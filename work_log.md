@@ -15,3 +15,6 @@
 | 2026-10-13 | Phase 2 | Baseline metrics (test): Issue F1=0.968, Team F1=0.923 | ✓ |
 | 2026-10-13 | Phase 3 | LLM classifier with schema validation, retry, cache (src/llm_classifier.py) | ✓ |
 | 2026-10-13 | Phase 3 | LLM metrics (test): Issue F1=0.984, Team F1=0.983 (Δ +1.6%, +6.0% vs baseline) | ✓ |
+| 2026-10-13 | Phase 4 | Guardrails pipeline (src/guardrails.py): PII redaction, confidence threshold, human review, fallback | ✓ |
+| 2026-10-13 | Phase 4 | Guardrail metrics (test, LLM): Issue F1=0.984, Team F1=0.983, 0% human review, 26.7% PII redacted | ✓ |
+| 2026-10-13 | Phase 4 | Guardrail metrics (test, fallback): Issue F1=0.968, Team F1=0.923, 11% human review | ✓ |
