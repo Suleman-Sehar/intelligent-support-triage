@@ -1,0 +1,1 @@
+{"issue_type": "outage", "team": "tech support", "confidence": 0.95, "reasoning": "The ticket describes a service issue where requests are timing out and the dashboard is stuck on 'Connecting...', indicating a potential outage."}

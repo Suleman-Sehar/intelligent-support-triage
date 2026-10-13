@@ -1,0 +1,1 @@
+{"issue_type": "account access", "team": "account security", "confidence": 0.95, "reasoning": "The ticket is about resetting 2FA due to a lost authenticator app, which falls under account access issues."}

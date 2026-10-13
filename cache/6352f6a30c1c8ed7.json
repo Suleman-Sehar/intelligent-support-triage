@@ -1,0 +1,1 @@
+{"issue_type": "account access", "team": "account security", "confidence": 0.95, "reasoning": "The ticket mentions an account lockout due to failed login attempts, which falls under account access issues. The mention of SSO configuration suggests a potential security concern, thus it is directed to the account security team."}

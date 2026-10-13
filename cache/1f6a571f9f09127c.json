@@ -1,0 +1,1 @@
+{"issue_type": "account access", "team": "account security", "confidence": 0.95, "reasoning": "The ticket describes an issue related to account access due to 2FA and a possible brute force attack, which falls under account security."}

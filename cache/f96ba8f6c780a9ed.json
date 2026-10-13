@@ -1,0 +1,1 @@
+{"issue_type": "account access", "team": "account security", "confidence": 0.85, "reasoning": "The ticket involves API key rotation, which falls under account access issues, particularly related to authentication and security settings."}

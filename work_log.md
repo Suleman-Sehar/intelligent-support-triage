@@ -13,3 +13,5 @@
 | 2026-10-13 | Phase 2 | Rules-based baseline classifier created (src/baseline_classifier.py) | ✓ |
 | 2026-10-13 | Phase 2 | Baseline metrics (dev): Issue F1=0.968, Team F1=0.937 | ✓ |
 | 2026-10-13 | Phase 2 | Baseline metrics (test): Issue F1=0.968, Team F1=0.923 | ✓ |
+| 2026-10-13 | Phase 3 | LLM classifier with schema validation, retry, cache (src/llm_classifier.py) | ✓ |
+| 2026-10-13 | Phase 3 | LLM metrics (test): Issue F1=0.984, Team F1=0.983 (Δ +1.6%, +6.0% vs baseline) | ✓ |
