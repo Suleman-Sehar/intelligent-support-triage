@@ -22,3 +22,6 @@
 | 2026-10-13 | Phase 5 | Evidence saved: evaluation_latest.md/json, timestamped files in evidence/ | ✓ |
 | 2026-10-13 | Phase 6 | Error analysis (error_analysis.md): 2 issue-type errors, 1 team error, product +20.7% F1 | ✓ |
 | 2026-10-13 | Phase 6 | Responsible use statement (responsible_use.md): privacy, fairness, limitations, governance | ✓ |
+| 2026-10-13 | Phase 7 | README.md with 5-command reproduction, demo outline, API reference | ✓ |
+| 2026-10-13 | Phase 7 | requirements.txt, tests/test_core.py (4 tests passing) | ✓ |
+| 2026-10-13 | Phase 7 | Final QA: pipeline verified end-to-end | ✓ |

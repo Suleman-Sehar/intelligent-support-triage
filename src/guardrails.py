@@ -39,7 +39,7 @@ PII_PATTERNS = [
     # Phone numbers (various formats)
     (r'\+?1?[-.\s]?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b', '[PHONE]'),
     # API keys (common patterns)
-    (r'\b(sk|pk|rk)_[a-zA-Z0-9]{20,}\b', '[API_KEY]'),
+    (r'\b(sk|pk|rk)_[a-zA-Z0-9_]{20,}\b', '[API_KEY]'),
     (r'\b[A-Za-z0-9]{32,}\b', '[API_KEY]'),  # Generic long alphanumeric
     # Credit card numbers (basic pattern)
     (r'\b\d{4}[-\s]?\d{4}[-\s]?\d{4}[-\s]?\d{4}\b', '[CREDIT_CARD]'),
