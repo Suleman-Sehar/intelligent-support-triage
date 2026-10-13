@@ -28,3 +28,4 @@
 | 2026-10-13 | Phase 8 | GitHub repo created & pushed (https://github.com/Suleman-Sehar/intelligent-support-triage) | ✓ |
 | 2026-10-13 | Phase 8 | SLIDES_OUTLINE.md (12 slides), demo.py (live demo script) | ✓ |
 | 2026-10-13 | Phase 8 | RESUME_BULLETS.md, LINKEDIN_POST.md | ✓ |
+| 2026-10-13 | Gap Fix 1 | Overconfidence guardrails: vague ticket detection (short, few keywords, vague words without intent), baseline vs LLM disagreement flag; 10 edge cases all flagged for review (100%); updated guardrails.py, added data/edge_cases.csv | ✓ |

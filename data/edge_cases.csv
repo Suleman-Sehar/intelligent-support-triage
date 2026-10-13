@@ -1,0 +1,11 @@
+id,subject,body,issue_type,team,split
+EC-00001,Question,Hi I have a question about something,unknown,unknown,edge
+EC-00002,Help,Need help please,unknown,unknown,edge
+EC-00003,Issue,Something is wrong with my account,unknown,unknown,edge
+EC-00004,Problem,There is a problem,unknown,unknown,edge
+EC-00005,Hi,Hello,unknown,unknown,edge
+EC-00006,Random,Random text that doesn't match any keywords at all,unknown,unknown,edge
+EC-00007,Confused,I don't know what to do,unknown,unknown,edge
+EC-00008,Maybe,Maybe you can help me with something,unknown,unknown,edge
+EC-00009,Unclear,This is unclear and vague,unknown,unknown,edge
+EC-00010,Empty-ish,Just a quick question,unknown,unknown,edge

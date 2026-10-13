@@ -30,6 +30,10 @@ class GuardrailResult:
     fallback_used: bool
     original_text: str
     redacted_text: str
+    keyword_match_count: int = 0
+    baseline_issue_type: str = ""
+    llm_issue_type: str = ""
+    disagreement_flag: bool = False
 
 
 # PII patterns
@@ -64,6 +68,47 @@ def redact_pii(text: str) -> Tuple[str, bool]:
     return redacted, was_redacted
 
 
+def count_keyword_matches(text: str) -> int:
+    """Count total keyword matches across all issue types and teams."""
+    from baseline_classifier import ISSUE_TYPE_KEYWORDS, TEAM_KEYWORDS
+    text_lower = text.lower()
+    count = 0
+    for keywords in ISSUE_TYPE_KEYWORDS.values():
+        for kw in keywords:
+            count += len(re.findall(rf"\b{re.escape(kw)}\b", text_lower))
+    for keywords in TEAM_KEYWORDS.values():
+        for kw in keywords:
+            count += len(re.findall(rf"\b{re.escape(kw)}\b", text_lower))
+    return count
+
+
+def is_vague_ticket(text: str, min_words: int = 10, min_keyword_matches: int = 2) -> bool:
+    """Check if ticket is vague/ambiguous based on length and keyword matches."""
+    word_count = len(text.split())
+    keyword_count = count_keyword_matches(text)
+    
+    # Additional check: vague indicator words without clear intent
+    vague_indicators = {"question", "help", "something", "maybe", "whatever", "unsure", "confused", "don't know", "not sure"}
+    text_lower = text.lower()
+    has_vague_indicators = any(indicator in text_lower for indicator in vague_indicators)
+    
+    # Check for specific intent keywords (strong signals)
+    intent_keywords = {"invoice", "charge", "refund", "payment", "crash", "error", "bug", "password", "reset", "2fa", "feature", "export", "webhook", "outage", "down", "500", "timeout"}
+    has_intent = any(kw in text_lower for kw in intent_keywords)
+    
+    # Vague if: too short, too few keyword matches, has vague indicators but no clear intent
+    return (word_count < min_words or 
+            keyword_count < min_keyword_matches or 
+            (has_vague_indicators and not has_intent))
+
+
+def get_baseline_issue_type(subject: str, body: str) -> str:
+    """Get baseline classifier's issue type prediction."""
+    combined = f"{subject} {body}"
+    from baseline_classifier import classify_ticket as baseline_classify
+    return baseline_classify(subject, body).issue_type
+
+
 class GuardrailPipeline:
     def __init__(self, confidence_threshold: float = 0.75, 
                  llm_classifier=None, use_llm: bool = True):
@@ -78,9 +123,18 @@ class GuardrailPipeline:
         # Step 1: PII redaction
         redacted_text, pii_redacted = redact_pii(combined)
         
-        # Step 2: Try LLM classification first
+        # Step 2: Vague/ambiguous ticket detection (rule-based guardrail)
+        keyword_match_count = count_keyword_matches(combined)
+        is_vague = is_vague_ticket(combined)
+        
+        # Step 3: Get baseline prediction for comparison
+        baseline_issue_type = get_baseline_issue_type(subject, body)
+        
+        # Step 4: Try LLM classification first
         fallback_used = False
         human_review = False
+        llm_issue_type = ""
+        disagreement_flag = False
         
         if self.use_llm:
             try:
@@ -89,6 +143,7 @@ class GuardrailPipeline:
                 team = result.team
                 confidence = result.confidence
                 reasoning = result.reasoning
+                llm_issue_type = result.issue_type
             except Exception as e:
                 print(f"  LLM failed, falling back to rules: {e}")
                 fallback_used = True
@@ -105,7 +160,19 @@ class GuardrailPipeline:
             confidence = baseline_result.confidence
             reasoning = "Rules classifier (LLM disabled)"
         
-        # Step 3: Confidence threshold check
+        # Step 5: Check for baseline vs LLM disagreement (when LLM used)
+        if self.use_llm and not fallback_used and llm_issue_type:
+            if baseline_issue_type != llm_issue_type:
+                disagreement_flag = True
+                human_review = True
+                reasoning += f" | Baseline/LLM disagreement (baseline={baseline_issue_type}, LLM={llm_issue_type}) - flagged for human review"
+        
+        # Step 6: Vague/ambiguous ticket guardrail
+        if is_vague:
+            human_review = True
+            reasoning += f" | Vague/ambiguous ticket (words={len(combined.split())}, keyword_matches={keyword_match_count}) - flagged for human review"
+        
+        # Step 7: Confidence threshold check
         if confidence < self.confidence_threshold:
             human_review = True
             reasoning += f" | Low confidence ({confidence:.2f} < {self.confidence_threshold}) - flagged for human review"
@@ -119,7 +186,11 @@ class GuardrailPipeline:
             human_review=human_review,
             fallback_used=fallback_used,
             original_text=combined,
-            redacted_text=redacted_text
+            redacted_text=redacted_text,
+            keyword_match_count=keyword_match_count,
+            baseline_issue_type=baseline_issue_type,
+            llm_issue_type=llm_issue_type,
+            disagreement_flag=disagreement_flag
         )
 
 
