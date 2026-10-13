@@ -25,3 +25,6 @@
 | 2026-10-13 | Phase 7 | README.md with 5-command reproduction, demo outline, API reference | ✓ |
 | 2026-10-13 | Phase 7 | requirements.txt, tests/test_core.py (4 tests passing) | ✓ |
 | 2026-10-13 | Phase 7 | Final QA: pipeline verified end-to-end | ✓ |
+| 2026-10-13 | Phase 8 | GitHub repo created & pushed (https://github.com/Suleman-Sehar/intelligent-support-triage) | ✓ |
+| 2026-10-13 | Phase 8 | SLIDES_OUTLINE.md (12 slides), demo.py (live demo script) | ✓ |
+| 2026-10-13 | Phase 8 | RESUME_BULLETS.md, LINKEDIN_POST.md | ✓ |
