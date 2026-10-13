@@ -8,3 +8,5 @@
 | 2026-10-13 | Phase 0 | requirements.md written | ✓ |
 | 2026-10-13 | Phase 0 | decision_log.md created | ✓ |
 | 2026-10-13 | Phase 0 | work_log.md created | ✓ |
+| 2026-10-13 | Phase 1 | Synthetic ticket generator created (src/generate_tickets.py) | ✓ |
+| 2026-10-13 | Phase 1 | 1000 tickets generated (data/tickets.csv, 80/20 dev/test split) | ✓ |
