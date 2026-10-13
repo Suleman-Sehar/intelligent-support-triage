@@ -18,3 +18,5 @@
 | 2026-10-13 | Phase 4 | Guardrails pipeline (src/guardrails.py): PII redaction, confidence threshold, human review, fallback | ✓ |
 | 2026-10-13 | Phase 4 | Guardrail metrics (test, LLM): Issue F1=0.984, Team F1=0.983, 0% human review, 26.7% PII redacted | ✓ |
 | 2026-10-13 | Phase 4 | Guardrail metrics (test, fallback): Issue F1=0.968, Team F1=0.923, 11% human review | ✓ |
+| 2026-10-13 | Phase 5 | Evaluation script (src/evaluate.py) with comparison table | ✓ |
+| 2026-10-13 | Phase 5 | Evidence saved: evaluation_latest.md/json, timestamped files in evidence/ | ✓ |
