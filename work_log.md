@@ -10,3 +10,6 @@
 | 2026-10-13 | Phase 0 | work_log.md created | ✓ |
 | 2026-10-13 | Phase 1 | Synthetic ticket generator created (src/generate_tickets.py) | ✓ |
 | 2026-10-13 | Phase 1 | 1000 tickets generated (data/tickets.csv, 80/20 dev/test split) | ✓ |
+| 2026-10-13 | Phase 2 | Rules-based baseline classifier created (src/baseline_classifier.py) | ✓ |
+| 2026-10-13 | Phase 2 | Baseline metrics (dev): Issue F1=0.968, Team F1=0.937 | ✓ |
+| 2026-10-13 | Phase 2 | Baseline metrics (test): Issue F1=0.968, Team F1=0.923 | ✓ |
