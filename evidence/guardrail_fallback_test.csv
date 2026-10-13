@@ -1,0 +1,192 @@
+id,pred_issue_type,pred_team,confidence,reasoning,pii_redacted,human_review,fallback_used,true_issue_type,true_team
+TKT-00004,account access,account security,0.9500,Rules classifier (LLM disabled),True,False,False,account access,account security
+TKT-00007,account access,account security,0.9500,Rules classifier (LLM disabled),True,False,False,account access,account security
+TKT-00020,billing,billing,0.9247,Rules classifier (LLM disabled),True,False,False,billing,billing
+TKT-00021,account access,account security,0.9500,Rules classifier (LLM disabled),True,False,False,account access,account security
+TKT-00030,bug,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,bug,tech support
+TKT-00031,feature request,product,0.9500,Rules classifier (LLM disabled),False,False,False,feature request,product
+TKT-00058,how-to,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,how-to,tech support
+TKT-00061,outage,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,outage,tech support
+TKT-00064,feature request,tech support,0.7858,Rules classifier (LLM disabled),True,False,False,feature request,product
+TKT-00071,feature request,product,0.9500,Rules classifier (LLM disabled),True,False,False,feature request,product
+TKT-00078,account access,account security,0.9500,Rules classifier (LLM disabled),False,False,False,account access,account security
+TKT-00079,bug,tech support,0.7649,Rules classifier (LLM disabled),False,False,False,bug,tech support
+TKT-00081,bug,tech support,0.8808,Rules classifier (LLM disabled),False,False,False,bug,tech support
+TKT-00084,billing,billing,0.9247,Rules classifier (LLM disabled),False,False,False,billing,billing
+TKT-00086,how-to,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,how-to,tech support
+TKT-00100,feature request,product,0.9500,Rules classifier (LLM disabled),False,False,False,feature request,product
+TKT-00104,bug,tech support,0.8808,Rules classifier (LLM disabled),False,False,False,bug,tech support
+TKT-00105,billing,billing,0.9500,Rules classifier (LLM disabled),False,False,False,billing,billing
+TKT-00108,billing,billing,0.9500,Rules classifier (LLM disabled),False,False,False,billing,billing
+TKT-00109,outage,tech support,0.8573,Rules classifier (LLM disabled),False,False,False,outage,tech support
+TKT-00111,outage,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,outage,tech support
+TKT-00117,bug,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,bug,tech support
+TKT-00118,bug,tech support,0.7858,Rules classifier (LLM disabled),False,False,False,bug,tech support
+TKT-00124,billing,billing,0.9500,Rules classifier (LLM disabled),False,False,False,billing,billing
+TKT-00134,feature request,product,0.8808,Rules classifier (LLM disabled),False,False,False,feature request,product
+TKT-00135,outage,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,outage,tech support
+TKT-00137,bug,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,bug,tech support
+TKT-00139,billing,billing,0.7286,Rules classifier (LLM disabled) | Low confidence (0.73 < 0.75) - flagged for human review,True,True,False,billing,billing
+TKT-00140,account access,account security,0.8808,Rules classifier (LLM disabled),False,False,False,account access,account security
+TKT-00141,feature request,product,0.8808,Rules classifier (LLM disabled),True,False,False,feature request,product
+TKT-00146,feature request,product,0.8808,Rules classifier (LLM disabled),True,False,False,feature request,product
+TKT-00167,account access,account security,0.9500,Rules classifier (LLM disabled),True,False,False,account access,account security
+TKT-00178,outage,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,outage,tech support
+TKT-00183,bug,tech support,0.3082,Rules classifier (LLM disabled) | Low confidence (0.31 < 0.75) - flagged for human review,False,True,False,how-to,tech support
+TKT-00212,how-to,tech support,0.9247,Rules classifier (LLM disabled),False,False,False,how-to,tech support
+TKT-00214,how-to,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,how-to,tech support
+TKT-00241,feature request,product,0.8808,Rules classifier (LLM disabled),False,False,False,feature request,product
+TKT-00245,bug,tech support,0.7286,Rules classifier (LLM disabled) | Low confidence (0.73 < 0.75) - flagged for human review,False,True,False,bug,tech support
+TKT-00260,outage,tech support,0.3082,Rules classifier (LLM disabled) | Low confidence (0.31 < 0.75) - flagged for human review,False,True,False,outage,tech support
+TKT-00273,feature request,tech support,0.7858,Rules classifier (LLM disabled),False,False,False,feature request,product
+TKT-00277,account access,account security,0.8808,Rules classifier (LLM disabled),True,False,False,account access,account security
+TKT-00278,feature request,product,0.8808,Rules classifier (LLM disabled),True,False,False,feature request,product
+TKT-00284,outage,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,outage,tech support
+TKT-00286,how-to,tech support,0.9247,Rules classifier (LLM disabled),False,False,False,how-to,tech support
+TKT-00289,billing,billing,0.9500,Rules classifier (LLM disabled),True,False,False,billing,billing
+TKT-00290,outage,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,outage,tech support
+TKT-00303,feature request,product,0.9500,Rules classifier (LLM disabled),True,False,False,feature request,product
+TKT-00304,bug,tech support,0.7858,Rules classifier (LLM disabled),False,False,False,bug,tech support
+TKT-00307,how-to,tech support,0.3082,Rules classifier (LLM disabled) | Low confidence (0.31 < 0.75) - flagged for human review,False,True,False,how-to,tech support
+TKT-00310,account access,account security,0.8808,Rules classifier (LLM disabled),False,False,False,account access,account security
+TKT-00321,billing,billing,0.9500,Rules classifier (LLM disabled),True,False,False,billing,billing
+TKT-00344,how-to,tech support,0.8808,Rules classifier (LLM disabled),False,False,False,how-to,tech support
+TKT-00348,how-to,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,how-to,tech support
+TKT-00354,feature request,product,0.9247,Rules classifier (LLM disabled),False,False,False,feature request,product
+TKT-00365,feature request,tech support,0.7858,Rules classifier (LLM disabled),False,False,False,how-to,tech support
+TKT-00367,billing,billing,0.8808,Rules classifier (LLM disabled),False,False,False,billing,billing
+TKT-00371,how-to,tech support,0.8808,Rules classifier (LLM disabled),False,False,False,how-to,tech support
+TKT-00384,account access,account security,0.8808,Rules classifier (LLM disabled),False,False,False,account access,account security
+TKT-00386,bug,tech support,0.7286,Rules classifier (LLM disabled) | Low confidence (0.73 < 0.75) - flagged for human review,False,True,False,bug,tech support
+TKT-00394,bug,tech support,0.8808,Rules classifier (LLM disabled),False,False,False,bug,tech support
+TKT-00397,billing,billing,0.9000,Rules classifier (LLM disabled),False,False,False,billing,billing
+TKT-00404,billing,billing,0.9247,Rules classifier (LLM disabled),False,False,False,billing,billing
+TKT-00408,how-to,tech support,0.9500,Rules classifier (LLM disabled),True,False,False,how-to,tech support
+TKT-00416,bug,tech support,0.9500,Rules classifier (LLM disabled),True,False,False,bug,tech support
+TKT-00422,bug,tech support,0.9500,Rules classifier (LLM disabled),True,False,False,bug,tech support
+TKT-00423,feature request,product,0.9247,Rules classifier (LLM disabled),False,False,False,feature request,product
+TKT-00429,bug,tech support,0.7286,Rules classifier (LLM disabled) | Low confidence (0.73 < 0.75) - flagged for human review,False,True,False,bug,tech support
+TKT-00430,billing,billing,0.9500,Rules classifier (LLM disabled),False,False,False,billing,billing
+TKT-00431,bug,tech support,0.8573,Rules classifier (LLM disabled),False,False,False,bug,tech support
+TKT-00432,billing,billing,0.9061,Rules classifier (LLM disabled),False,False,False,billing,billing
+TKT-00435,account access,account security,0.9500,Rules classifier (LLM disabled),False,False,False,account access,account security
+TKT-00436,billing,billing,0.8167,Rules classifier (LLM disabled),False,False,False,billing,billing
+TKT-00437,outage,tech support,0.9500,Rules classifier (LLM disabled),True,False,False,outage,tech support
+TKT-00446,billing,billing,0.8808,Rules classifier (LLM disabled),True,False,False,billing,billing
+TKT-00448,outage,billing,0.7286,Rules classifier (LLM disabled) | Low confidence (0.73 < 0.75) - flagged for human review,True,True,False,outage,tech support
+TKT-00461,feature request,tech support,0.7858,Rules classifier (LLM disabled),False,False,False,feature request,product
+TKT-00462,billing,billing,0.9500,Rules classifier (LLM disabled),False,False,False,billing,billing
+TKT-00464,how-to,tech support,0.9500,Rules classifier (LLM disabled),True,False,False,how-to,tech support
+TKT-00470,account access,account security,0.9500,Rules classifier (LLM disabled),False,False,False,account access,account security
+TKT-00471,outage,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,outage,tech support
+TKT-00472,how-to,tech support,0.3082,Rules classifier (LLM disabled) | Low confidence (0.31 < 0.75) - flagged for human review,False,True,False,how-to,tech support
+TKT-00474,bug,tech support,0.8573,Rules classifier (LLM disabled),False,False,False,bug,tech support
+TKT-00476,account access,account security,0.9500,Rules classifier (LLM disabled),False,False,False,account access,account security
+TKT-00484,bug,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,bug,tech support
+TKT-00489,outage,tech support,0.8573,Rules classifier (LLM disabled),False,False,False,outage,tech support
+TKT-00490,account access,account security,0.8808,Rules classifier (LLM disabled),False,False,False,account access,account security
+TKT-00496,account access,account security,0.9500,Rules classifier (LLM disabled),True,False,False,account access,account security
+TKT-00497,account access,account security,0.8808,Rules classifier (LLM disabled),False,False,False,account access,account security
+TKT-00498,bug,tech support,0.9500,Rules classifier (LLM disabled),True,False,False,bug,tech support
+TKT-00503,outage,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,outage,tech support
+TKT-00510,bug,tech support,0.7286,Rules classifier (LLM disabled) | Low confidence (0.73 < 0.75) - flagged for human review,False,True,False,bug,tech support
+TKT-00511,billing,billing,0.7286,Rules classifier (LLM disabled) | Low confidence (0.73 < 0.75) - flagged for human review,False,True,False,billing,billing
+TKT-00514,bug,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,bug,tech support
+TKT-00518,outage,tech support,0.3082,Rules classifier (LLM disabled) | Low confidence (0.31 < 0.75) - flagged for human review,False,True,False,outage,tech support
+TKT-00523,how-to,tech support,0.8808,Rules classifier (LLM disabled),False,False,False,how-to,tech support
+TKT-00533,feature request,product,0.9500,Rules classifier (LLM disabled),False,False,False,feature request,product
+TKT-00536,how-to,tech support,0.3082,Rules classifier (LLM disabled) | Low confidence (0.31 < 0.75) - flagged for human review,True,True,False,how-to,tech support
+TKT-00542,outage,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,outage,tech support
+TKT-00543,account access,account security,0.9500,Rules classifier (LLM disabled),False,False,False,account access,account security
+TKT-00552,how-to,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,how-to,tech support
+TKT-00554,how-to,tech support,0.9500,Rules classifier (LLM disabled),True,False,False,how-to,tech support
+TKT-00561,outage,tech support,0.9500,Rules classifier (LLM disabled),True,False,False,outage,tech support
+TKT-00572,feature request,product,0.8808,Rules classifier (LLM disabled),True,False,False,feature request,product
+TKT-00573,bug,tech support,0.9500,Rules classifier (LLM disabled),True,False,False,bug,tech support
+TKT-00582,feature request,tech support,0.7858,Rules classifier (LLM disabled),False,False,False,how-to,tech support
+TKT-00587,how-to,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,how-to,tech support
+TKT-00589,feature request,tech support,0.7858,Rules classifier (LLM disabled),False,False,False,feature request,product
+TKT-00592,feature request,product,0.8808,Rules classifier (LLM disabled),False,False,False,feature request,product
+TKT-00598,account access,account security,0.9500,Rules classifier (LLM disabled),False,False,False,account access,account security
+TKT-00603,outage,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,outage,tech support
+TKT-00604,feature request,product,0.9500,Rules classifier (LLM disabled),True,False,False,feature request,product
+TKT-00610,how-to,tech support,0.3082,Rules classifier (LLM disabled) | Low confidence (0.31 < 0.75) - flagged for human review,False,True,False,how-to,tech support
+TKT-00612,account access,account security,0.9500,Rules classifier (LLM disabled),False,False,False,account access,account security
+TKT-00617,bug,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,bug,tech support
+TKT-00621,account access,account security,0.8808,Rules classifier (LLM disabled),False,False,False,account access,account security
+TKT-00627,feature request,product,0.9500,Rules classifier (LLM disabled),False,False,False,feature request,product
+TKT-00628,outage,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,outage,tech support
+TKT-00629,outage,tech support,0.3082,Rules classifier (LLM disabled) | Low confidence (0.31 < 0.75) - flagged for human review,True,True,False,outage,tech support
+TKT-00631,how-to,tech support,0.8808,Rules classifier (LLM disabled),True,False,False,how-to,tech support
+TKT-00639,feature request,tech support,0.7858,Rules classifier (LLM disabled),True,False,False,feature request,product
+TKT-00645,bug,tech support,0.3082,Rules classifier (LLM disabled) | Low confidence (0.31 < 0.75) - flagged for human review,False,True,False,how-to,tech support
+TKT-00655,feature request,product,0.9500,Rules classifier (LLM disabled),True,False,False,feature request,product
+TKT-00656,billing,billing,0.8167,Rules classifier (LLM disabled),True,False,False,billing,billing
+TKT-00657,billing,billing,0.9500,Rules classifier (LLM disabled),False,False,False,billing,billing
+TKT-00674,billing,billing,0.9500,Rules classifier (LLM disabled),False,False,False,billing,billing
+TKT-00680,account access,account security,0.9500,Rules classifier (LLM disabled),False,False,False,account access,account security
+TKT-00681,account access,account security,0.9500,Rules classifier (LLM disabled),True,False,False,account access,account security
+TKT-00682,account access,account security,0.8808,Rules classifier (LLM disabled),False,False,False,account access,account security
+TKT-00687,feature request,tech support,0.7858,Rules classifier (LLM disabled),False,False,False,feature request,product
+TKT-00694,how-to,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,how-to,tech support
+TKT-00705,outage,tech support,0.9500,Rules classifier (LLM disabled),True,False,False,outage,tech support
+TKT-00707,billing,billing,0.7286,Rules classifier (LLM disabled) | Low confidence (0.73 < 0.75) - flagged for human review,False,True,False,billing,billing
+TKT-00709,how-to,tech support,0.9500,Rules classifier (LLM disabled),True,False,False,how-to,tech support
+TKT-00730,how-to,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,how-to,tech support
+TKT-00738,account access,account security,0.9500,Rules classifier (LLM disabled),False,False,False,account access,account security
+TKT-00751,outage,tech support,0.9500,Rules classifier (LLM disabled),True,False,False,outage,tech support
+TKT-00767,feature request,product,0.9500,Rules classifier (LLM disabled),False,False,False,feature request,product
+TKT-00774,outage,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,outage,tech support
+TKT-00775,bug,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,bug,tech support
+TKT-00778,bug,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,bug,tech support
+TKT-00779,feature request,product,0.9500,Rules classifier (LLM disabled),False,False,False,feature request,product
+TKT-00784,feature request,tech support,0.7858,Rules classifier (LLM disabled),False,False,False,feature request,product
+TKT-00785,outage,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,outage,tech support
+TKT-00788,billing,billing,0.9500,Rules classifier (LLM disabled),True,False,False,billing,billing
+TKT-00797,how-to,tech support,0.8808,Rules classifier (LLM disabled),False,False,False,how-to,tech support
+TKT-00801,feature request,tech support,0.7858,Rules classifier (LLM disabled),False,False,False,feature request,product
+TKT-00804,outage,billing,0.7286,Rules classifier (LLM disabled) | Low confidence (0.73 < 0.75) - flagged for human review,False,True,False,outage,tech support
+TKT-00807,how-to,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,how-to,tech support
+TKT-00809,feature request,tech support,0.7858,Rules classifier (LLM disabled),False,False,False,feature request,product
+TKT-00810,account access,account security,0.9500,Rules classifier (LLM disabled),True,False,False,account access,account security
+TKT-00812,bug,tech support,0.8808,Rules classifier (LLM disabled),False,False,False,bug,tech support
+TKT-00821,how-to,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,how-to,tech support
+TKT-00838,billing,billing,0.9500,Rules classifier (LLM disabled),False,False,False,billing,billing
+TKT-00839,outage,tech support,0.8573,Rules classifier (LLM disabled),False,False,False,outage,tech support
+TKT-00841,bug,tech support,0.9500,Rules classifier (LLM disabled),True,False,False,bug,tech support
+TKT-00847,bug,tech support,0.7286,Rules classifier (LLM disabled) | Low confidence (0.73 < 0.75) - flagged for human review,False,True,False,bug,tech support
+TKT-00855,outage,tech support,0.9247,Rules classifier (LLM disabled),True,False,False,outage,tech support
+TKT-00861,outage,tech support,0.9500,Rules classifier (LLM disabled),True,False,False,outage,tech support
+TKT-00864,feature request,product,0.9247,Rules classifier (LLM disabled),True,False,False,feature request,product
+TKT-00873,feature request,product,0.9500,Rules classifier (LLM disabled),False,False,False,feature request,product
+TKT-00880,feature request,tech support,0.7858,Rules classifier (LLM disabled),False,False,False,feature request,product
+TKT-00883,outage,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,outage,tech support
+TKT-00891,bug,tech support,0.7649,Rules classifier (LLM disabled),False,False,False,bug,tech support
+TKT-00892,outage,tech support,0.9500,Rules classifier (LLM disabled),True,False,False,outage,tech support
+TKT-00895,bug,tech support,0.1000,Rules classifier (LLM disabled) | Low confidence (0.10 < 0.75) - flagged for human review,False,True,False,how-to,tech support
+TKT-00896,billing,billing,0.9500,Rules classifier (LLM disabled),False,False,False,billing,billing
+TKT-00904,account access,account security,0.8808,Rules classifier (LLM disabled),False,False,False,account access,account security
+TKT-00909,feature request,product,0.8808,Rules classifier (LLM disabled),False,False,False,feature request,product
+TKT-00912,bug,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,bug,tech support
+TKT-00915,account access,account security,0.8808,Rules classifier (LLM disabled),False,False,False,account access,account security
+TKT-00920,feature request,product,0.9500,Rules classifier (LLM disabled),True,False,False,feature request,product
+TKT-00922,bug,tech support,0.3082,Rules classifier (LLM disabled) | Low confidence (0.31 < 0.75) - flagged for human review,False,True,False,how-to,tech support
+TKT-00927,account access,account security,0.9500,Rules classifier (LLM disabled),False,False,False,account access,account security
+TKT-00931,billing,billing,0.9500,Rules classifier (LLM disabled),False,False,False,billing,billing
+TKT-00933,feature request,tech support,0.7858,Rules classifier (LLM disabled),False,False,False,feature request,product
+TKT-00942,bug,tech support,0.9500,Rules classifier (LLM disabled),True,False,False,bug,tech support
+TKT-00944,how-to,tech support,0.9247,Rules classifier (LLM disabled),False,False,False,how-to,tech support
+TKT-00945,account access,account security,0.9500,Rules classifier (LLM disabled),False,False,False,account access,account security
+TKT-00947,account access,account security,0.8808,Rules classifier (LLM disabled),True,False,False,account access,account security
+TKT-00949,bug,tech support,0.9500,Rules classifier (LLM disabled),True,False,False,bug,tech support
+TKT-00951,outage,tech support,0.9247,Rules classifier (LLM disabled),False,False,False,outage,tech support
+TKT-00961,billing,billing,0.9500,Rules classifier (LLM disabled),False,False,False,billing,billing
+TKT-00967,bug,tech support,0.7649,Rules classifier (LLM disabled),True,False,False,bug,tech support
+TKT-00971,account access,account security,0.8808,Rules classifier (LLM disabled),False,False,False,account access,account security
+TKT-00973,billing,billing,0.9500,Rules classifier (LLM disabled),False,False,False,billing,billing
+TKT-00978,billing,billing,0.9500,Rules classifier (LLM disabled),False,False,False,billing,billing
+TKT-00979,outage,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,outage,tech support
+TKT-00987,outage,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,outage,tech support
+TKT-00989,feature request,tech support,0.7858,Rules classifier (LLM disabled),False,False,False,feature request,product
+TKT-00995,billing,billing,0.9500,Rules classifier (LLM disabled),False,False,False,billing,billing
+TKT-00997,outage,tech support,0.8573,Rules classifier (LLM disabled),False,False,False,outage,tech support

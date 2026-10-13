@@ -1,0 +1,51 @@
+id,pred_issue_type,pred_team,confidence,reasoning,true_issue_type,true_team
+TKT-00001,outage,tech support,0.9500,"The ticket describes a service downtime issue with a 503 error, indicating an outage that needs technical support.",outage,tech support
+TKT-00002,outage,tech support,0.9500,"The ticket describes a service downtime with a 503 error, indicating an outage that needs technical support.",outage,tech support
+TKT-00003,billing,billing,0.9500,"The ticket involves a payment issue related to a subscription upgrade, specifically a declined credit card despite sufficient funds, which falls under billing.",billing,billing
+TKT-00005,account access,account security,0.9500,"The ticket is about a password reset issue, which falls under account access. The user is having trouble receiving the reset email, indicating a potential security or access issue.",account access,account security
+TKT-00006,billing,billing,0.9500,"The ticket involves a payment issue related to upgrading a subscription plan, which falls under billing.",billing,billing
+TKT-00008,bug,tech support,0.9500,"The ticket describes an application performance issue (dashboard loading time), which indicates a bug in the system.",bug,tech support
+TKT-00009,outage,tech support,0.9500,"The ticket describes a service downtime with a 503 error, indicating an outage that needs technical support.",outage,tech support
+TKT-00010,account access,account security,0.9500,"The ticket involves resetting 2FA due to a lost authenticator app, which falls under account access issues.",account access,account security
+TKT-00011,billing,billing,0.9500,"The ticket is about a refund request related to an invoice discrepancy, which falls under billing issues.",billing,billing
+TKT-00012,outage,tech support,0.9500,"The ticket describes a performance issue with the dashboard loading time, which indicates a potential service outage or degradation in performance.",bug,tech support
+TKT-00013,outage,tech support,0.9500,"The ticket is inquiring about scheduled maintenance, which relates to service availability and potential downtime, classifying it under outage.",outage,tech support
+TKT-00014,bug,tech support,0.9500,"The ticket describes a performance issue with the dashboard loading time, which indicates a bug in the application.",bug,tech support
+TKT-00015,outage,tech support,0.9500,"The ticket mentions a partial outage and asks about scheduled maintenance, indicating a service-related issue.",outage,tech support
+TKT-00016,how-to,tech support,0.9500,"The ticket is asking for guidance on setting up an integration, which falls under how-to questions related to configuration help.",how-to,tech support
+TKT-00017,billing,billing,0.9500,"The ticket is about a refund request related to an invoice discrepancy, which falls under billing issues.",billing,billing
+TKT-00018,how-to,tech support,0.9500,"The ticket is asking for guidance on best practices for importing historical data, which falls under setup and configuration help.",how-to,tech support
+TKT-00019,how-to,tech support,0.9500,"The ticket is requesting step-by-step guidance on configuring an approval workflow, which falls under setup and configuration help.",how-to,tech support
+TKT-00022,how-to,tech support,0.9500,"The ticket is asking for step-by-step guidance on configuring a workflow, which falls under setup and configuration help.",how-to,tech support
+TKT-00023,how-to,tech support,0.9500,"The ticket is asking for step-by-step guidance on setting up an approval workflow, which falls under how-to questions related to configuration.",how-to,tech support
+TKT-00024,feature request,product,0.9500,The ticket is requesting a new feature (custom fields on tickets) which falls under product enhancements.,feature request,product
+TKT-00025,billing,billing,0.9500,"The ticket is about upgrading a subscription plan and inquiring about the prorated cost, which falls under billing issues.",billing,billing
+TKT-00026,billing,billing,0.9500,"The ticket is about a charge discrepancy related to a refund request, which falls under billing issues.",billing,billing
+TKT-00027,outage,tech support,0.9500,"The ticket is inquiring about scheduled maintenance, which relates to service availability and potential downtime, classifying it under outage.",outage,tech support
+TKT-00028,billing,billing,0.9500,"The ticket mentions a payment failure and a request for a refund, which are directly related to billing issues.",billing,billing
+TKT-00029,outage,tech support,0.9500,"The ticket describes a service downtime issue with a 503 error, indicating an outage that needs technical support.",outage,tech support
+TKT-00032,bug,tech support,0.9500,"The ticket describes a performance issue with the dashboard loading time, indicating a potential bug in the application.",bug,tech support
+TKT-00033,feature request,product,0.9500,The ticket suggests a new feature (custom fields on tickets) which aligns with product development and enhancements.,feature request,product
+TKT-00034,how-to,tech support,0.9500,"The ticket is asking for step-by-step guidance on setting up an approval workflow, which falls under how-to questions related to configuration help.",how-to,tech support
+TKT-00035,outage,tech support,0.9500,"The ticket describes a service downtime with a 503 error, indicating an outage that affects the entire platform.",outage,tech support
+TKT-00036,how-to,tech support,0.9500,"The ticket is requesting step-by-step guidance for setting up an integration, which falls under how-to questions related to configuration.",how-to,tech support
+TKT-00037,how-to,tech support,0.9500,"The ticket is asking for guidance on best practices for importing historical data, which falls under setup and configuration help.",how-to,tech support
+TKT-00038,how-to,tech support,0.9500,"The ticket is asking for clarification on user roles and permissions, which falls under setup guides and configuration help.",how-to,tech support
+TKT-00039,account access,account security,0.9500,"The ticket mentions an account lockout due to failed login attempts, which falls under account access issues. The mention of SSO configuration suggests a potential security concern, thus it is directed to the account security team.",account access,account security
+TKT-00040,bug,tech support,0.9500,"The user is reporting a UI glitch related to the loss of custom filters after an update, which indicates a technical issue with the application.",bug,tech support
+TKT-00041,bug,tech support,0.9500,"The ticket describes a performance issue related to a visual bug (text overlapping) on a specific page and mode, which falls under technical bugs.",bug,tech support
+TKT-00042,billing,billing,0.9500,"The ticket involves a request for a refund related to a subscription, which falls under billing issues.",billing,billing
+TKT-00043,billing,billing,0.9500,"The ticket involves a payment issue related to a subscription upgrade, specifically a declined credit card, which falls under billing.",billing,billing
+TKT-00044,account access,account security,0.8500,"The ticket involves API key rotation, which falls under account access issues, particularly related to authentication and security settings.",account access,account security
+TKT-00045,account access,account security,0.9500,"The ticket describes an issue related to account access due to 2FA and a possible brute force attack, which falls under account security.",account access,account security
+TKT-00046,billing,billing,0.9500,"The ticket mentions a charge discrepancy and asks about upgrading plans, which falls under billing issues.",billing,billing
+TKT-00047,account access,account security,0.9500,"The user is experiencing an issue related to being locked out of their account and is unable to receive a password reset email, which falls under account access.",account access,account security
+TKT-00048,how-to,tech support,0.9500,"The ticket is asking for best practices related to importing historical data, which falls under setup guides and configuration help.",how-to,tech support
+TKT-00049,bug,tech support,0.9500,"The ticket describes an application crash with a specific error message, indicating a technical bug that needs to be addressed by the tech support team.",bug,tech support
+TKT-00050,outage,tech support,0.9500,"The ticket describes API errors and requests timing out, indicating a service outage.",outage,tech support
+TKT-00051,feature request,product,0.9500,"The ticket is requesting a new feature (webhook notifications for ticket status changes), which falls under feature requests and is directed to the product team.",feature request,product
+TKT-00052,feature request,product,0.9500,"The ticket is requesting a new feature (webhook notifications for ticket status changes), which falls under feature requests and is directed to the product team.",feature request,product
+TKT-00053,feature request,product,0.9500,The ticket suggests a new feature (webhook notifications for ticket status changes) which aligns with product feedback and enhancements.,feature request,product
+TKT-00054,account access,account security,0.9500,"The ticket is about a password reset issue, which falls under account access. The user is having trouble receiving the reset email, indicating a potential security or access issue.",account access,account security
+TKT-00055,how-to,tech support,0.9500,"The ticket is asking for guidance on how to build a custom report, which falls under setup and configuration help.",how-to,tech support
+TKT-00056,how-to,tech support,0.9500,"The ticket is asking for clarification on roles, which falls under setup guides and configuration help.",how-to,tech support
