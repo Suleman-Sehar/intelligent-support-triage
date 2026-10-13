@@ -20,3 +20,5 @@
 | 2026-10-13 | Phase 4 | Guardrail metrics (test, fallback): Issue F1=0.968, Team F1=0.923, 11% human review | ✓ |
 | 2026-10-13 | Phase 5 | Evaluation script (src/evaluate.py) with comparison table | ✓ |
 | 2026-10-13 | Phase 5 | Evidence saved: evaluation_latest.md/json, timestamped files in evidence/ | ✓ |
+| 2026-10-13 | Phase 6 | Error analysis (error_analysis.md): 2 issue-type errors, 1 team error, product +20.7% F1 | ✓ |
+| 2026-10-13 | Phase 6 | Responsible use statement (responsible_use.md): privacy, fairness, limitations, governance | ✓ |
