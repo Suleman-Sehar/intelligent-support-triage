@@ -1,1 +1,0 @@
-{"issue_type": "account access", "team": "account security", "confidence": 0.95, "reasoning": "The ticket is about a password reset and an account lockout due to failed attempts, indicating a potential security issue."}

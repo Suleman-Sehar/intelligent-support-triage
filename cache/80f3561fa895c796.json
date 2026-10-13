@@ -1,1 +1,0 @@
-{"issue_type": "account access", "team": "account security", "confidence": 0.85, "reasoning": "The ticket mentions 2FA issues and the need to rotate API keys, which falls under account access and security compliance."}

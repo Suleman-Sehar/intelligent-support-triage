@@ -1,1 +1,0 @@
-{"issue_type": "outage", "team": "tech support", "confidence": 0.95, "reasoning": "The ticket describes a service issue with the API returning 500 errors, indicating a service outage."}

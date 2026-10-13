@@ -1,1 +1,0 @@
-{"issue_type": "account access", "team": "account security", "confidence": 0.95, "reasoning": "The ticket mentions an account lockout due to failed login attempts, which falls under account access issues. The mention of possible brute force indicates a security concern, aligning it with the account security team."}

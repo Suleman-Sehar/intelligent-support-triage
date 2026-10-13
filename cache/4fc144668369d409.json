@@ -1,1 +1,0 @@
-{"issue_type": "account access", "team": "account security", "confidence": 0.95, "reasoning": "The ticket mentions issues with 2FA and not receiving a password reset email, which are related to account access and security."}
