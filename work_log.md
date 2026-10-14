@@ -30,3 +30,4 @@
 | 2026-10-13 | Phase 8 | RESUME_BULLETS.md, LINKEDIN_POST.md | ✓ |
 | 2026-10-13 | Gap Fix 1 | Overconfidence guardrails: vague ticket detection (short, few keywords, vague words without intent), baseline vs LLM disagreement flag; 10 edge cases all flagged for review (100%); updated guardrails.py, added data/edge_cases.csv | ✓ |
 | 2026-10-13 | Gap Fix 2 | Evidence committed: removed evidence/* from .gitignore, committed dated evaluation snapshot; verified fresh clone regenerates data/tickets.csv identically (seed 42, MD5 fbf4c66dbe9a181013876e98a46ebc91) | ✓ |
+| 2026-10-13 | Gap Fix 3 | Edge case tests: test_edge_cases.py with 12 tests (empty/None/long/Unicode, LLM retry, timeout fallback, vague ticket) - 16 total tests passing | ✓ |
