@@ -53,7 +53,7 @@ intelligent-support-triage/
 │   ├── llm_classifier.py    # LLM with schema validation, retry, cache
 │   ├── guardrails.py        # PII redaction, threshold, fallback
 │   └── evaluate.py          # Comparison table generator
-├── evidence/                # Evaluation outputs (gitignored)
+├── evidence/                # Evaluation outputs (committed: dated reports + latest)
 ├── tests/                   # Unit tests
 ├── docs/                    # Documentation
 ├── requirements.md          # Requirements & acceptance criteria

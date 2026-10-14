@@ -34,3 +34,4 @@
 | 2026-10-14 | Gap Fix 4 | Honest reporting: added dated entry on LLM improvement target not met (synthetic data limitation); added per-slice results (easy/hard/edge) to evaluate.py; noted test set size/noise in error_analysis.md and README | ✓ |
 | 2026-10-14 | Gap Fix 5 | Docs only: added cache TTL/LRU, multi-label, calibration docs to README and responsible_use.md | ✓ |
 | 2026-10-14 | Phase 9 Step 1 | Vague-ticket check: 5/5 vague tickets flagged for review; 10/10 edge cases flagged (100% review rate) | ✓ |
+| 2026-10-14 | Phase 9 Step 2 | Evidence: confirmed dated reports tracked, no symlinks, fixed README evidence/ comment | ✓ |
