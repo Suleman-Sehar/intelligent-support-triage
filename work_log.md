@@ -32,3 +32,4 @@
 | 2026-10-13 | Gap Fix 2 | Evidence committed: removed evidence/* from .gitignore, committed dated evaluation snapshot; verified fresh clone regenerates data/tickets.csv identically (seed 42, MD5 fbf4c66dbe9a181013876e98a46ebc91) | ✓ |
 | 2026-10-13 | Gap Fix 3 | Edge case tests: test_edge_cases.py with 12 tests (empty/None/long/Unicode, LLM retry, timeout fallback, vague ticket) - 16 total tests passing | ✓ |
 | 2026-10-14 | Gap Fix 4 | Honest reporting: added dated entry on LLM improvement target not met (synthetic data limitation); added per-slice results (easy/hard/edge) to evaluate.py; noted test set size/noise in error_analysis.md and README | ✓ |
+| 2026-10-14 | Gap Fix 5 | Docs only: added cache TTL/LRU, multi-label, calibration docs to README and responsible_use.md | ✓ |

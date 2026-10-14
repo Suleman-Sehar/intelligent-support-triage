@@ -129,6 +129,9 @@ Balanced by design in synthetic generator. Real data likely imbalanced (more how
 4. **Static threshold**: 0.75 not optimized per class
 5. **No uncertainty quantification**: Confidence not calibrated
 6. **Template bias**: Generator templates may create artificial patterns
+7. **Single-label only**: Cannot handle multi-issue tickets (must choose one label)
+8. **Cache unbounded**: No TTL or size limits (manual cleanup required)
+9. **No PII audit log**: Redaction is pattern-based, not logged for compliance review
 
 ## Recommendations for Production Deployment
 

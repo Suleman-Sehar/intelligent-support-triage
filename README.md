@@ -202,19 +202,37 @@ pytest>=7.0.0
 1. **Synthetic evaluation only** - No real ticket validation
 2. **English only** - No multilingual support
 3. **Account access regression** - "How to" pattern confuses LLM (-5.3% F1)
-4. **Confidence not calibrated** - Threshold 0.75 arbitrary
+4. **Confidence not calibrated** - Threshold 0.75 arbitrary (no temperature scaling, Platt, or isotonic calibration)
 5. **Single model** - No ensemble or A/B testing framework
-6. **Cache grows unbounded** - No TTL/cleanup
+6. **Cache grows unbounded** - No TTL/cleanup (see Gap Fix 5 below)
+7. **Single-label only** - Cannot handle tickets with multiple issues (e.g., billing + bug)
 
 ## Future Work
 
+### Cache Management (Gap Fix 5)
+- [ ] Add `ttl_hours` and `max_entries` params to `PredictionCache`
+- [ ] Implement LRU eviction when cache exceeds `max_entries`
+- [ ] Periodic cleanup of expired cache entries
+- [ ] Add cache hit rate metrics to evaluation output
+
+### Multi-Label Tickets (Gap Fix 5)
+- [ ] Detect multiple issues in single ticket (top-k predictions with threshold)
+- [ ] Add "multiple issues" flag and routing to senior support
+- [ ] Update GuardrailResult to support list of (issue_type, confidence) pairs
+
+### Confidence Calibration (Gap Fix 5)
+- [ ] Plot confidence vs accuracy on dev set (reliability diagram)
+- [ ] Add temperature scaling calibration step
+- [ ] Use calibrated confidence for threshold optimization
+- [ ] Report Expected Calibration Error (ECE) in evaluate.py
+
+### Other Improvements
 - [ ] Evaluate on 1000+ real tickets
 - [ ] Finetune smaller model for lower latency/cost
-- [ ] Add confidence calibration (temperature scaling)
-- [ ] Implement cache TTL and size limits
 - [ ] Add drift detection (confidence distribution monitoring)
 - [ ] Build simple UI for human review queue
 - [ ] Add multi-language support
+- [ ] Add unit tests for calibration, cache TTL, multi-label logic
 
 ## License
 
