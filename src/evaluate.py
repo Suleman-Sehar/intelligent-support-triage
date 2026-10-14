@@ -103,6 +103,8 @@ def format_comparison_table(baseline_metrics: Dict, llm_metrics: Dict, guardrail
     lines.append("# Model Comparison - Test Split")
     lines.append(f"Generated: {datetime.now().isoformat()}")
     lines.append("")
+    lines.append("> Note: Test split = 191 tickets (~30 per class). Small sample size; per-class metrics may have high variance.")
+    lines.append("")
     
     # Main metrics table
     lines.append("## Overall Metrics")
@@ -184,6 +186,76 @@ def format_comparison_table(baseline_metrics: Dict, llm_metrics: Dict, guardrail
     return "\n".join(lines)
 
 
+def compute_per_slice_metrics(preds: List[dict], truths: List[dict]) -> Dict:
+    """Compute metrics for easy/hard/edge-case slices."""
+    from collections import defaultdict
+    
+    def macro_f1(pred_labels, true_labels):
+        labels = set(true_labels)
+        tp = defaultdict(int); fp = defaultdict(int); fn = defaultdict(int)
+        for p, t in zip(pred_labels, true_labels):
+            if p == t: tp[p] += 1
+            else:
+                fp[p] += 1; fn[t] += 1
+        f1s = []
+        for label in labels:
+            prec = tp[label] / (tp[label] + fp[label]) if (tp[label] + fp[label]) > 0 else 0
+            rec = tp[label] / (tp[label] + fn[label]) if (tp[label] + fn[label]) > 0 else 0
+            f1 = 2 * prec * rec / (prec + rec) if (prec + rec) > 0 else 0
+            f1s.append(f1)
+        return sum(f1s) / len(f1s) if f1s else 0
+    
+    # Slice by confidence: easy (>=0.9), hard (<0.75), edge (0.75-0.9)
+    easy = []
+    hard = []
+    edge = []
+    
+    for p, t in zip(preds, truths):
+        conf = float(p.get("confidence", 0.9))
+        if conf >= 0.9:
+            easy.append((p, t))
+        elif conf < 0.75:
+            hard.append((p, t))
+        else:
+            edge.append((p, t))
+    
+    slices = {}
+    for name, items in [("easy (conf>=0.9)", easy), ("hard (conf<0.75)", hard), ("edge (0.75-0.9)", edge)]:
+        if items:
+            p_items = [i[0] for i in items]
+            t_items = [i[1] for i in items]
+            slices[name] = {
+                "issue_type_f1": macro_f1([p["pred_issue_type"] for p in p_items], [t["issue_type"] for t in t_items]),
+                "team_f1": macro_f1([p["pred_team"] for p in p_items], [t["team"] for t in t_items]),
+                "count": len(items)
+            }
+        else:
+            slices[name] = {"issue_type_f1": 0, "team_f1": 0, "count": 0}
+    
+    return slices
+
+
+def format_per_slice_table(baseline_preds: List[dict], llm_preds: List[dict], truths: List[dict]) -> str:
+    """Format per-slice comparison table."""
+    lines = []
+    lines.append("## Per-Slice Results (Confidence-based)")
+    lines.append("")
+    lines.append("| Slice | Count | Baseline Issue F1 | LLM Issue F1 | Baseline Team F1 | LLM Team F1 |")
+    lines.append("|-------|-------|-------------------|--------------|------------------|-------------|")
+    
+    baseline_slices = compute_per_slice_metrics(baseline_preds, truths)
+    llm_slices = compute_per_slice_metrics(llm_preds, truths)
+    
+    for slice_name in ["easy (conf>=0.9)", "edge (0.75-0.9)", "hard (conf<0.75)"]:
+        b = baseline_slices.get(slice_name, {"count": 0, "issue_type_f1": 0, "team_f1": 0})
+        l = llm_slices.get(slice_name, {"count": 0, "issue_type_f1": 0, "team_f1": 0})
+        count = b["count"] if b["count"] > 0 else l["count"]
+        lines.append(f"| {slice_name} | {count} | {b['issue_type_f1']:.3f} | {l['issue_type_f1']:.3f} | {b['team_f1']:.3f} | {l['team_f1']:.3f} |")
+    
+    lines.append("")
+    return "\n".join(lines)
+
+
 def save_evidence(evidence_dir: Path, basename: str, content: str, metrics: Dict):
     """Save evidence files."""
     evidence_dir.mkdir(parents=True, exist_ok=True)
@@ -244,6 +316,10 @@ def main():
     comparison = format_comparison_table(baseline_metrics, llm_metrics, guardrail_metrics)
     print("\n" + comparison)
     
+    # Per-slice results
+    slice_table = format_per_slice_table(baseline_preds, llm_preds, truths)
+    print(slice_table)
+    
     # Save evidence
     all_metrics = {
         "baseline": baseline_metrics,
@@ -251,16 +327,23 @@ def main():
         "guardrails_llm": guardrail_metrics,
         "guardrails_fallback": guardrail_fallback_metrics,
         "timestamp": datetime.now().isoformat(),
-        "split": args.split
+        "split": args.split,
+        "test_set_size": len(truths),
+        "per_slice": {
+            "baseline": compute_per_slice_metrics(baseline_preds, truths),
+            "llm": compute_per_slice_metrics(llm_preds, truths)
+        }
     }
     
-    save_evidence(Path(args.output_dir), args.name, comparison, all_metrics)
+    full_comparison = comparison + "\n" + slice_table
     
-    # Also save a latest symlink/copy
+    save_evidence(Path(args.output_dir), args.name, full_comparison, all_metrics)
+    
+    # Also save a latest copy
     latest_md = Path(args.output_dir) / f"{args.name}_latest.md"
     latest_json = Path(args.output_dir) / f"{args.name}_latest.json"
     with open(latest_md, "w", encoding="utf-8") as f:
-        f.write(comparison)
+        f.write(full_comparison)
     with open(latest_json, "w", encoding="utf-8") as f:
         json.dump(all_metrics, f, indent=2)
     

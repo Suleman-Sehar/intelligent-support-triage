@@ -187,15 +187,15 @@ pytest>=7.0.0
 
 | Criterion | Target | Actual | Status |
 |-----------|--------|--------|--------|
-| Baseline Issue F1 | ≥ 0.70 | 0.968 | ✅ |
-| Baseline Team F1 | ≥ 0.70 | 0.923 | ✅ |
-| LLM Issue F1 improvement | ≥ 0.10 | +0.015 | ❌* |
-| LLM Team F1 improvement | ≥ 0.10 | +0.060 | ❌* |
-| Human review rate | ≤ 15% | 0% | ✅ |
-| PII redaction | Working | 26.7% | ✅ |
-| Reproducible in ≤5 cmds | Yes | 5 commands | ✅ |
+| Baseline Issue F1 | >= 0.70 | 0.968 | PASS |
+| Baseline Team F1 | >= 0.70 | 0.923 | PASS |
+| LLM Issue F1 improvement | >= 0.10 | +0.015 | FAIL* |
+| LLM Team F1 improvement | >= 0.10 | +0.060 | FAIL* |
+| Human review rate | <= 15% | 0% | PASS |
+| PII redaction | Working | 26.7% | PASS |
+| Reproducible in <=5 cmds | Yes | 5 commands | PASS |
 
-*Baseline already very high on synthetic data; improvement target unrealistic for this dataset.
+*Baseline already near-ceiling on synthetic data; improvement target unrealistic for this dataset (see decision_log.md)
 
 ## Known Limitations
 

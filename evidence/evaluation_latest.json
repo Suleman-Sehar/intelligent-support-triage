@@ -267,6 +267,43 @@
     "pii_redacted_rate": 0.2670157068062827,
     "num_samples": 191
   },
-  "timestamp": "2026-10-13T19:16:23.009315",
-  "split": "test"
+  "timestamp": "2026-10-14T11:25:04.838608",
+  "split": "test",
+  "test_set_size": 191,
+  "per_slice": {
+    "baseline": {
+      "easy (conf>=0.9)": {
+        "issue_type_f1": 1.0,
+        "team_f1": 1.0,
+        "count": 112
+      },
+      "hard (conf<0.75)": {
+        "issue_type_f1": 0.8452380952380952,
+        "team_f1": 0.8455882352941175,
+        "count": 21
+      },
+      "edge (0.75-0.9)": {
+        "issue_type_f1": 0.9642857142857143,
+        "team_f1": 0.8392857142857143,
+        "count": 58
+      }
+    },
+    "llm": {
+      "easy (conf>=0.9)": {
+        "issue_type_f1": 0.9858517260894172,
+        "team_f1": 0.9841825307950729,
+        "count": 174
+      },
+      "hard (conf<0.75)": {
+        "issue_type_f1": 0,
+        "team_f1": 0,
+        "count": 0
+      },
+      "edge (0.75-0.9)": {
+        "issue_type_f1": 0.9368421052631579,
+        "team_f1": 0.9454191033138403,
+        "count": 17
+      }
+    }
+  }
 }

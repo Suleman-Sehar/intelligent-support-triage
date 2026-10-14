@@ -1,7 +1,15 @@
 # Error Analysis
 
 ## Overview
-Analysis of misclassifications on the test split (191 tickets) comparing Baseline (rules) vs LLM (gpt-4o-mini) with Guardrails.
+Analysis of misclassifications on the test split (191 tickets, ~30 per class) comparing Baseline (rules) vs LLM (gpt-4o-mini) with Guardrails.
+
+> **Sample size note**: 191 test tickets (~30 per class) is a small sample for evaluation. Per-class metrics may have high variance. Error analysis is based on only 3 misclassifications, which limits statistical significance. Future work: larger test set with bootstrapped confidence intervals.
+
+## Noise Sources in Synthetic Data
+- **Template reuse**: Same template can appear in both train and test (random split by index, not content)
+- **Keyword overlap**: "account access" templates include "How do I" phrasing that matches how-to keywords
+- **Class imbalance within templates**: Some templates have more body variety than others
+- **No real-world noise**: No typos, slang, abbreviations, or incomplete sentences (except edge cases)
 
 ## Confusion Matrix - Issue Type (LLM)
 

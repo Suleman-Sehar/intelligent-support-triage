@@ -1,5 +1,7 @@
 # Model Comparison - Test Split
-Generated: 2026-10-13T19:16:23.009315
+Generated: 2026-10-14T11:25:04.838608
+
+> Note: Test split = 191 tickets (~30 per class). Small sample size; per-class metrics may have high variance.
 
 ## Overall Metrics
 
@@ -47,3 +49,11 @@ Generated: 2026-10-13T19:16:23.009315
 | LLM Team F1 improvement >= 0.10 | FAIL | 0.0602 |
 | Human review rate <= 15% | PASS | 0.00% |
 | PII redaction working | PASS | 26.70% |
+
+## Per-Slice Results (Confidence-based)
+
+| Slice | Count | Baseline Issue F1 | LLM Issue F1 | Baseline Team F1 | LLM Team F1 |
+|-------|-------|-------------------|--------------|------------------|-------------|
+| easy (conf>=0.9) | 112 | 1.000 | 0.986 | 1.000 | 0.984 |
+| edge (0.75-0.9) | 58 | 0.964 | 0.937 | 0.839 | 0.945 |
+| hard (conf<0.75) | 21 | 0.845 | 0.000 | 0.846 | 0.000 |
