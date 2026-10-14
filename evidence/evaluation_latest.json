@@ -267,7 +267,7 @@
     "pii_redacted_rate": 0.2670157068062827,
     "num_samples": 191
   },
-  "timestamp": "2026-10-14T11:25:04.838608",
+  "timestamp": "2026-10-14T12:14:30.432085",
   "split": "test",
   "test_set_size": 191,
   "per_slice": {

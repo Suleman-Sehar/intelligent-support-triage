@@ -238,6 +238,16 @@ def compute_per_slice_metrics(preds: List[dict], truths: List[dict]) -> Dict:
 def format_per_slice_table(baseline_preds: List[dict], llm_preds: List[dict], truths: List[dict]) -> str:
     """Format per-slice comparison table."""
     lines = []
+    lines.append("## How to Read This Report")
+    lines.append("")
+    lines.append("- **Overall Metrics**: Aggregate across 191 test tickets (~30 per class)")
+    lines.append("- **Per-Class F1**: Identifies weak classes")
+    lines.append("- **Per-Slice Results**: Tickets grouped by confidence band")
+    lines.append("  - *easy (conf>=0.9)*: High-confidence; both models should excel")
+    lines.append("  - *edge (0.75-0.9)*: Medium-confidence; where LLM should outperform rules")
+    lines.append("  - *hard (conf<0.75)*: Low-confidence; flagged for human review")
+    lines.append("- Small sample size (191) limits statistical significance")
+    lines.append("")
     lines.append("## Per-Slice Results (Confidence-based)")
     lines.append("")
     lines.append("| Slice | Count | Baseline Issue F1 | LLM Issue F1 | Baseline Team F1 | LLM Team F1 |")

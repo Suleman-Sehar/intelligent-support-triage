@@ -1,0 +1,309 @@
+{
+  "baseline": {
+    "issue_type": {
+      "macro_f1": 0.9683250694913982,
+      "per_class": {
+        "account access": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "billing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "bug": {
+          "precision": 0.8888888888888888,
+          "recall": 1.0,
+          "f1": 0.9411764705882353
+        },
+        "feature request": {
+          "precision": 0.9459459459459459,
+          "recall": 1.0,
+          "f1": 0.9722222222222222
+        },
+        "how-to": {
+          "precision": 1.0,
+          "recall": 0.8125,
+          "f1": 0.896551724137931
+        },
+        "outage": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      }
+    },
+    "team": {
+      "macro_f1": 0.9227856659905341,
+      "per_class": {
+        "account security": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "billing": {
+          "precision": 0.9354838709677419,
+          "recall": 1.0,
+          "f1": 0.9666666666666666
+        },
+        "product": {
+          "precision": 1.0,
+          "recall": 0.6571428571428571,
+          "f1": 0.7931034482758621
+        },
+        "tech support": {
+          "precision": 0.8878504672897196,
+          "recall": 0.979381443298969,
+          "f1": 0.9313725490196078
+        }
+      }
+    },
+    "avg_confidence": 0.8662057591623025,
+    "human_review_rate": 0.1099476439790576,
+    "fallback_rate": 0,
+    "pii_redacted_rate": 0.2670157068062827,
+    "num_samples": 191
+  },
+  "llm": {
+    "issue_type": {
+      "macro_f1": 0.9837653836082745,
+      "per_class": {
+        "account access": {
+          "precision": 1.0,
+          "recall": 0.9,
+          "f1": 0.9473684210526316
+        },
+        "billing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "bug": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "feature request": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "how-to": {
+          "precision": 0.9142857142857143,
+          "recall": 1.0,
+          "f1": 0.955223880597015
+        },
+        "outage": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      }
+    },
+    "team": {
+      "macro_f1": 0.9830349986641732,
+      "per_class": {
+        "account security": {
+          "precision": 1.0,
+          "recall": 0.9,
+          "f1": 0.9473684210526316
+        },
+        "billing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "product": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "tech support": {
+          "precision": 0.97,
+          "recall": 1.0,
+          "f1": 0.9847715736040609
+        }
+      }
+    },
+    "avg_confidence": 0.9410994764397886,
+    "human_review_rate": 0,
+    "fallback_rate": 0,
+    "pii_redacted_rate": 0,
+    "num_samples": 191
+  },
+  "guardrails_llm": {
+    "issue_type": {
+      "macro_f1": 0.9837653836082745,
+      "per_class": {
+        "account access": {
+          "precision": 1.0,
+          "recall": 0.9,
+          "f1": 0.9473684210526316
+        },
+        "billing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "bug": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "feature request": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "how-to": {
+          "precision": 0.9142857142857143,
+          "recall": 1.0,
+          "f1": 0.955223880597015
+        },
+        "outage": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      }
+    },
+    "team": {
+      "macro_f1": 0.9830349986641732,
+      "per_class": {
+        "account security": {
+          "precision": 1.0,
+          "recall": 0.9,
+          "f1": 0.9473684210526316
+        },
+        "billing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "product": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "tech support": {
+          "precision": 0.97,
+          "recall": 1.0,
+          "f1": 0.9847715736040609
+        }
+      }
+    },
+    "avg_confidence": 0.9410994764397886,
+    "human_review_rate": 0.0,
+    "fallback_rate": 0.0,
+    "pii_redacted_rate": 0.2670157068062827,
+    "num_samples": 191
+  },
+  "guardrails_fallback": {
+    "issue_type": {
+      "macro_f1": 0.9683250694913982,
+      "per_class": {
+        "account access": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "billing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "bug": {
+          "precision": 0.8888888888888888,
+          "recall": 1.0,
+          "f1": 0.9411764705882353
+        },
+        "feature request": {
+          "precision": 0.9459459459459459,
+          "recall": 1.0,
+          "f1": 0.9722222222222222
+        },
+        "how-to": {
+          "precision": 1.0,
+          "recall": 0.8125,
+          "f1": 0.896551724137931
+        },
+        "outage": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      }
+    },
+    "team": {
+      "macro_f1": 0.9227856659905341,
+      "per_class": {
+        "account security": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "billing": {
+          "precision": 0.9354838709677419,
+          "recall": 1.0,
+          "f1": 0.9666666666666666
+        },
+        "product": {
+          "precision": 1.0,
+          "recall": 0.6571428571428571,
+          "f1": 0.7931034482758621
+        },
+        "tech support": {
+          "precision": 0.8878504672897196,
+          "recall": 0.979381443298969,
+          "f1": 0.9313725490196078
+        }
+      }
+    },
+    "avg_confidence": 0.8662057591623025,
+    "human_review_rate": 0.1099476439790576,
+    "fallback_rate": 0.0,
+    "pii_redacted_rate": 0.2670157068062827,
+    "num_samples": 191
+  },
+  "timestamp": "2026-10-14T12:14:30.432085",
+  "split": "test",
+  "test_set_size": 191,
+  "per_slice": {
+    "baseline": {
+      "easy (conf>=0.9)": {
+        "issue_type_f1": 1.0,
+        "team_f1": 1.0,
+        "count": 112
+      },
+      "hard (conf<0.75)": {
+        "issue_type_f1": 0.8452380952380952,
+        "team_f1": 0.8455882352941175,
+        "count": 21
+      },
+      "edge (0.75-0.9)": {
+        "issue_type_f1": 0.9642857142857143,
+        "team_f1": 0.8392857142857143,
+        "count": 58
+      }
+    },
+    "llm": {
+      "easy (conf>=0.9)": {
+        "issue_type_f1": 0.9858517260894172,
+        "team_f1": 0.9841825307950729,
+        "count": 174
+      },
+      "hard (conf<0.75)": {
+        "issue_type_f1": 0,
+        "team_f1": 0,
+        "count": 0
+      },
+      "edge (0.75-0.9)": {
+        "issue_type_f1": 0.9368421052631579,
+        "team_f1": 0.9454191033138403,
+        "count": 17
+      }
+    }
+  }
+}

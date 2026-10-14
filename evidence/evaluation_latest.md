@@ -1,5 +1,5 @@
 # Model Comparison - Test Split
-Generated: 2026-10-14T11:25:04.838608
+Generated: 2026-10-14T12:14:30.432085
 
 > Note: Test split = 191 tickets (~30 per class). Small sample size; per-class metrics may have high variance.
 
@@ -49,6 +49,16 @@ Generated: 2026-10-14T11:25:04.838608
 | LLM Team F1 improvement >= 0.10 | FAIL | 0.0602 |
 | Human review rate <= 15% | PASS | 0.00% |
 | PII redaction working | PASS | 26.70% |
+
+## How to Read This Report
+
+- **Overall Metrics**: Aggregate across 191 test tickets (~30 per class)
+- **Per-Class F1**: Identifies weak classes
+- **Per-Slice Results**: Tickets grouped by confidence band
+  - *easy (conf>=0.9)*: High-confidence; both models should excel
+  - *edge (0.75-0.9)*: Medium-confidence; where LLM should outperform rules
+  - *hard (conf<0.75)*: Low-confidence; flagged for human review
+- Small sample size (191) limits statistical significance
 
 ## Per-Slice Results (Confidence-based)
 
