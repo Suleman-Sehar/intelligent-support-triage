@@ -208,6 +208,47 @@ def test_disagreement_flag():
     assert result.disagreement_flag == True
 
 
+def test_llm_receives_no_pii():
+    """LLM classifier must receive PII-redacted text only (subject and body)."""
+    from llm_classifier import TicketClassification
+    
+    captured = {}
+    
+    class CapturingLLM:
+        def classify(self, subject, body):
+            captured["subject"] = subject
+            captured["body"] = body
+            return TicketClassification(
+                issue_type="billing",
+                team="billing",
+                confidence=0.9,
+                reasoning="test"
+            )
+    
+    pipe = GuardrailPipeline(
+        confidence_threshold=0.75,
+        llm_classifier=CapturingLLM(),
+        use_llm=True
+    )
+    
+    subject = "Invoice question"
+    body = ("My email is john.doe@example.com and phone is +1-555-123-4567. "
+            "API key sk-test-FAKEKEYABCDEFGHIJKLMNOPQRSTUVWXYZ was exposed. "
+            "Card 4111-1111-1111-1111. SSN 123-45-6789. IP 192.168.1.1.")
+    
+    pipe.classify_with_guardrails(subject, body)
+    
+    received = captured["subject"] + " " + captured["body"]
+    assert "john.doe@example.com" not in received, "email leaked to LLM"
+    assert "+1-555-123-4567" not in received, "phone leaked to LLM"
+    assert "sk-test-FAKEKEYABCDEFGHIJKLMNOPQRSTUVWXYZ" not in received, "api key leaked to LLM"
+    assert "4111-1111-1111-1111" not in received, "credit card leaked to LLM"
+    assert "123-45-6789" not in received, "ssn leaked to LLM"
+    assert "192.168.1.1" not in received, "ip leaked to LLM"
+    assert "[EMAIL]" in captured["body"]
+    assert "[PHONE]" in captured["body"]
+    assert "[API_KEY]" in captured["body"]
+
 def test_edge_cases_file_loaded():
     """Edge cases file should contain 10 entries."""
     import csv
@@ -244,6 +285,8 @@ if __name__ == "__main__":
     print("  PASS: test_llm_timeout_fallback")
     test_disagreement_flag()
     print("  PASS: test_disagreement_flag")
+    test_llm_receives_no_pii()
+    print("  PASS: test_llm_receives_no_pii")
     test_edge_cases_file_loaded()
     print("  PASS: test_edge_cases_file_loaded")
     print("\nAll edge case tests passed!")
