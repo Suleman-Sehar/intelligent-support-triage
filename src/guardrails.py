@@ -118,17 +118,18 @@ class GuardrailPipeline:
     
     def classify_with_guardrails(self, subject: str, body: str) -> GuardrailResult:
         """Classify ticket with all guardrails applied."""
-        combined = f"{subject} {body}"
-        
-        # Step 1: PII redaction
-        redacted_text, pii_redacted = redact_pii(combined)
+        # Step 1: PII redaction (redact before any classifier sees the text)
+        redacted_subject, s_redacted = redact_pii(subject)
+        redacted_body, b_redacted = redact_pii(body)
+        pii_redacted = s_redacted or b_redacted
+        redacted_combined = f"{redacted_subject} {redacted_body}"
         
         # Step 2: Vague/ambiguous ticket detection (rule-based guardrail)
-        keyword_match_count = count_keyword_matches(combined)
-        is_vague = is_vague_ticket(combined)
+        keyword_match_count = count_keyword_matches(redacted_combined)
+        is_vague = is_vague_ticket(redacted_combined)
         
         # Step 3: Get baseline prediction for comparison
-        baseline_issue_type = get_baseline_issue_type(subject, body)
+        baseline_issue_type = get_baseline_issue_type(redacted_subject, redacted_body)
         
         # Step 4: Try LLM classification first
         fallback_used = False
@@ -138,7 +139,7 @@ class GuardrailPipeline:
         
         if self.use_llm:
             try:
-                result = self.llm_classifier.classify(subject, body)
+                result = self.llm_classifier.classify(redacted_subject, redacted_body)
                 issue_type = result.issue_type
                 team = result.team
                 confidence = result.confidence
@@ -147,14 +148,14 @@ class GuardrailPipeline:
             except Exception as e:
                 print(f"  LLM failed, falling back to rules: {e}")
                 fallback_used = True
-                baseline_result = baseline_classify(subject, body)
+                baseline_result = baseline_classify(redacted_subject, redacted_body)
                 issue_type = baseline_result.issue_type
                 team = baseline_result.team
                 confidence = baseline_result.confidence
                 reasoning = "Fallback to rules classifier"
         else:
             # Use baseline directly
-            baseline_result = baseline_classify(subject, body)
+            baseline_result = baseline_classify(redacted_subject, redacted_body)
             issue_type = baseline_result.issue_type
             team = baseline_result.team
             confidence = baseline_result.confidence
@@ -170,7 +171,7 @@ class GuardrailPipeline:
         # Step 6: Vague/ambiguous ticket guardrail
         if is_vague:
             human_review = True
-            reasoning += f" | Vague/ambiguous ticket (words={len(combined.split())}, keyword_matches={keyword_match_count}) - flagged for human review"
+            reasoning += f" | Vague/ambiguous ticket (words={len(redacted_combined.split())}, keyword_matches={keyword_match_count}) - flagged for human review"
         
         # Step 7: Confidence threshold check
         if confidence < self.confidence_threshold:
@@ -185,8 +186,8 @@ class GuardrailPipeline:
             pii_redacted=pii_redacted,
             human_review=human_review,
             fallback_used=fallback_used,
-            original_text=combined,
-            redacted_text=redacted_text,
+            original_text=f"{subject} {body}",
+            redacted_text=redacted_combined,
             keyword_match_count=keyword_match_count,
             baseline_issue_type=baseline_issue_type,
             llm_issue_type=llm_issue_type,
