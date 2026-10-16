@@ -149,7 +149,7 @@ Same ticket, team follows issue type. When issue_type=how-to, team=tech_support 
 
 3. **High baseline performance**: Synthetic data is very separable by keywords. Real-world data would show larger LLM advantage.
 
-4. **Guardrails working**: 0% human review (all confidences > 0.75), 26.7% PII redacted, 0% fallback.
+4. **Guardrails working**: 6.8% human review (vague/ambiguous tickets flagged), 26.7% PII redacted, 0% fallback.
 
 ## Recommendations
 

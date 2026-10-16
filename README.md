@@ -83,7 +83,7 @@ intelligent-support-triage/
 | Issue Type Macro F1 | 0.968 | 0.984 | +1.5% |
 | Team Macro F1 | 0.923 | 0.983 | +6.0% |
 | Avg Confidence | 0.866 | 0.941 | +8.6% |
-| Human Review Rate | N/A | 0.0% | ✓ |
+| Human Review Rate | N/A | 6.8% | ✓ |
 | PII Redacted Rate | N/A | 26.7% | ✓ |
 
 **Per-class Team F1 gains:**
@@ -202,7 +202,7 @@ pytest>=7.0.0
 | Baseline Team F1 | >= 0.70 | 0.923 | PASS |
 | LLM Issue F1 improvement | >= 0.10 | +0.015 | FAIL* |
 | LLM Team F1 improvement | >= 0.10 | +0.060 | FAIL* |
-| Human review rate | <= 15% | 0% | PASS |
+| Human review rate | <= 15% | 6.8% | PASS |
 | PII redaction | Working | 26.7% | PASS |
 | Reproducible in <=5 cmds | Yes | 5 commands | PASS |
 
