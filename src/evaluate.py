@@ -12,6 +12,18 @@ from typing import Dict, List
 import argparse
 
 
+# Urgency derived from issue type
+URGENCY_MAP = {
+    "outage": "critical",
+    "bug": "high",
+    "account access": "high",
+    "billing": "medium",
+    "feature request": "low",
+    "how-to": "low",
+}
+URGENCY_ORDER = ["critical", "high", "medium", "low"]
+
+
 def load_predictions(filepath: str) -> List[dict]:
     """Load predictions from CSV."""
     preds = []
@@ -86,14 +98,56 @@ def compute_metrics(preds: List[dict], truths: List[dict], pred_issue_col: str, 
     if "pii_redacted" in preds[0]:
         pii_rate = sum(1 for p in preds if p.get("pii_redacted", "False").lower() == "true") / len(preds)
     
+    # Urgency metrics (derived from issue_type)
+    urgency_preds = [URGENCY_MAP.get(p.get(pred_issue_col, ""), "low") for p in preds]
+    urgency_truths = [URGENCY_MAP.get(t.get("issue_type", ""), "low") for t in truths]
+    urgency_metrics = macro_f1(urgency_preds, urgency_truths)
+    
+    # Guardrail value: auto-routed vs flagged accuracy
+    auto_routed_correct = 0
+    auto_routed_total = 0
+    flagged_correct = 0
+    flagged_total = 0
+    total_errors = 0
+    errors_caught = 0
+    
+    if "human_review" in preds[0]:
+        for p, t in zip(preds, truths):
+            is_correct = p.get(pred_issue_col) == t.get("issue_type") and p.get(pred_team_col) == t.get("team")
+            if not is_correct:
+                total_errors += 1
+            flagged = p.get("human_review", "False").lower() == "true"
+            if flagged:
+                flagged_total += 1
+                if not is_correct:
+                    errors_caught += 1
+                if is_correct:
+                    flagged_correct += 1
+            else:
+                auto_routed_total += 1
+                if is_correct:
+                    auto_routed_correct += 1
+    
+    auto_routed_accuracy = auto_routed_correct / auto_routed_total if auto_routed_total > 0 else 0
+    flagged_accuracy = flagged_correct / flagged_total if flagged_total > 0 else 0
+    errors_caught_rate = errors_caught / total_errors if total_errors > 0 else 0
+    
     return {
         "issue_type": issue_metrics,
         "team": team_metrics,
+        "urgency": urgency_metrics,
         "avg_confidence": avg_conf,
         "human_review_rate": human_review_rate,
         "fallback_rate": fallback_rate,
         "pii_redacted_rate": pii_rate,
-        "num_samples": len(preds)
+        "num_samples": len(preds),
+        "auto_routed_accuracy": auto_routed_accuracy,
+        "auto_routed_total": auto_routed_total,
+        "flagged_accuracy": flagged_accuracy,
+        "flagged_total": flagged_total,
+        "total_errors": total_errors,
+        "errors_caught": errors_caught,
+        "errors_caught_rate": errors_caught_rate,
     }
 
 
@@ -103,7 +157,7 @@ def format_comparison_table(baseline_metrics: Dict, llm_metrics: Dict, guardrail
     lines.append("# Model Comparison - Test Split")
     lines.append(f"Generated: {datetime.now().isoformat()}")
     lines.append("")
-    lines.append("> Note: Test split = 191 tickets (~30 per class). Small sample size; per-class metrics may have high variance.")
+    lines.append("> Note: Test split = 191 tickets. Small sample size; per-class metrics may have high variance.")
     lines.append("")
     
     # Main metrics table
@@ -125,6 +179,7 @@ def format_comparison_table(baseline_metrics: Dict, llm_metrics: Dict, guardrail
     lines.append(f"| Human Review Rate | N/A | N/A | {guardrail_metrics['human_review_rate']:.2%} | {baseline_metrics.get('human_review_rate', 0):.2%} |")
     lines.append(f"| Fallback Rate | N/A | N/A | {guardrail_metrics['fallback_rate']:.2%} | N/A |")
     lines.append(f"| PII Redacted Rate | N/A | N/A | {guardrail_metrics['pii_redacted_rate']:.2%} | {baseline_metrics.get('pii_redacted_rate', 0):.2%} |")
+    lines.append(f"| Urgency Macro F1 | N/A | {llm_metrics.get('urgency', {}).get('macro_f1', 0):.4f} | {guardrail_metrics.get('urgency', {}).get('macro_f1', 0):.4f} | {baseline_metrics.get('urgency', {}).get('macro_f1', 0):.4f} |")
     lines.append("")
     
     # Improvement
@@ -163,6 +218,43 @@ def format_comparison_table(baseline_metrics: Dict, llm_metrics: Dict, guardrail
         l = llm_metrics["team"]["per_class"].get(cls, {}).get("f1", 0)
         g = guardrail_metrics["team"]["per_class"].get(cls, {}).get("f1", 0)
         lines.append(f"| {cls} | {b:.3f} | {l:.3f} | {g:.3f} |")
+    lines.append("")
+    
+    # Urgency metrics (derived from issue type)
+    lines.append("## Urgency Metrics")
+    lines.append("")
+    lines.append("Urgency is derived from issue type: outage=critical, bug/account access=high, billing=medium, feature request/how-to=low.")
+    lines.append("")
+    lines.append("| Urgency | Baseline P | Baseline R | LLM P | LLM R | Guardrails P | Guardrails R |")
+    lines.append("|-------|------------|------------|-------|-------|--------------|--------------|")
+    
+    b_urg = baseline_metrics.get("urgency", {}).get("per_class", {})
+    l_urg = llm_metrics.get("urgency", {}).get("per_class", {})
+    g_urg = guardrail_metrics.get("urgency", {}).get("per_class", {})
+    
+    for urg in URGENCY_ORDER:
+        b = b_urg.get(urg, {"precision": 0, "recall": 0, "f1": 0})
+        l = l_urg.get(urg, {"precision": 0, "recall": 0, "f1": 0})
+        g = g_urg.get(urg, {"precision": 0, "recall": 0, "f1": 0})
+        lines.append(f"| {urg} | {b['precision']:.3f} | {b['recall']:.3f} | {l['precision']:.3f} | {l['recall']:.3f} | {g['precision']:.3f} | {g['recall']:.3f} |")
+    
+    lines.append(f"| **Macro F1** | | | **{llm_metrics.get('urgency', {}).get('macro_f1', 0):.4f}** | | | |")
+    lines.append("")
+    
+    # Guardrail value section
+    lines.append("## Guardrail Value")
+    lines.append("")
+    g_ar = guardrail_metrics.get("auto_routed_accuracy", 0)
+    g_ar_n = guardrail_metrics.get("auto_routed_total", 0)
+    g_fa = guardrail_metrics.get("flagged_accuracy", 0)
+    g_fn = guardrail_metrics.get("flagged_total", 0)
+    g_ec = guardrail_metrics.get("errors_caught_rate", 0)
+    g_ec_n = guardrail_metrics.get("errors_caught", 0)
+    g_te = guardrail_metrics.get("total_errors", 0)
+    
+    lines.append(f"- Auto-routed accuracy ({g_ar_n} tickets, human_review=False): {g_ar:.2%}")
+    lines.append(f"- Flagged accuracy ({g_fn} tickets, human_review=True): {g_fa:.2%}")
+    lines.append(f"- Share of all errors caught by guardrails: {g_ec:.2%} ({g_ec_n} of {g_te} errors)")
     lines.append("")
     
     # Acceptance criteria check
@@ -240,7 +332,7 @@ def format_per_slice_table(baseline_preds: List[dict], llm_preds: List[dict], tr
     lines = []
     lines.append("## How to Read This Report")
     lines.append("")
-    lines.append("- **Overall Metrics**: Aggregate across 191 test tickets (~30 per class)")
+    lines.append("- **Overall Metrics**: Aggregate across 191 test tickets.")
     lines.append("- **Per-Class F1**: Identifies weak classes")
     lines.append("- **Per-Slice Results**: Tickets grouped by confidence band")
     lines.append("  - *easy (conf>=0.9)*: High-confidence; both models should excel")
