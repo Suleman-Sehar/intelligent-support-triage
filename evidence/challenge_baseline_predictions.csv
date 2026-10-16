@@ -1,0 +1,40 @@
+id,pred_issue_type,pred_team,confidence,true_issue_type,true_team
+CH-0001,bug,tech support,0.1000,billing,billing
+CH-0002,billing,billing,0.9500,billing,billing
+CH-0003,billing,billing,0.7286,billing,billing
+CH-0004,billing,billing,0.9500,billing,billing
+CH-0005,billing,billing,0.8808,billing,billing
+CH-0006,bug,tech support,0.7495,bug,tech support
+CH-0007,bug,tech support,0.9500,bug,tech support
+CH-0008,bug,tech support,0.3082,bug,tech support
+CH-0009,outage,tech support,0.9500,bug,tech support
+CH-0010,feature request,tech support,0.8808,bug,tech support
+CH-0011,account access,account security,0.9500,account access,account security
+CH-0012,account access,account security,0.9500,account access,account security
+CH-0014,account access,account security,0.7286,account access,account security
+CH-0015,account access,account security,0.8808,account access,account security
+CH-0016,feature request,product,0.9061,feature request,product
+CH-0017,feature request,tech support,0.7858,feature request,product
+CH-0018,feature request,product,0.8808,feature request,product
+CH-0019,bug,tech support,0.1000,feature request,product
+CH-0020,feature request,product,0.9500,feature request,product
+CH-0021,how-to,tech support,0.8808,how-to,tech support
+CH-0022,how-to,tech support,0.9500,how-to,tech support
+CH-0023,how-to,tech support,0.3082,how-to,tech support
+CH-0024,how-to,tech support,0.9500,how-to,tech support
+CH-0025,how-to,tech support,0.9500,how-to,tech support
+CH-0026,outage,tech support,0.9500,outage,tech support
+CH-0027,outage,tech support,0.9500,outage,tech support
+CH-0028,bug,tech support,0.3082,outage,tech support
+CH-0029,outage,account security,0.9247,outage,tech support
+CH-0030,outage,tech support,0.8573,outage,tech support
+CH-0031,billing,billing,0.8167,billing,tech support
+CH-0032,billing,billing,0.9500,billing,billing
+CH-0033,account access,account security,0.9247,account access,account security
+CH-0034,billing,billing,0.9500,billing,billing
+CH-0035,bug,tech support,0.9500,bug,tech support
+CH-0036,bug,tech support,0.1000,how-to,tech support
+CH-0037,bug,tech support,0.9500,how-to,tech support
+CH-0038,bug,tech support,0.1000,how-to,tech support
+CH-0039,bug,tech support,0.6772,feature request,product
+CH-0040,bug,tech support,0.1000,how-to,tech support

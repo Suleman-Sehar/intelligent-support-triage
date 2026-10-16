@@ -163,7 +163,7 @@ def evaluate(predictions: List[ClassificationResult], ground_truth: List[dict]) 
 def main():
     parser = argparse.ArgumentParser(description="Rules-based baseline classifier")
     parser.add_argument("--input", default="data/tickets.csv", help="Input CSV")
-    parser.add_argument("--split", default="dev", choices=["dev", "test"], help="Split to evaluate")
+    parser.add_argument("--split", default="dev", choices=["dev", "test", "challenge"], help="Split to evaluate")
     parser.add_argument("--output", default="evidence/baseline_predictions.csv", help="Output predictions")
     args = parser.parse_args()
     

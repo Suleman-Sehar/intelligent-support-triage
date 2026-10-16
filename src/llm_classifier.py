@@ -238,7 +238,7 @@ def evaluate(predictions: List[ClassificationResult], ground_truth: List[dict]) 
 def main():
     parser = argparse.ArgumentParser(description="LLM-based ticket classifier")
     parser.add_argument("--input", default="data/tickets.csv", help="Input CSV")
-    parser.add_argument("--split", default="dev", choices=["dev", "test"], help="Split to evaluate")
+    parser.add_argument("--split", default="dev", choices=["dev", "test", "challenge"], help="Split to evaluate")
     parser.add_argument("--output", default="evidence/llm_predictions_dev.csv", help="Output predictions")
     parser.add_argument("--model", default="gpt-4o-mini", help="OpenAI model")
     parser.add_argument("--base-url", default=None, help="API base URL (e.g., https://openrouter.ai/api/v1 for OpenRouter)")

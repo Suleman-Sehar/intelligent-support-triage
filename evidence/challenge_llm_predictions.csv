@@ -1,0 +1,40 @@
+id,pred_issue_type,pred_team,confidence,reasoning,true_issue_type,true_team
+CH-0001,billing,billing,0.9500,"The ticket mentions being charged twice, which is a billing issue related to payments.",billing,billing
+CH-0002,billing,billing,0.9500,"The ticket clearly indicates a discrepancy in the invoice amount, which falls under billing issues.",billing,billing
+CH-0003,billing,billing,0.9500,"The ticket clearly states a request for a refund, which falls under billing issues related to payments.",billing,billing
+CH-0004,billing,billing,0.9500,"The ticket is about a payment issue where the user's card was declined, which falls under billing concerns.",billing,billing
+CH-0005,billing,billing,0.9500,"The ticket is asking about upgrading a subscription plan and inquiring about the cost, which falls under billing issues.",billing,billing
+CH-0006,bug,tech support,0.9500,"The ticket describes an application crash when attempting to use a specific feature (Export Report), which indicates a technical bug.",bug,tech support
+CH-0007,bug,tech support,0.9500,"The ticket describes a broken feature (Save as Draft button) that does not function as expected, indicating a technical issue.",bug,tech support
+CH-0008,bug,tech support,0.9500,"The ticket describes a loss of custom filters after an update, indicating a potential bug in the application.",bug,tech support
+CH-0009,outage,tech support,0.9500,"The ticket describes a performance issue with the dashboard loading slowly, which indicates a potential service outage or degradation in performance.",bug,tech support
+CH-0010,bug,tech support,0.9500,"The ticket describes a visual issue (text overlapping) on a specific page (Settings) in dark mode, which indicates a bug in the application.",bug,tech support
+CH-0011,account access,account security,0.9500,"The ticket is about not receiving a password reset email, which falls under account access issues related to authentication.",account access,account security
+CH-0012,account access,account security,0.9500,"The user is requesting to reset 2FA due to losing access to their authenticator app, which falls under account access issues.",account access,account security
+CH-0014,how-to,tech support,0.8500,"The ticket describes a setup issue related to SAML SSO, which falls under configuration help, indicating a how-to question.",account access,account security
+CH-0015,how-to,tech support,0.9500,"The ticket is asking for guidance on how to rotate API keys, which falls under setup and configuration help, indicating a how-to issue.",account access,account security
+CH-0016,feature request,product,0.9500,The ticket is requesting a new feature (dark mode toggle) which falls under feature requests and is directed to the product team.,feature request,product
+CH-0017,feature request,product,0.9500,"The user is requesting new export options (CSV and PDF) for reports, which falls under feature requests for product enhancements.",feature request,product
+CH-0018,feature request,product,0.9500,"The ticket suggests a new feature (webhook notifications for ticket status changes), which falls under feature requests.",feature request,product
+CH-0019,feature request,product,0.9500,The ticket is requesting a new feature (custom fields on tickets) which aligns with product development and enhancements.,feature request,product
+CH-0020,feature request,product,0.9500,"The request is for a new feature to bulk close multiple tickets, which falls under feature requests for product enhancements.",feature request,product
+CH-0021,how-to,tech support,0.9500,"The ticket is asking for help with setting up a Slack integration, which falls under setup guides and configuration help.",how-to,tech support
+CH-0022,how-to,tech support,0.9500,"The ticket is requesting a step-by-step guide for setting up an approval workflow, which falls under how-to questions related to configuration help.",how-to,tech support
+CH-0023,how-to,tech support,0.9500,"The ticket is asking for clarification on the differences between user roles, which falls under setup guides and configuration help.",how-to,tech support
+CH-0024,how-to,tech support,0.9500,"The ticket is asking for guidance on how to build a custom report, which falls under setup and configuration help.",how-to,tech support
+CH-0025,how-to,tech support,0.9500,"The ticket is asking for guidance on best practices for importing historical data, which falls under setup and configuration help.",how-to,tech support
+CH-0026,outage,tech support,0.9500,"The ticket describes a service downtime issue with the platform returning a 503 error, indicating an outage that needs technical support.",outage,tech support
+CH-0027,outage,tech support,0.9500,"The ticket describes a service issue (500 errors) related to an API endpoint, indicating a potential outage.",outage,tech support
+CH-0028,outage,tech support,0.9500,"The ticket describes a situation where all requests are timing out and the dashboard indicates a connection issue, which aligns with service downtime or performance problems.",outage,tech support
+CH-0029,outage,tech support,0.9500,"The ticket describes a login issue specifically affecting users in the EU region, indicating a potential service outage or performance issue related to that region.",outage,tech support
+CH-0030,outage,tech support,0.8500,"The ticket is inquiring about scheduled maintenance, which relates to service availability and potential downtime, thus classified under outage.",outage,tech support
+CH-0031,billing,billing,0.8500,"The ticket mentions a charge discrepancy (being charged twice), which falls under billing issues. The mention of the app crashing when viewing the invoice indicates a bug, but the primary concern is the billing issue.",billing,tech support
+CH-0032,billing,billing,0.9500,"The ticket mentions a wrong invoice and being charged twice, which are clear billing issues.",billing,billing
+CH-0033,account access,account security,0.9500,"The ticket is about a password reset issue, which falls under account access. The user is seeking guidance on how to resolve this, indicating a need for account security support.",account access,account security
+CH-0034,billing,billing,0.9500,"The user is reporting a billing issue regarding a double invoice, which falls under the billing category.",billing,billing
+CH-0035,bug,tech support,0.9500,"The ticket describes an application crash, which is a technical issue indicating a bug that needs to be addressed by the tech support team.",bug,tech support
+CH-0036,account access,account security,0.7000,"The ticket mentions a question related to the account, which suggests it may involve account access issues. However, the ambiguity in the request lowers the confidence.",how-to,tech support
+CH-0037,account access,account security,0.7000,"The ticket mentions an issue with the account, which suggests it may relate to access or security, but lacks specific details.",how-to,tech support
+CH-0038,how-to,tech support,0.5000,"The ticket does not provide specific information about an issue, but the greeting suggests a potential inquiry about assistance or guidance.",how-to,tech support
+CH-0039,bug,tech support,0.8500,"The ticket mentions a broken export button, which indicates a technical issue (bug). It also requests a new feature (dark mode), but the primary concern is the broken functionality.",feature request,product
+CH-0040,how-to,tech support,0.7000,"The ticket requests help but lacks specific details, suggesting it may relate to setup or configuration assistance.",how-to,tech support

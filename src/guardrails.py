@@ -248,7 +248,7 @@ def evaluate(predictions: List[GuardrailResult], ground_truth: List[dict]) -> di
 def main():
     parser = argparse.ArgumentParser(description="Guardrail pipeline for ticket triage")
     parser.add_argument("--input", default="data/tickets.csv", help="Input CSV")
-    parser.add_argument("--split", default="test", choices=["dev", "test"], help="Split to evaluate")
+    parser.add_argument("--split", default="test", choices=["dev", "test", "challenge"], help="Split to evaluate")
     parser.add_argument("--output", default="evidence/guardrail_predictions_test.csv", help="Output predictions")
     parser.add_argument("--threshold", type=float, default=0.75, help="Confidence threshold for human review")
     parser.add_argument("--no-llm", action="store_true", help="Disable LLM, use rules only")
