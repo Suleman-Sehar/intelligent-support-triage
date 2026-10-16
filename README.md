@@ -38,6 +38,17 @@ $env:OPENAI_API_KEY="your-key"; python src/guardrails.py --input data/tickets.cs
 python src/evaluate.py --input data/tickets.csv --split test --baseline evidence/baseline_predictions_test.csv --llm evidence/llm_predictions_test.csv --guardrail evidence/guardrail_predictions_test.csv --guardrail-fallback evidence/guardrail_fallback_test.csv --output-dir evidence --name evaluation
 ```
 
+### Running Without an API Key
+If no API key is available, skip steps 3-4 and use rules-only mode:
+```bash
+# Step 4 (rules-only fallback, no LLM)
+python src/guardrails.py --input data/tickets.csv --split test --output evidence/guardrail_predictions_test.csv --no-llm
+
+# Step 5 (evaluate rules-only results as both LLM and fallback)
+python src/evaluate.py --input data/tickets.csv --split test --baseline evidence/baseline_predictions_test.csv --llm evidence/guardrail_predictions_test.csv --guardrail evidence/guardrail_predictions_test.csv --guardrail-fallback evidence/guardrail_predictions_test.csv --output-dir evidence --name evaluation
+```
+**Without API key**: `llm_classifier.py` exits with error. `guardrails.py` with `--no-llm` falls back to rules. No cached results are used (cache is empty on fresh clone).
+
 ### Run Tests
 ```bash
 pytest tests/ -v
@@ -82,11 +93,11 @@ intelligent-support-triage/
 - Account Security: 1.000 → 0.947 (-5.3%)
 
 ## Configuration
-
 ### Environment Variables (.env)
+
 ```bash
-OPENAI_API_KEY=sk-or-v1-xxxxxxxxxxxx  # OpenRouter or OpenAI key
-OPENAI_BASE_URL=https://openrouter.ai/api/v1  # Optional: for OpenRouter
+OPENAI_API_KEY=sk-or-v1-xxxxxxxxxxxx  # OpenAI-compatible key (OpenRouter, OpenAI, etc.)
+# Base URL is set via --base-url CLI flag (default: https://openrouter.ai/api/v1)
 ```
 
 ### Guardrails Settings
