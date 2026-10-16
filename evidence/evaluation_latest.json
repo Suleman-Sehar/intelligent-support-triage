@@ -194,8 +194,8 @@
         }
       }
     },
-    "avg_confidence": 0.9410994764397886,
-    "human_review_rate": 0.0,
+    "avg_confidence": 0.9421465968586368,
+    "human_review_rate": 0.06806282722513089,
     "fallback_rate": 0.0,
     "pii_redacted_rate": 0.2670157068062827,
     "num_samples": 191
@@ -267,7 +267,7 @@
     "pii_redacted_rate": 0.2670157068062827,
     "num_samples": 191
   },
-  "timestamp": "2026-10-14T12:14:30.432085",
+  "timestamp": "2026-10-16T12:59:04.272872",
   "split": "test",
   "test_set_size": 191,
   "per_slice": {
@@ -284,14 +284,14 @@
       },
       "edge (0.75-0.9)": {
         "issue_type_f1": 0.9642857142857143,
-        "team_f1": 0.8392857142857143,
+        "team_f1": 0.8392857142857144,
         "count": 58
       }
     },
     "llm": {
       "easy (conf>=0.9)": {
         "issue_type_f1": 0.9858517260894172,
-        "team_f1": 0.9841825307950729,
+        "team_f1": 0.9841825307950728,
         "count": 174
       },
       "hard (conf<0.75)": {

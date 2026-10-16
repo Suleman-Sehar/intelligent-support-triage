@@ -32,7 +32,7 @@ TKT-00141,feature request,product,0.8808,Rules classifier (LLM disabled),True,Fa
 TKT-00146,feature request,product,0.8808,Rules classifier (LLM disabled),True,False,False,feature request,product
 TKT-00167,account access,account security,0.9500,Rules classifier (LLM disabled),True,False,False,account access,account security
 TKT-00178,outage,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,outage,tech support
-TKT-00183,bug,tech support,0.3082,Rules classifier (LLM disabled) | Low confidence (0.31 < 0.75) - flagged for human review,False,True,False,how-to,tech support
+TKT-00183,bug,tech support,0.3082,"Rules classifier (LLM disabled) | Vague/ambiguous ticket (words=11, keyword_matches=1) - flagged for human review | Low confidence (0.31 < 0.75) - flagged for human review",False,True,False,how-to,tech support
 TKT-00212,how-to,tech support,0.9247,Rules classifier (LLM disabled),False,False,False,how-to,tech support
 TKT-00214,how-to,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,how-to,tech support
 TKT-00241,feature request,product,0.8808,Rules classifier (LLM disabled),False,False,False,feature request,product
@@ -47,7 +47,7 @@ TKT-00289,billing,billing,0.9500,Rules classifier (LLM disabled),True,False,Fals
 TKT-00290,outage,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,outage,tech support
 TKT-00303,feature request,product,0.9500,Rules classifier (LLM disabled),True,False,False,feature request,product
 TKT-00304,bug,tech support,0.7858,Rules classifier (LLM disabled),False,False,False,bug,tech support
-TKT-00307,how-to,tech support,0.3082,Rules classifier (LLM disabled) | Low confidence (0.31 < 0.75) - flagged for human review,False,True,False,how-to,tech support
+TKT-00307,how-to,tech support,0.3082,"Rules classifier (LLM disabled) | Vague/ambiguous ticket (words=14, keyword_matches=1) - flagged for human review | Low confidence (0.31 < 0.75) - flagged for human review",False,True,False,how-to,tech support
 TKT-00310,account access,account security,0.8808,Rules classifier (LLM disabled),False,False,False,account access,account security
 TKT-00321,billing,billing,0.9500,Rules classifier (LLM disabled),True,False,False,billing,billing
 TKT-00344,how-to,tech support,0.8808,Rules classifier (LLM disabled),False,False,False,how-to,tech support
@@ -79,7 +79,7 @@ TKT-00462,billing,billing,0.9500,Rules classifier (LLM disabled),False,False,Fal
 TKT-00464,how-to,tech support,0.9500,Rules classifier (LLM disabled),True,False,False,how-to,tech support
 TKT-00470,account access,account security,0.9500,Rules classifier (LLM disabled),False,False,False,account access,account security
 TKT-00471,outage,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,outage,tech support
-TKT-00472,how-to,tech support,0.3082,Rules classifier (LLM disabled) | Low confidence (0.31 < 0.75) - flagged for human review,False,True,False,how-to,tech support
+TKT-00472,how-to,tech support,0.3082,"Rules classifier (LLM disabled) | Vague/ambiguous ticket (words=11, keyword_matches=1) - flagged for human review | Low confidence (0.31 < 0.75) - flagged for human review",False,True,False,how-to,tech support
 TKT-00474,bug,tech support,0.8573,Rules classifier (LLM disabled),False,False,False,bug,tech support
 TKT-00476,account access,account security,0.9500,Rules classifier (LLM disabled),False,False,False,account access,account security
 TKT-00484,bug,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,bug,tech support
@@ -95,7 +95,7 @@ TKT-00514,bug,tech support,0.9500,Rules classifier (LLM disabled),False,False,Fa
 TKT-00518,outage,tech support,0.3082,Rules classifier (LLM disabled) | Low confidence (0.31 < 0.75) - flagged for human review,False,True,False,outage,tech support
 TKT-00523,how-to,tech support,0.8808,Rules classifier (LLM disabled),False,False,False,how-to,tech support
 TKT-00533,feature request,product,0.9500,Rules classifier (LLM disabled),False,False,False,feature request,product
-TKT-00536,how-to,tech support,0.3082,Rules classifier (LLM disabled) | Low confidence (0.31 < 0.75) - flagged for human review,True,True,False,how-to,tech support
+TKT-00536,how-to,tech support,0.3082,"Rules classifier (LLM disabled) | Vague/ambiguous ticket (words=13, keyword_matches=1) - flagged for human review | Low confidence (0.31 < 0.75) - flagged for human review",True,True,False,how-to,tech support
 TKT-00542,outage,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,outage,tech support
 TKT-00543,account access,account security,0.9500,Rules classifier (LLM disabled),False,False,False,account access,account security
 TKT-00552,how-to,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,how-to,tech support
@@ -110,7 +110,7 @@ TKT-00592,feature request,product,0.8808,Rules classifier (LLM disabled),False,F
 TKT-00598,account access,account security,0.9500,Rules classifier (LLM disabled),False,False,False,account access,account security
 TKT-00603,outage,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,outage,tech support
 TKT-00604,feature request,product,0.9500,Rules classifier (LLM disabled),True,False,False,feature request,product
-TKT-00610,how-to,tech support,0.3082,Rules classifier (LLM disabled) | Low confidence (0.31 < 0.75) - flagged for human review,False,True,False,how-to,tech support
+TKT-00610,how-to,tech support,0.3082,"Rules classifier (LLM disabled) | Vague/ambiguous ticket (words=11, keyword_matches=1) - flagged for human review | Low confidence (0.31 < 0.75) - flagged for human review",False,True,False,how-to,tech support
 TKT-00612,account access,account security,0.9500,Rules classifier (LLM disabled),False,False,False,account access,account security
 TKT-00617,bug,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,bug,tech support
 TKT-00621,account access,account security,0.8808,Rules classifier (LLM disabled),False,False,False,account access,account security
@@ -119,7 +119,7 @@ TKT-00628,outage,tech support,0.9500,Rules classifier (LLM disabled),False,False
 TKT-00629,outage,tech support,0.3082,Rules classifier (LLM disabled) | Low confidence (0.31 < 0.75) - flagged for human review,True,True,False,outage,tech support
 TKT-00631,how-to,tech support,0.8808,Rules classifier (LLM disabled),True,False,False,how-to,tech support
 TKT-00639,feature request,tech support,0.7858,Rules classifier (LLM disabled),True,False,False,feature request,product
-TKT-00645,bug,tech support,0.3082,Rules classifier (LLM disabled) | Low confidence (0.31 < 0.75) - flagged for human review,False,True,False,how-to,tech support
+TKT-00645,bug,tech support,0.3082,"Rules classifier (LLM disabled) | Vague/ambiguous ticket (words=11, keyword_matches=1) - flagged for human review | Low confidence (0.31 < 0.75) - flagged for human review",False,True,False,how-to,tech support
 TKT-00655,feature request,product,0.9500,Rules classifier (LLM disabled),True,False,False,feature request,product
 TKT-00656,billing,billing,0.8167,Rules classifier (LLM disabled),True,False,False,billing,billing
 TKT-00657,billing,billing,0.9500,Rules classifier (LLM disabled),False,False,False,billing,billing
@@ -163,14 +163,14 @@ TKT-00880,feature request,tech support,0.7858,Rules classifier (LLM disabled),Fa
 TKT-00883,outage,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,outage,tech support
 TKT-00891,bug,tech support,0.7649,Rules classifier (LLM disabled),False,False,False,bug,tech support
 TKT-00892,outage,tech support,0.9500,Rules classifier (LLM disabled),True,False,False,outage,tech support
-TKT-00895,bug,tech support,0.1000,Rules classifier (LLM disabled) | Low confidence (0.10 < 0.75) - flagged for human review,False,True,False,how-to,tech support
+TKT-00895,bug,tech support,0.1000,"Rules classifier (LLM disabled) | Vague/ambiguous ticket (words=11, keyword_matches=0) - flagged for human review | Low confidence (0.10 < 0.75) - flagged for human review",False,True,False,how-to,tech support
 TKT-00896,billing,billing,0.9500,Rules classifier (LLM disabled),False,False,False,billing,billing
 TKT-00904,account access,account security,0.8808,Rules classifier (LLM disabled),False,False,False,account access,account security
 TKT-00909,feature request,product,0.8808,Rules classifier (LLM disabled),False,False,False,feature request,product
 TKT-00912,bug,tech support,0.9500,Rules classifier (LLM disabled),False,False,False,bug,tech support
 TKT-00915,account access,account security,0.8808,Rules classifier (LLM disabled),False,False,False,account access,account security
 TKT-00920,feature request,product,0.9500,Rules classifier (LLM disabled),True,False,False,feature request,product
-TKT-00922,bug,tech support,0.3082,Rules classifier (LLM disabled) | Low confidence (0.31 < 0.75) - flagged for human review,False,True,False,how-to,tech support
+TKT-00922,bug,tech support,0.3082,"Rules classifier (LLM disabled) | Vague/ambiguous ticket (words=11, keyword_matches=1) - flagged for human review | Low confidence (0.31 < 0.75) - flagged for human review",False,True,False,how-to,tech support
 TKT-00927,account access,account security,0.9500,Rules classifier (LLM disabled),False,False,False,account access,account security
 TKT-00931,billing,billing,0.9500,Rules classifier (LLM disabled),False,False,False,billing,billing
 TKT-00933,feature request,tech support,0.7858,Rules classifier (LLM disabled),False,False,False,feature request,product

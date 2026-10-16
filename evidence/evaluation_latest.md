@@ -1,5 +1,5 @@
 # Model Comparison - Test Split
-Generated: 2026-10-14T12:14:30.432085
+Generated: 2026-10-16T12:59:04.272872
 
 > Note: Test split = 191 tickets (~30 per class). Small sample size; per-class metrics may have high variance.
 
@@ -9,8 +9,8 @@ Generated: 2026-10-14T12:14:30.432085
 |--------|------------------|-------------------|------------------|----------------------|
 | Issue Type Macro F1 | 0.9683 | 0.9838 | 0.9838 | 0.9683 |
 | Team Macro F1 | 0.9228 | 0.9830 | 0.9830 | 0.9228 |
-| Avg Confidence | 0.8662 | 0.9411 | 0.9411 | 0.8662 |
-| Human Review Rate | N/A | N/A | 0.00% | 10.99% |
+| Avg Confidence | 0.8662 | 0.9411 | 0.9421 | 0.8662 |
+| Human Review Rate | N/A | N/A | 6.81% | 10.99% |
 | Fallback Rate | N/A | N/A | 0.00% | N/A |
 | PII Redacted Rate | N/A | N/A | 26.70% | 26.70% |
 
@@ -47,7 +47,7 @@ Generated: 2026-10-14T12:14:30.432085
 | Baseline Team F1 >= 0.70 | PASS | 0.9228 |
 | LLM Issue F1 improvement >= 0.10 | FAIL | 0.0154 |
 | LLM Team F1 improvement >= 0.10 | FAIL | 0.0602 |
-| Human review rate <= 15% | PASS | 0.00% |
+| Human review rate <= 15% | PASS | 6.81% |
 | PII redaction working | PASS | 26.70% |
 
 ## How to Read This Report
