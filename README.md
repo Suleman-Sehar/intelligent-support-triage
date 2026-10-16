@@ -47,7 +47,7 @@ python src/guardrails.py --input data/tickets.csv --split test --output evidence
 # Step 5 (evaluate rules-only results as both LLM and fallback)
 python src/evaluate.py --input data/tickets.csv --split test --baseline evidence/baseline_predictions_test.csv --llm evidence/guardrail_predictions_test.csv --guardrail evidence/guardrail_predictions_test.csv --guardrail-fallback evidence/guardrail_predictions_test.csv --output-dir evidence --name evaluation
 ```
-**Without API key**: `llm_classifier.py` exits with error. `guardrails.py` with `--no-llm` falls back to rules. No cached results are used (cache is empty on fresh clone).
+**Without API key**: `llm_classifier.py` exits with error. `guardrails.py` with `--no-llm` falls back to rules. No cached results are used (cache is empty on fresh clone). **Rules-only results are not LLM results** — they reflect baseline performance only.
 
 ### Run Tests
 ```bash
@@ -118,45 +118,9 @@ OPENAI_API_KEY=sk-or-v1-xxxxxxxxxxxx  # OpenAI-compatible key (OpenRouter, OpenA
 
 **PII bug fix** (commit 18b0ad6): PII was previously redacted for the record but the original subject/body was still passed to the LLM and baseline classifiers — violating the "PII redacted before any LLM call" requirement. Fixed by redacting subject and body first, then passing redacted text to all classifiers. Regression test `test_llm_receives_no_pii` (tests/test_edge_cases.py) confirms the LLM receives no email/phone/API-key/card/SSN/IP patterns; it fails on the pre-fix commit and passes after 18b0ad6.
 
-## Demo Outline (5 min)
+## Demo Outline
 
-### 1. Problem Statement (30 sec)
-"Support teams waste time manually routing tickets. We automate triage with LLM+guardrails; LLM reaches 0.984 issue-type macro-F1 on synthetic test data (both models near-ceiling; real-world gap larger on noisy data)."
-
-### 2. Live Classification (2 min)
-```bash
-# Show single ticket classification
-python -c "
-from src.guardrails import GuardrailPipeline
-from src.llm_classifier import LLMClassifier, PredictionCache
-import os
-os.environ['OPENAI_API_KEY'] = 'your-key'
-cache = PredictionCache('cache')
-llm = LLMClassifier(base_url='https://openrouter.ai/api/v1', cache=cache)
-pipe = GuardrailPipeline(llm_classifier=llm)
-result = pipe.classify_with_guardrails(
-    'Invoice discrepancy', 
-    'I was charged \$49.99 but my plan shows \$29.99. Invoice INV-2024-00123.'
-)
-print(f'Issue: {result.issue_type}, Team: {result.team}, Confidence: {result.confidence:.2f}')
-print(f'PII Redacted: {result.pii_redacted}, Human Review: {result.human_review}')
-"
-```
-
-### 3. Guardrails Demo (1 min)
-- Show PII redaction on ticket with email/phone
-- Show human review flag on low-confidence example
-- Show fallback when LLM disabled
-
-### 4. Evaluation Dashboard (1 min)
-- Open `evidence/evaluation_latest.md` - comparison table
-- Highlight product team +20.7% F1 improvement
-- Show 6.8% human review rate
-
-### 5. Responsible AI (30 sec)
-- PII never sent to LLM
-- Synthetic data limitations acknowledged
-- Human-in-the-loop for edge cases
+See `docs/DEMO_SCRIPT.md` for the full 5-minute demo run sheet.
 
 ## API Reference
 
@@ -238,6 +202,21 @@ Generates markdown + JSON evidence in `evidence/`
 
 Generated from ticket: subject="Double charged this month", body="I was charged twice this month for my subscription plan. Please refund the duplicate charge."
 
+**LLM sample output** (gpt-4o-mini, from evidence/llm_predictions_test.csv TKT-00004):
+
+```json
+{
+  "issue_type": "account access",
+  "urgency": "high",
+  "routing_team": "account security",
+  "confidence": 0.95,
+  "needs_human_review": false,
+  "rationale": "The ticket is about resetting 2FA due to a lost authenticator app, which falls under account access issues."
+}
+```
+
+Generated from ticket: subject="2FA reset", body="I lost my authenticator app and need to reset two-factor authentication on my account."
+
 ## Requirements
 ```
 openai>=1.0.0
@@ -256,7 +235,9 @@ pytest>=7.0.0
 | LLM Issue F1 improvement | >= 0.10 | +1.5 points | FAIL* |
 | LLM Team F1 improvement | >= 0.10 | +6.0 points | FAIL* |
 | Human review rate | <= 15% | 6.8% | PASS |
-| PII redaction | Working | 26.7% | PASS |
+| PII redaction | test_llm_receives_no_pii fails pre-fix 18b0ad6^, passes now | PASS |
+| Urgency High/Critical Recall | >= 90% | Baseline 80.0% / LLM 96.8% | PASS |
+| Total tests passing | 17 | 17 passed | PASS |
 | Reproducible in <=5 cmds | Yes | 5 commands | PASS |
 
 *Baseline already near-ceiling on synthetic data; improvement target unrealistic for this dataset (see decision_log.md)
@@ -264,8 +245,8 @@ pytest>=7.0.0
 ## Known Limitations
 
 1. **Synthetic evaluation only** - No real ticket validation
-2. **Account access (issue type) regression** - "How to" pattern confuses LLM (-5.3 points F1 on test split)
-3. **Account Security (team) drop on challenge set** - Drops to 0.600 F1; Roman-Urdu and ambiguous tickets misrouted to tech support. No meaningful team F1 gain on challenge set (+0.1 points).
+2. **Account Access (issue type) regression** - "How to" pattern confuses LLM. Baseline 1.000 → LLM 0.947 (-5.3 points F1 on test split).
+3. **Account Security (team) drop** - Baseline 1.000 → LLM 0.947 (-5.3 points on test split); on challenge set drops to 0.600 F1; Roman-Urdu and ambiguous tickets misrouted to tech support. No meaningful team F1 gain on challenge set (+0.1 points).
 4. **Confidence not calibrated** - Threshold 0.75 arbitrary (no temperature scaling, Platt, or isotonic calibration)
 5. **Single model** - No ensemble or A/B testing framework
 6. **Cache grows unbounded** - No TTL/cleanup (see Future Work)
