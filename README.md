@@ -1,6 +1,6 @@
 # Intelligent Support Triage
 
-Automated ticket classification system for SaaS helpdesk. Classifies incoming support tickets by issue type (6 classes) and routes to team (4 classes) using LLM with guardrails.
+Automated ticket classification system for SaaS helpdesk. Classifies incoming support tickets by issue type (6 classes), urgency (4 levels), and routes to team (4 classes) using LLM with guardrails.
 
 ## Quick Start
 
@@ -87,6 +87,7 @@ intelligent-support-triage/
 | Issue Type Macro F1 | 0.968 | 0.984 | +1.6 points |
 | Team Macro F1 | 0.923 | 0.983 | +6.0 points |
 | Urgency Macro F1 | 0.856 | 0.988 | +13.2 points |
+| Urgency High/Critical Recall | 80.0% | 96.8% | +16.8 pts |
 | Avg Confidence | 0.866 | 0.941 | +0.08 |
 | Human Review Rate | N/A | 6.8% | ✓ |
 | PII Redacted Rate | N/A | 26.7% | ✓ |
@@ -222,6 +223,21 @@ Generates markdown + JSON evidence in `evidence/`
 }
 ```
 
+## Sample Output (single triage result, rules-only mode)
+
+```json
+{
+  "issue_type": "billing",
+  "urgency": "medium",
+  "routing_team": "billing",
+  "confidence": 0.95,
+  "needs_human_review": false,
+  "rationale": "Rules classifier (LLM disabled) | Keyword match on billing terms (charged, refund)"
+}
+```
+
+Generated from ticket: subject="Double charged this month", body="I was charged twice this month for my subscription plan. Please refund the duplicate charge."
+
 ## Requirements
 ```
 openai>=1.0.0
@@ -252,23 +268,23 @@ pytest>=7.0.0
 3. **Account Security (team) drop on challenge set** - Drops to 0.600 F1; Roman-Urdu and ambiguous tickets misrouted to tech support. No meaningful team F1 gain on challenge set (+0.1 points).
 4. **Confidence not calibrated** - Threshold 0.75 arbitrary (no temperature scaling, Platt, or isotonic calibration)
 5. **Single model** - No ensemble or A/B testing framework
-6. **Cache grows unbounded** - No TTL/cleanup (see Gap Fix 5 below)
+6. **Cache grows unbounded** - No TTL/cleanup (see Future Work)
 7. **Single-label only** - Cannot handle tickets with multiple issues (e.g., billing + bug)
 
 ## Future Work
 
-### Cache Management (Gap Fix 5)
+### Cache Management
 - [ ] Add `ttl_hours` and `max_entries` params to `PredictionCache`
 - [ ] Implement LRU eviction when cache exceeds `max_entries`
 - [ ] Periodic cleanup of expired cache entries
 - [ ] Add cache hit rate metrics to evaluation output
 
-### Multi-Label Tickets (Gap Fix 5)
+### Multi-Label Tickets
 - [ ] Detect multiple issues in single ticket (top-k predictions with threshold)
 - [ ] Add "multiple issues" flag and routing to senior support
 - [ ] Update GuardrailResult to support list of (issue_type, confidence) pairs
 
-### Confidence Calibration (Gap Fix 5)
+### Confidence Calibration
 - [ ] Plot confidence vs accuracy on dev set (reliability diagram)
 - [ ] Add temperature scaling calibration step
 - [ ] Use calibrated confidence for threshold optimization
