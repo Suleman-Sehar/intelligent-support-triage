@@ -80,17 +80,21 @@ intelligent-support-triage/
 
 | Metric | Baseline (Rules) | LLM (gpt-4o-mini) | Improvement |
 |--------|------------------|-------------------|-------------|
-| Issue Type Macro F1 | 0.968 | 0.984 | +1.5% |
-| Team Macro F1 | 0.923 | 0.983 | +6.0% |
-| Avg Confidence | 0.866 | 0.941 | +8.6% |
+| Issue Type Macro F1 | 0.968 | 0.984 | +0.02 points |
+| Team Macro F1 | 0.923 | 0.983 | +0.06 points |
+| Avg Confidence | 0.866 | 0.941 | +0.08 |
 | Human Review Rate | N/A | 6.8% | ✓ |
 | PII Redacted Rate | N/A | 26.7% | ✓ |
 
 **Per-class Team F1 gains:**
-- Product: 0.793 → 1.000 (+20.7%)
-- Billing: 0.967 → 1.000 (+3.3%)
-- Tech Support: 0.931 → 0.985 (+5.4%)
-- Account Security: 1.000 → 0.947 (-5.3%)
+- Product: 0.793 → 1.000 (+0.21 points)
+- Billing: 0.967 → 1.000 (+0.03 points)
+- Tech Support: 0.931 → 0.985 (+0.05 points)
+- Account Security: 1.000 → 0.947 (-0.05 points)
+
+**Challenge set** (author-written, AI-assisted, 39 tickets, not used for tuning):
+- Baseline Issue F1: 0.770 | LLM Issue F1: 0.838 (+0.07 points)
+- Baseline Team F1: 0.824 | LLM Team F1: 0.825 (+0.00 points)
 
 ## Configuration
 ### Environment Variables (.env)

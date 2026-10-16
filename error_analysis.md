@@ -127,29 +127,31 @@ Same ticket, team follows issue type. When issue_type=how-to, team=tech_support 
 
 | Class | Baseline F1 | LLM F1 | Change | Notes |
 |-------|-------------|--------|--------|-------|
-| account access | 1.000 | 0.947 | -5.3% | LLM worse! Keyword "how" confuses |
-| billing | 1.000 | 1.000 | 0% | Both perfect |
-| bug | 0.941 | 1.000 | +5.9% | LLM better at crash/error context |
-| feature request | 0.972 | 1.000 | +2.8% | LLM better at intent |
-| how-to | 0.897 | 0.955 | +5.8% | LLM better at distinguishing |
-| outage | 1.000 | 1.000 | 0% | Both perfect |
+| account access | 1.000 | 0.947 | -0.05 points | LLM worse! Keyword "how" confuses |
+| billing | 1.000 | 1.000 | 0 points | Both perfect |
+| bug | 0.941 | 1.000 | +0.06 points | LLM better at crash/error context |
+| feature request | 0.972 | 1.000 | +0.03 points | LLM better at intent |
+| how-to | 0.897 | 0.955 | +0.06 points | LLM better at distinguishing |
+| outage | 1.000 | 1.000 | 0 points | Both perfect |
 
 | Class | Baseline F1 | LLM F1 | Change | Notes |
 |-------|-------------|--------|--------|-------|
-| account security | 1.000 | 0.947 | -5.3% | Follows issue type error |
-| billing | 0.967 | 1.000 | +3.3% | LLM better |
-| product | 0.793 | 1.000 | +20.7% | **Major improvement** - rules confused product/tech support |
-| tech support | 0.931 | 0.985 | +5.4% | LLM better |
+| account security | 1.000 | 0.947 | -0.05 points | Follows issue type error |
+| billing | 0.967 | 1.000 | +0.03 points | LLM better |
+| product | 0.793 | 1.000 | +0.21 points | **Major improvement** - rules confused product/tech support |
+| tech support | 0.931 | 0.985 | +0.05 points | LLM better |
 
 ## Key Findings
 
-1. **Product team classification**: Biggest improvement (+20.7%). Rules classifier confused feature requests (product) with how-to (tech support). LLM correctly distinguishes "I want a feature" vs "How do I use this".
+1. **Product team classification**: Biggest improvement (+0.21 points). Rules classifier confused feature requests (product) with how-to (tech support). LLM correctly distinguishes "I want a feature" vs "How do I use this".
 
-2. **Account access regression**: LLM slightly worse (-5.3%) due to "how to" pattern overlap. The synthetic templates for account access include "How to reset 2FA" which triggers how-to keywords.
+2. **Account access regression**: LLM slightly worse (-0.05 points) due to "how to" pattern overlap. The synthetic templates for account access include "How to reset 2FA" which triggers how-to keywords.
 
 3. **High baseline performance**: Synthetic data is very separable by keywords. Real-world data would show larger LLM advantage.
 
 4. **Guardrails working**: 6.8% human review (vague/ambiguous tickets flagged), 26.7% PII redacted, 0% fallback.
+
+5. **Challenge set (author-written, AI-assisted, 39 tickets)**: LLM improves Issue F1 by +0.07 points (0.770 → 0.838) over baseline, vs +0.02 points on synthetic test data. Confirms real-world noise widens the LLM advantage. Not used for tuning.
 
 ## Recommendations
 
