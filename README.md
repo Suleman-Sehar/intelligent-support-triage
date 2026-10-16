@@ -10,7 +10,7 @@ Automated ticket classification system for SaaS helpdesk. Classifies incoming su
 
 ### Installation
 ```bash
-git clone <repo-url>
+git clone https://github.com/Suleman-Sehar/intelligent-support-triage.git
 cd intelligent-support-triage
 python -m venv .venv
 .venv\Scripts\activate  # Windows
@@ -57,23 +57,27 @@ pytest tests/ -v
 ## Project Structure
 ```
 intelligent-support-triage/
-├── data/                    # Synthetic tickets (gitignored, reproducible)
+├── data/
+│   ├── tickets.csv            # Synthetic tickets (gitignored, reproducible, seed 42)
+│   ├── edge_cases.csv         # 10 edge-case tickets
+│   └── challenge_set.csv      # 39 hand-labeled challenge tickets (author-written, AI-assisted)
 ├── src/
-│   ├── generate_tickets.py  # Synthetic data generator
-│   ├── baseline_classifier.py  # Rules-based baseline
-│   ├── llm_classifier.py    # LLM with schema validation, retry, cache
-│   ├── guardrails.py        # PII redaction, threshold, fallback
-│   └── evaluate.py          # Comparison table generator
-├── evidence/                # Evaluation outputs (committed: dated reports + latest)
-├── tests/                   # Unit tests
-├── docs/                    # Documentation
-├── requirements.md          # Requirements & acceptance criteria
-├── decision_log.md          # Key decisions
-├── work_log.md              # Phase-by-phase progress
-├── error_analysis.md        # Misclassification analysis
-├── responsible_use.md       # Privacy, fairness, governance
-├── requirements.txt         # Python dependencies
-└── .gitignore
+│   ├── generate_tickets.py    # Synthetic data generator
+│   ├── baseline_classifier.py # Rules-based baseline (issue type, team, urgency)
+│   ├── llm_classifier.py      # LLM with schema validation, retry, cache
+│   ├── guardrails.py          # PII redaction, threshold, fallback
+│   └── evaluate.py            # Comparison table generator (urgency, guardrail value)
+├── evidence/                  # Evaluation outputs (committed: dated reports + latest)
+├── tests/                     # Unit tests
+├── docs/                      # Documentation (MENTOR_REVIEW.md, SLIDES_OUTLINE.md, DEMO_SCRIPT.md)
+├── requirements.md            # Requirements & acceptance criteria
+├── decision_log.md            # Key decisions
+├── work_log.md                # Phase-by-phase progress
+├── error_analysis.md          # Misclassification analysis
+├── responsible_use.md         # Privacy, fairness, governance
+├── requirements.txt           # Python dependencies
+├── .gitignore
+└── README.md
 ```
 
 ## Key Results (Test Split, 191 tickets)
@@ -82,6 +86,7 @@ intelligent-support-triage/
 |--------|------------------|-------------------|-------------|
 | Issue Type Macro F1 | 0.968 | 0.984 | +1.6 points |
 | Team Macro F1 | 0.923 | 0.983 | +6.0 points |
+| Urgency Macro F1 | 0.856 | 0.988 | +13.2 points |
 | Avg Confidence | 0.866 | 0.941 | +0.08 |
 | Human Review Rate | N/A | 6.8% | ✓ |
 | PII Redacted Rate | N/A | 26.7% | ✓ |
@@ -110,10 +115,12 @@ OPENAI_API_KEY=sk-or-v1-xxxxxxxxxxxx  # OpenAI-compatible key (OpenRouter, OpenA
 - Max retries: 3 with exponential backoff
 - Cache: local disk (SHA256 of input)
 
+**PII bug fix** (commit 18b0ad6): PII was previously redacted for the record but the original subject/body was still passed to the LLM and baseline classifiers — violating the "PII redacted before any LLM call" requirement. Fixed by redacting subject and body first, then passing redacted text to all classifiers. Regression test `test_llm_receives_no_pii` (tests/test_edge_cases.py) confirms the LLM receives no email/phone/API-key/card/SSN/IP patterns; it fails on the pre-fix commit and passes after 18b0ad6.
+
 ## Demo Outline (5 min)
 
 ### 1. Problem Statement (30 sec)
-"Support teams waste time manually routing tickets. We automate this with 98% accuracy."
+"Support teams waste time manually routing tickets. We automate triage with LLM+guardrails; LLM reaches 0.984 issue-type macro-F1 on synthetic test data (both models near-ceiling; real-world gap larger on noisy data)."
 
 ### 2. Live Classification (2 min)
 ```bash
@@ -165,7 +172,7 @@ python src/generate_tickets.py -n 1000 -s 42 -o data/tickets.csv
 python src/baseline_classifier.py --input data/tickets.csv --split test --output evidence/baseline_predictions_test.csv
 ```
 - `--split`: dev or test
-- Outputs: predictions CSV + per-class F1
+- Outputs: predictions CSV + per-class F1 (issue type, team, urgency)
 
 ### llm_classifier.py
 ```bash
@@ -189,6 +196,32 @@ python src/evaluate.py --input data/tickets.csv --split test --baseline evidence
 ```
 Generates markdown + JSON evidence in `evidence/`
 
+**Example JSON output** (evidence/evaluation_latest.json):
+```json
+{
+  "baseline": {
+    "issue_type": { "macro_f1": 0.9683 },
+    "team": { "macro_f1": 0.9228 },
+    "urgency": { "macro_f1": 0.8562 },
+    "urgency_high_critical_recall": 0.8,
+    "avg_confidence": 0.8662,
+    "human_review_rate": 0.1099,
+    "pii_redacted_rate": 0.267,
+    "num_samples": 191
+  },
+  "llm": {
+    "issue_type": { "macro_f1": 0.9838 },
+    "team": { "macro_f1": 0.983 },
+    "urgency": { "macro_f1": 0.9883 },
+    "urgency_high_critical_recall": 0.9684,
+    "avg_confidence": 0.9411,
+    "human_review_rate": 0.0,
+    "pii_redacted_rate": 0.0,
+    "num_samples": 191
+  }
+}
+```
+
 ## Requirements
 ```
 openai>=1.0.0
@@ -204,8 +237,8 @@ pytest>=7.0.0
 |-----------|--------|--------|--------|
 | Baseline Issue F1 | >= 0.70 | 0.968 | PASS |
 | Baseline Team F1 | >= 0.70 | 0.923 | PASS |
-| LLM Issue F1 improvement | >= 0.10 | +0.015 | FAIL* |
-| LLM Team F1 improvement | >= 0.10 | +0.060 | FAIL* |
+| LLM Issue F1 improvement | >= 0.10 | +1.5 points | FAIL* |
+| LLM Team F1 improvement | >= 0.10 | +6.0 points | FAIL* |
 | Human review rate | <= 15% | 6.8% | PASS |
 | PII redaction | Working | 26.7% | PASS |
 | Reproducible in <=5 cmds | Yes | 5 commands | PASS |
@@ -215,8 +248,8 @@ pytest>=7.0.0
 ## Known Limitations
 
 1. **Synthetic evaluation only** - No real ticket validation
-2. **English only** - No multilingual support
-3. **Account access regression** - "How to" pattern confuses LLM (-5.3% F1)
+2. **Account access (issue type) regression** - "How to" pattern confuses LLM (-5.3 points F1 on test split)
+3. **Account Security (team) drop on challenge set** - Drops to 0.600 F1; Roman-Urdu and ambiguous tickets misrouted to tech support. No meaningful team F1 gain on challenge set (+0.1 points).
 4. **Confidence not calibrated** - Threshold 0.75 arbitrary (no temperature scaling, Platt, or isotonic calibration)
 5. **Single model** - No ensemble or A/B testing framework
 6. **Cache grows unbounded** - No TTL/cleanup (see Gap Fix 5 below)
@@ -255,4 +288,4 @@ MIT License - see LICENSE file
 
 ## Contact
 
-Built for Arrowstack Internship - Intelligent Support Triage Project
+Built by Suleman-Sehar for Arrowstack Internship - Intelligent Support Triage Project
