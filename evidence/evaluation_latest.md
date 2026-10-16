@@ -1,5 +1,5 @@
 # Model Comparison - Test Split
-Generated: 2026-10-16T14:43:04.336162
+Generated: 2026-10-16T15:10:30.767734
 
 > Note: Test split = 191 tickets. Small sample size; per-class metrics may have high variance.
 

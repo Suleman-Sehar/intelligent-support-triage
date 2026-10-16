@@ -395,7 +395,7 @@
     "errors_caught": 6,
     "errors_caught_rate": 0.3
   },
-  "timestamp": "2026-10-16T14:43:04.336162",
+  "timestamp": "2026-10-16T15:10:30.800755",
   "split": "test",
   "test_set_size": 191,
   "per_slice": {
@@ -419,7 +419,7 @@
     "llm": {
       "easy (conf>=0.9)": {
         "issue_type_f1": 0.9858517260894172,
-        "team_f1": 0.9841825307950729,
+        "team_f1": 0.9841825307950728,
         "count": 174
       },
       "hard (conf<0.75)": {
