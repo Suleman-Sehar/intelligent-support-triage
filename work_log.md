@@ -45,3 +45,5 @@
 | 2026-10-16 | Task 6 | Challenge set: data/challenge_set.csv with 39 hand-labeled tickets; LLM Issue F1 0.8382 vs baseline 0.7699 on challenge set | ✓ |
 | 2026-10-16 | Task 7 | Docs: README updated (6.8% review rate, OpenRouter provider), stale ~30 per class removed, error_analysis.md updated | ✓ |
 | 2026-10-16 | Task 8 | pytest: 17 passed; new dated evidence saved as real files (no symlinks) | ✓ |
+| 2026-10-16 | Step 1 | Challenge set rerun: baseline Issue F1 0.7699, LLM Issue F1 0.8382 (+0.0683 points); dated evidence saved | ✓ |
+| 2026-10-16 | Step 2 | Docs: percentages converted to points in README/error_analysis.md; challenge set described as "author-written, AI-assisted" | ✓ |
