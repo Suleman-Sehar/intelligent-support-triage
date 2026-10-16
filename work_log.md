@@ -47,3 +47,5 @@
 | 2026-10-16 | Task 8 | pytest: 17 passed; new dated evidence saved as real files (no symlinks) | ✓ |
 | 2026-10-16 | Step 1 | Challenge set rerun: baseline Issue F1 0.7699, LLM Issue F1 0.8382 (+0.0683 points); dated evidence saved | ✓ |
 | 2026-10-16 | Step 2 | Docs: percentages converted to points in README/error_analysis.md; challenge set described as "author-written, AI-assisted" | ✓ |
+| 2026-10-16 | Step 1b | Units fixed: points = F1 x 100 everywhere; challenge-set team routing explicit (0.824 vs 0.825, no gain; account security drops to 0.600 F1) | ✓ |
+| 2026-10-16 | Step 2 | Rules-based urgency baseline added to baseline_classifier.py (URGENCY_KEYWORDS + issue-type fallback). Test: baseline 0.8562 F1 / 80.00% high-crit recall; LLM 0.9883 F1 / 96.84% recall. Challenge: baseline 0.6324 F1. | ✓ |
