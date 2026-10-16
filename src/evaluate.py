@@ -98,10 +98,22 @@ def compute_metrics(preds: List[dict], truths: List[dict], pred_issue_col: str, 
     if "pii_redacted" in preds[0]:
         pii_rate = sum(1 for p in preds if p.get("pii_redacted", "False").lower() == "true") / len(preds)
     
-    # Urgency metrics (derived from issue_type)
-    urgency_preds = [URGENCY_MAP.get(p.get(pred_issue_col, ""), "low") for p in preds]
+    # Urgency metrics: use predictions' urgency column when available (baseline),
+    # otherwise derive from issue_type (LLM/guardrails)
+    if "urgency" in preds[0]:
+        urgency_preds = [p.get("urgency", "low") for p in preds]
+    else:
+        urgency_preds = [URGENCY_MAP.get(p.get(pred_issue_col, ""), "low") for p in preds]
     urgency_truths = [URGENCY_MAP.get(t.get("issue_type", ""), "low") for t in truths]
     urgency_metrics = macro_f1(urgency_preds, urgency_truths)
+    
+    # Urgency recall on high/critical
+    high_critical_truths = [i for i, t in enumerate(urgency_truths) if t in ("high", "critical")]
+    high_correct = 0
+    for i, t in enumerate(urgency_truths):
+        if t in ("high", "critical") and urgency_preds[i] == t:
+            high_correct += 1
+    urgency_high_critical_recall = high_correct / len(high_critical_truths) if high_critical_truths else 0
     
     # Guardrail value: auto-routed vs flagged accuracy
     auto_routed_correct = 0
@@ -148,6 +160,7 @@ def compute_metrics(preds: List[dict], truths: List[dict], pred_issue_col: str, 
         "total_errors": total_errors,
         "errors_caught": errors_caught,
         "errors_caught_rate": errors_caught_rate,
+        "urgency_high_critical_recall": urgency_high_critical_recall,
     }
 
 
@@ -224,6 +237,7 @@ def format_comparison_table(baseline_metrics: Dict, llm_metrics: Dict, guardrail
     lines.append("## Urgency Metrics")
     lines.append("")
     lines.append("Urgency is derived from issue type: outage=critical, bug/account access=high, billing=medium, feature request/how-to=low.")
+    lines.append("(Baseline uses rules-based urgency keywords; LLM/guardrails derive urgency from predicted issue type.)")
     lines.append("")
     lines.append("| Urgency | Baseline P | Baseline R | LLM P | LLM R | Guardrails P | Guardrails R |")
     lines.append("|-------|------------|------------|-------|-------|--------------|--------------|")
@@ -238,7 +252,8 @@ def format_comparison_table(baseline_metrics: Dict, llm_metrics: Dict, guardrail
         g = g_urg.get(urg, {"precision": 0, "recall": 0, "f1": 0})
         lines.append(f"| {urg} | {b['precision']:.3f} | {b['recall']:.3f} | {l['precision']:.3f} | {l['recall']:.3f} | {g['precision']:.3f} | {g['recall']:.3f} |")
     
-    lines.append(f"| **Macro F1** | | | **{llm_metrics.get('urgency', {}).get('macro_f1', 0):.4f}** | | | |")
+    lines.append(f"| **Macro F1** | **{baseline_metrics.get('urgency', {}).get('macro_f1', 0):.4f}** | | **{llm_metrics.get('urgency', {}).get('macro_f1', 0):.4f}** | **{guardrail_metrics.get('urgency', {}).get('macro_f1', 0):.4f}** | | |")
+    lines.append(f"| **High/Critical Recall** | **{baseline_metrics.get('urgency_high_critical_recall', 0):.2%}** | | **{llm_metrics.get('urgency_high_critical_recall', 0):.2%}** | **{guardrail_metrics.get('urgency_high_critical_recall', 0):.2%}** | | |")
     lines.append("")
     
     # Guardrail value section

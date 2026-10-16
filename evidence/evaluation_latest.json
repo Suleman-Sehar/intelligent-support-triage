@@ -61,27 +61,27 @@
       }
     },
     "urgency": {
-      "macro_f1": 0.9844951923076923,
+      "macro_f1": 0.8561638966503027,
       "per_class": {
         "critical": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1": 1.0
+          "precision": 0.7692307692307693,
+          "recall": 0.6060606060606061,
+          "f1": 0.6779661016949152
         },
         "high": {
-          "precision": 0.9393939393939394,
-          "recall": 1.0,
-          "f1": 0.96875
+          "precision": 0.7887323943661971,
+          "recall": 0.9032258064516129,
+          "f1": 0.8421052631578947
         },
         "low": {
-          "precision": 1.0,
+          "precision": 0.9402985074626866,
           "recall": 0.9402985074626866,
-          "f1": 0.9692307692307692
+          "f1": 0.9402985074626865
         },
         "medium": {
           "precision": 1.0,
-          "recall": 1.0,
-          "f1": 1.0
+          "recall": 0.9310344827586207,
+          "f1": 0.9642857142857143
         }
       }
     },
@@ -96,7 +96,8 @@
     "flagged_total": 0,
     "total_errors": 0,
     "errors_caught": 0,
-    "errors_caught_rate": 0
+    "errors_caught_rate": 0,
+    "urgency_high_critical_recall": 0.8
   },
   "llm": {
     "issue_type": {
@@ -195,7 +196,8 @@
     "flagged_total": 0,
     "total_errors": 0,
     "errors_caught": 0,
-    "errors_caught_rate": 0
+    "errors_caught_rate": 0,
+    "urgency_high_critical_recall": 0.968421052631579
   },
   "guardrails_llm": {
     "issue_type": {
@@ -294,7 +296,8 @@
     "flagged_total": 13,
     "total_errors": 3,
     "errors_caught": 3,
-    "errors_caught_rate": 1.0
+    "errors_caught_rate": 1.0,
+    "urgency_high_critical_recall": 0.968421052631579
   },
   "guardrails_fallback": {
     "issue_type": {
@@ -393,9 +396,10 @@
     "flagged_total": 21,
     "total_errors": 20,
     "errors_caught": 6,
-    "errors_caught_rate": 0.3
+    "errors_caught_rate": 0.3,
+    "urgency_high_critical_recall": 1.0
   },
-  "timestamp": "2026-10-16T15:10:30.800755",
+  "timestamp": "2026-10-16T15:48:07.724820",
   "split": "test",
   "test_set_size": 191,
   "per_slice": {
@@ -412,14 +416,14 @@
       },
       "edge (0.75-0.9)": {
         "issue_type_f1": 0.9642857142857143,
-        "team_f1": 0.8392857142857143,
+        "team_f1": 0.8392857142857144,
         "count": 58
       }
     },
     "llm": {
       "easy (conf>=0.9)": {
         "issue_type_f1": 0.9858517260894172,
-        "team_f1": 0.9841825307950728,
+        "team_f1": 0.9841825307950729,
         "count": 174
       },
       "hard (conf<0.75)": {
@@ -429,7 +433,7 @@
       },
       "edge (0.75-0.9)": {
         "issue_type_f1": 0.9368421052631579,
-        "team_f1": 0.9454191033138403,
+        "team_f1": 0.94541910331384,
         "count": 17
       }
     }

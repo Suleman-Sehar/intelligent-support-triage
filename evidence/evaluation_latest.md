@@ -1,5 +1,5 @@
 # Model Comparison - Test Split
-Generated: 2026-10-16T15:10:30.767734
+Generated: 2026-10-16T15:48:07.706847
 
 > Note: Test split = 191 tickets. Small sample size; per-class metrics may have high variance.
 
@@ -13,7 +13,7 @@ Generated: 2026-10-16T15:10:30.767734
 | Human Review Rate | N/A | N/A | 6.81% | 10.99% |
 | Fallback Rate | N/A | N/A | 0.00% | N/A |
 | PII Redacted Rate | N/A | N/A | 26.70% | 26.70% |
-| Urgency Macro F1 | N/A | 0.9883 | 0.9883 | 0.9845 |
+| Urgency Macro F1 | N/A | 0.9883 | 0.9883 | 0.8562 |
 
 ## Improvement Over Baseline
 
@@ -43,14 +43,16 @@ Generated: 2026-10-16T15:10:30.767734
 ## Urgency Metrics
 
 Urgency is derived from issue type: outage=critical, bug/account access=high, billing=medium, feature request/how-to=low.
+(Baseline uses rules-based urgency keywords; LLM/guardrails derive urgency from predicted issue type.)
 
 | Urgency | Baseline P | Baseline R | LLM P | LLM R | Guardrails P | Guardrails R |
 |-------|------------|------------|-------|-------|--------------|--------------|
-| critical | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
-| high | 0.939 | 1.000 | 1.000 | 0.952 | 1.000 | 0.952 |
-| medium | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
-| low | 1.000 | 0.940 | 0.957 | 1.000 | 0.957 | 1.000 |
-| **Macro F1** | | | **0.9883** | | | |
+| critical | 0.769 | 0.606 | 1.000 | 1.000 | 1.000 | 1.000 |
+| high | 0.789 | 0.903 | 1.000 | 0.952 | 1.000 | 0.952 |
+| medium | 1.000 | 0.931 | 1.000 | 1.000 | 1.000 | 1.000 |
+| low | 0.940 | 0.940 | 0.957 | 1.000 | 0.957 | 1.000 |
+| **Macro F1** | **0.8562** | | **0.9883** | **0.9883** | | |
+| **High/Critical Recall** | **80.00%** | | **96.84%** | **96.84%** | | |
 
 ## Guardrail Value
 

@@ -1,810 +1,810 @@
-id,pred_issue_type,pred_team,confidence,true_issue_type,true_team
-TKT-00001,outage,tech support,0.9500,outage,tech support
-TKT-00002,outage,tech support,0.9500,outage,tech support
-TKT-00003,billing,billing,0.9500,billing,billing
-TKT-00005,account access,account security,0.9500,account access,account security
-TKT-00006,billing,billing,0.9500,billing,billing
-TKT-00008,bug,tech support,0.9500,bug,tech support
-TKT-00009,outage,tech support,0.9500,outage,tech support
-TKT-00010,account access,account security,0.9500,account access,account security
-TKT-00011,billing,billing,0.8167,billing,billing
-TKT-00012,bug,tech support,0.9500,bug,tech support
-TKT-00013,outage,tech support,0.8808,outage,tech support
-TKT-00014,bug,tech support,0.9500,bug,tech support
-TKT-00015,outage,tech support,0.8573,outage,tech support
-TKT-00016,how-to,tech support,0.8808,how-to,tech support
-TKT-00017,billing,billing,0.8167,billing,billing
-TKT-00018,how-to,tech support,0.9500,how-to,tech support
-TKT-00019,how-to,tech support,0.9500,how-to,tech support
-TKT-00022,how-to,tech support,0.9500,how-to,tech support
-TKT-00023,how-to,tech support,0.9500,how-to,tech support
-TKT-00024,feature request,product,0.9500,feature request,product
-TKT-00025,billing,billing,0.9500,billing,billing
-TKT-00026,billing,billing,0.8167,billing,billing
-TKT-00027,outage,tech support,0.8808,outage,tech support
-TKT-00028,billing,billing,0.8808,billing,billing
-TKT-00029,outage,tech support,0.9500,outage,tech support
-TKT-00032,bug,tech support,0.7286,bug,tech support
-TKT-00033,feature request,tech support,0.7858,feature request,product
-TKT-00034,how-to,tech support,0.9500,how-to,tech support
-TKT-00035,outage,tech support,0.9500,outage,tech support
-TKT-00036,how-to,tech support,0.8808,how-to,tech support
-TKT-00037,how-to,tech support,0.9500,how-to,tech support
-TKT-00038,how-to,tech support,0.3082,how-to,tech support
-TKT-00039,account access,account security,0.9500,account access,account security
-TKT-00040,bug,tech support,0.9500,bug,tech support
-TKT-00041,bug,tech support,0.7858,bug,tech support
-TKT-00042,billing,billing,0.9247,billing,billing
-TKT-00043,billing,billing,0.9500,billing,billing
-TKT-00044,account access,account security,0.8808,account access,account security
-TKT-00045,account access,account security,0.9500,account access,account security
-TKT-00046,billing,billing,0.9500,billing,billing
-TKT-00047,account access,account security,0.9500,account access,account security
-TKT-00048,bug,tech support,0.3082,how-to,tech support
-TKT-00049,bug,tech support,0.8808,bug,tech support
-TKT-00050,bug,tech support,0.3082,outage,tech support
-TKT-00051,feature request,product,0.8808,feature request,product
-TKT-00052,feature request,product,0.8808,feature request,product
-TKT-00053,feature request,product,0.8808,feature request,product
-TKT-00054,account access,account security,0.9500,account access,account security
-TKT-00055,how-to,tech support,0.8808,how-to,tech support
-TKT-00056,how-to,tech support,0.9500,how-to,tech support
-TKT-00057,outage,tech support,0.9500,outage,tech support
-TKT-00059,how-to,tech support,0.3082,how-to,tech support
-TKT-00060,how-to,tech support,0.3082,how-to,tech support
-TKT-00062,bug,tech support,0.9500,bug,tech support
-TKT-00063,billing,billing,0.9500,billing,billing
-TKT-00065,feature request,tech support,0.7858,feature request,product
-TKT-00066,billing,billing,0.9500,billing,billing
-TKT-00067,feature request,product,0.9500,feature request,product
-TKT-00068,feature request,tech support,0.7858,feature request,product
-TKT-00069,feature request,tech support,0.7858,feature request,product
-TKT-00070,how-to,tech support,0.8808,how-to,tech support
-TKT-00072,feature request,tech support,0.7858,how-to,tech support
-TKT-00073,feature request,product,0.9500,feature request,product
-TKT-00074,feature request,tech support,0.7858,feature request,product
-TKT-00075,feature request,product,0.8808,feature request,product
-TKT-00076,billing,billing,0.9500,billing,billing
-TKT-00077,account access,account security,0.8808,account access,account security
-TKT-00080,feature request,product,0.8808,feature request,product
-TKT-00082,feature request,tech support,0.7858,feature request,product
-TKT-00083,outage,tech support,0.9500,outage,tech support
-TKT-00085,outage,tech support,0.9500,outage,tech support
-TKT-00087,billing,billing,0.8167,billing,billing
-TKT-00088,feature request,product,0.8808,feature request,product
-TKT-00089,bug,tech support,0.1000,how-to,tech support
-TKT-00090,bug,tech support,0.9500,bug,tech support
-TKT-00091,account access,account security,0.9500,account access,account security
-TKT-00092,account access,account security,0.8808,account access,account security
-TKT-00093,outage,tech support,0.9500,outage,tech support
-TKT-00094,how-to,tech support,0.9247,how-to,tech support
-TKT-00095,outage,tech support,0.9500,outage,tech support
-TKT-00096,feature request,product,0.8808,feature request,product
-TKT-00097,billing,billing,0.8167,billing,billing
-TKT-00098,how-to,tech support,0.9247,how-to,tech support
-TKT-00099,how-to,tech support,0.9500,how-to,tech support
-TKT-00101,bug,tech support,0.7286,bug,tech support
-TKT-00102,feature request,product,0.9500,feature request,product
-TKT-00103,feature request,tech support,0.7858,feature request,product
-TKT-00106,feature request,tech support,0.7858,feature request,product
-TKT-00107,feature request,product,0.9247,feature request,product
-TKT-00110,bug,tech support,0.9500,bug,tech support
-TKT-00112,how-to,tech support,0.8808,how-to,tech support
-TKT-00113,feature request,tech support,0.7858,how-to,tech support
-TKT-00114,outage,tech support,0.9500,outage,tech support
-TKT-00115,billing,billing,0.9500,billing,billing
-TKT-00116,feature request,tech support,0.7858,feature request,product
-TKT-00119,billing,billing,0.8167,billing,billing
-TKT-00120,outage,tech support,0.8573,outage,tech support
-TKT-00121,feature request,product,0.8808,feature request,product
-TKT-00122,feature request,tech support,0.7826,bug,tech support
-TKT-00123,bug,tech support,0.1000,feature request,product
-TKT-00125,billing,billing,0.9500,billing,billing
-TKT-00126,feature request,product,0.8808,feature request,product
-TKT-00127,account access,account security,0.8808,account access,account security
-TKT-00128,bug,tech support,0.9500,bug,tech support
-TKT-00129,bug,tech support,0.8808,bug,tech support
-TKT-00130,bug,tech support,0.3082,how-to,tech support
-TKT-00131,bug,tech support,0.7858,bug,tech support
-TKT-00132,feature request,product,0.9500,feature request,product
-TKT-00133,feature request,product,0.9500,feature request,product
-TKT-00136,outage,tech support,0.9500,outage,tech support
-TKT-00138,outage,tech support,0.9500,outage,tech support
-TKT-00142,outage,tech support,0.8573,outage,tech support
-TKT-00143,outage,tech support,0.8573,outage,tech support
-TKT-00144,feature request,product,0.8808,feature request,product
-TKT-00145,billing,billing,0.8808,billing,billing
-TKT-00147,outage,tech support,0.9500,outage,tech support
-TKT-00148,feature request,product,0.9500,feature request,product
-TKT-00149,feature request,tech support,0.7858,feature request,product
-TKT-00150,billing,billing,0.8808,billing,billing
-TKT-00151,bug,tech support,0.8808,bug,tech support
-TKT-00152,billing,billing,0.9500,billing,billing
-TKT-00153,how-to,tech support,0.8808,how-to,tech support
-TKT-00154,billing,billing,0.9500,billing,billing
-TKT-00155,feature request,product,0.9500,feature request,product
-TKT-00156,billing,billing,0.9500,billing,billing
-TKT-00157,account access,account security,0.9500,account access,account security
-TKT-00158,outage,tech support,0.9500,outage,tech support
-TKT-00159,bug,tech support,0.1000,how-to,tech support
-TKT-00160,how-to,tech support,0.9500,how-to,tech support
-TKT-00161,outage,tech support,0.3082,outage,tech support
-TKT-00162,feature request,tech support,0.7858,feature request,product
-TKT-00163,feature request,product,0.8808,feature request,product
-TKT-00164,bug,tech support,0.8808,bug,tech support
-TKT-00165,account access,account security,0.9500,account access,account security
-TKT-00166,bug,tech support,0.7286,bug,tech support
-TKT-00168,how-to,tech support,0.9247,how-to,tech support
-TKT-00169,account access,account security,0.9500,account access,account security
-TKT-00170,bug,tech support,0.8808,bug,tech support
-TKT-00171,account access,account security,0.9500,account access,account security
-TKT-00172,how-to,tech support,0.8808,how-to,tech support
-TKT-00173,bug,tech support,0.8808,bug,tech support
-TKT-00174,outage,tech support,0.9500,outage,tech support
-TKT-00175,bug,tech support,0.9500,bug,tech support
-TKT-00176,how-to,tech support,0.9500,how-to,tech support
-TKT-00177,outage,tech support,0.9500,outage,tech support
-TKT-00179,feature request,product,0.9500,feature request,product
-TKT-00180,feature request,product,0.8808,feature request,product
-TKT-00181,account access,account security,0.9500,account access,account security
-TKT-00182,outage,tech support,0.9500,outage,tech support
-TKT-00184,account access,account security,0.8808,account access,account security
-TKT-00185,account access,account security,0.9500,account access,account security
-TKT-00186,billing,billing,0.9500,billing,billing
-TKT-00187,billing,billing,0.9500,billing,billing
-TKT-00188,billing,billing,0.9500,billing,billing
-TKT-00189,outage,tech support,0.9500,outage,tech support
-TKT-00190,account access,account security,0.9500,account access,account security
-TKT-00191,outage,tech support,0.9500,outage,tech support
-TKT-00192,outage,tech support,0.9500,outage,tech support
-TKT-00193,outage,tech support,0.9500,outage,tech support
-TKT-00194,account access,account security,0.8808,account access,account security
-TKT-00195,bug,tech support,0.7286,bug,tech support
-TKT-00196,billing,billing,0.8167,billing,billing
-TKT-00197,outage,tech support,0.8573,outage,tech support
-TKT-00198,bug,tech support,0.8808,bug,tech support
-TKT-00199,account access,account security,0.9500,account access,account security
-TKT-00200,bug,tech support,0.7649,bug,tech support
-TKT-00201,how-to,tech support,0.9500,how-to,tech support
-TKT-00202,outage,tech support,0.9500,outage,tech support
-TKT-00203,billing,billing,0.8808,billing,billing
-TKT-00204,bug,tech support,0.9500,bug,tech support
-TKT-00205,feature request,tech support,0.7858,feature request,product
-TKT-00206,bug,tech support,0.7286,bug,tech support
-TKT-00207,feature request,product,0.9500,feature request,product
-TKT-00208,outage,tech support,0.8808,outage,tech support
-TKT-00209,bug,tech support,0.7858,bug,tech support
-TKT-00210,outage,tech support,0.8808,outage,tech support
-TKT-00211,bug,tech support,0.7649,bug,tech support
-TKT-00213,account access,account security,0.9500,account access,account security
-TKT-00215,outage,tech support,0.9500,outage,tech support
-TKT-00216,bug,tech support,0.9500,bug,tech support
-TKT-00217,how-to,tech support,0.9500,how-to,tech support
-TKT-00218,outage,tech support,0.9500,outage,tech support
-TKT-00219,feature request,product,0.8808,feature request,product
-TKT-00220,billing,billing,0.9500,billing,billing
-TKT-00221,billing,billing,0.8808,billing,billing
-TKT-00222,outage,tech support,0.9500,outage,tech support
-TKT-00223,feature request,product,0.9500,feature request,product
-TKT-00224,bug,tech support,0.9500,bug,tech support
-TKT-00225,bug,tech support,0.9500,bug,tech support
-TKT-00226,account access,account security,0.8808,account access,account security
-TKT-00227,outage,tech support,0.9500,outage,tech support
-TKT-00228,how-to,tech support,0.8808,how-to,tech support
-TKT-00229,outage,tech support,0.9500,outage,tech support
-TKT-00230,billing,billing,0.7286,billing,billing
-TKT-00231,bug,tech support,0.7286,bug,tech support
-TKT-00232,feature request,tech support,0.7858,feature request,product
-TKT-00233,how-to,tech support,0.8808,how-to,tech support
-TKT-00234,feature request,product,0.9500,feature request,product
-TKT-00235,account access,account security,0.8808,account access,account security
-TKT-00236,billing,billing,0.9500,billing,billing
-TKT-00237,how-to,tech support,0.9247,how-to,tech support
-TKT-00238,how-to,tech support,0.9247,how-to,tech support
-TKT-00239,how-to,tech support,0.3082,how-to,tech support
-TKT-00240,billing,billing,0.9247,billing,billing
-TKT-00242,feature request,product,0.9500,feature request,product
-TKT-00243,how-to,tech support,0.9500,how-to,tech support
-TKT-00244,feature request,tech support,0.7858,feature request,product
-TKT-00246,bug,tech support,0.7649,bug,tech support
-TKT-00247,feature request,product,0.9500,feature request,product
-TKT-00248,account access,account security,0.9500,account access,account security
-TKT-00249,how-to,tech support,0.8808,how-to,tech support
-TKT-00250,account access,account security,0.9061,account access,account security
-TKT-00251,feature request,product,0.8808,feature request,product
-TKT-00252,billing,billing,0.8808,billing,billing
-TKT-00253,bug,tech support,0.7858,bug,tech support
-TKT-00254,feature request,product,0.9500,feature request,product
-TKT-00255,bug,tech support,0.1000,how-to,tech support
-TKT-00256,account access,account security,0.9500,account access,account security
-TKT-00257,outage,tech support,0.9247,outage,tech support
-TKT-00258,how-to,tech support,0.9500,how-to,tech support
-TKT-00259,feature request,tech support,0.7858,feature request,product
-TKT-00261,outage,tech support,0.9500,outage,tech support
-TKT-00262,feature request,product,0.8808,feature request,product
-TKT-00263,outage,tech support,0.8573,outage,tech support
-TKT-00264,account access,account security,0.9500,account access,account security
-TKT-00265,outage,tech support,0.9500,outage,tech support
-TKT-00266,account access,account security,0.9500,account access,account security
-TKT-00267,feature request,tech support,0.7858,feature request,product
-TKT-00268,billing,billing,0.9500,billing,billing
-TKT-00269,billing,billing,0.9500,billing,billing
-TKT-00270,how-to,tech support,0.9500,how-to,tech support
-TKT-00271,account access,account security,0.9500,account access,account security
-TKT-00272,outage,tech support,0.9500,outage,tech support
-TKT-00274,billing,billing,0.9061,billing,billing
-TKT-00275,outage,tech support,0.8808,outage,tech support
-TKT-00276,bug,tech support,0.9500,bug,tech support
-TKT-00279,billing,billing,0.8167,billing,billing
-TKT-00280,billing,billing,0.7286,billing,billing
-TKT-00281,outage,tech support,0.9500,outage,tech support
-TKT-00282,bug,tech support,0.8573,bug,tech support
-TKT-00283,outage,tech support,0.9500,outage,tech support
-TKT-00285,billing,billing,0.9500,billing,billing
-TKT-00287,feature request,tech support,0.7858,feature request,product
-TKT-00288,feature request,product,0.9500,feature request,product
-TKT-00291,feature request,product,0.8808,feature request,product
-TKT-00292,bug,tech support,0.8808,bug,tech support
-TKT-00293,feature request,tech support,0.7858,feature request,product
-TKT-00294,billing,billing,0.9500,billing,billing
-TKT-00295,billing,billing,0.9500,billing,billing
-TKT-00296,billing,billing,0.9500,billing,billing
-TKT-00297,account access,account security,0.8808,account access,account security
-TKT-00298,account access,account security,0.8808,account access,account security
-TKT-00299,outage,tech support,0.3082,outage,tech support
-TKT-00300,how-to,tech support,0.9500,how-to,tech support
-TKT-00301,bug,tech support,0.7286,bug,tech support
-TKT-00302,feature request,product,0.9500,feature request,product
-TKT-00305,billing,billing,0.9500,billing,billing
-TKT-00306,how-to,tech support,0.9500,how-to,tech support
-TKT-00308,outage,tech support,0.9500,outage,tech support
-TKT-00309,bug,tech support,0.7286,bug,tech support
-TKT-00311,account access,account security,0.8808,account access,account security
-TKT-00312,account access,account security,0.9500,account access,account security
-TKT-00313,outage,tech support,0.9247,outage,tech support
-TKT-00314,feature request,tech support,0.7858,feature request,product
-TKT-00315,outage,tech support,0.9500,outage,tech support
-TKT-00316,bug,tech support,0.1000,how-to,tech support
-TKT-00317,bug,tech support,0.8808,bug,tech support
-TKT-00318,account access,account security,0.8808,account access,account security
-TKT-00319,account access,account security,0.9500,account access,account security
-TKT-00320,outage,tech support,0.9500,outage,tech support
-TKT-00322,how-to,tech support,0.8808,how-to,tech support
-TKT-00323,outage,tech support,0.9500,outage,tech support
-TKT-00324,how-to,tech support,0.9500,how-to,tech support
-TKT-00325,account access,account security,0.9500,account access,account security
-TKT-00326,how-to,tech support,0.9500,how-to,tech support
-TKT-00327,how-to,tech support,0.9500,how-to,tech support
-TKT-00328,outage,tech support,0.9500,outage,tech support
-TKT-00329,account access,account security,0.9500,account access,account security
-TKT-00330,billing,billing,0.9500,billing,billing
-TKT-00331,account access,account security,0.9500,account access,account security
-TKT-00332,feature request,product,0.9247,feature request,product
-TKT-00333,how-to,tech support,0.9500,how-to,tech support
-TKT-00334,feature request,product,0.9500,feature request,product
-TKT-00335,feature request,product,0.9500,feature request,product
-TKT-00336,how-to,tech support,0.9500,how-to,tech support
-TKT-00337,how-to,tech support,0.9500,how-to,tech support
-TKT-00338,feature request,product,0.8808,feature request,product
-TKT-00339,account access,account security,0.9500,account access,account security
-TKT-00340,how-to,tech support,0.9500,how-to,tech support
-TKT-00341,outage,tech support,0.3082,outage,tech support
-TKT-00342,bug,tech support,0.9500,bug,tech support
-TKT-00343,bug,tech support,0.3082,how-to,tech support
-TKT-00345,billing,billing,0.8808,billing,billing
-TKT-00346,account access,account security,0.9500,account access,account security
-TKT-00347,outage,tech support,0.9500,outage,tech support
-TKT-00349,billing,billing,0.9500,billing,billing
-TKT-00350,account access,account security,0.9500,account access,account security
-TKT-00351,outage,tech support,0.9500,outage,tech support
-TKT-00352,outage,billing,0.7286,outage,tech support
-TKT-00353,feature request,tech support,0.7858,feature request,product
-TKT-00355,billing,billing,0.9500,billing,billing
-TKT-00356,billing,billing,0.8167,billing,billing
-TKT-00357,how-to,tech support,0.8808,how-to,tech support
-TKT-00358,account access,account security,0.8808,account access,account security
-TKT-00359,account access,account security,0.8808,account access,account security
-TKT-00360,feature request,product,0.8808,feature request,product
-TKT-00361,feature request,product,0.9500,feature request,product
-TKT-00362,feature request,product,0.9500,feature request,product
-TKT-00363,feature request,tech support,0.7858,feature request,product
-TKT-00364,bug,tech support,0.9500,bug,tech support
-TKT-00366,billing,billing,0.9500,billing,billing
-TKT-00368,feature request,tech support,0.7826,bug,tech support
-TKT-00369,how-to,tech support,0.9500,how-to,tech support
-TKT-00370,how-to,tech support,0.9500,how-to,tech support
-TKT-00372,outage,tech support,0.9500,outage,tech support
-TKT-00373,feature request,product,0.8808,feature request,product
-TKT-00374,billing,billing,0.9500,billing,billing
-TKT-00375,feature request,product,0.9500,feature request,product
-TKT-00376,account access,account security,0.9247,account access,account security
-TKT-00377,account access,account security,0.9500,account access,account security
-TKT-00378,outage,tech support,0.9500,outage,tech support
-TKT-00379,billing,billing,0.9500,billing,billing
-TKT-00380,account access,account security,0.9500,account access,account security
-TKT-00381,outage,tech support,0.9500,outage,tech support
-TKT-00382,bug,tech support,0.9500,bug,tech support
-TKT-00383,bug,tech support,0.8808,bug,tech support
-TKT-00385,bug,tech support,0.7649,bug,tech support
-TKT-00387,bug,tech support,0.7649,bug,tech support
-TKT-00388,bug,tech support,0.8808,bug,tech support
-TKT-00389,outage,tech support,0.9500,outage,tech support
-TKT-00390,billing,billing,0.9500,billing,billing
-TKT-00391,billing,billing,0.7286,billing,billing
-TKT-00392,feature request,product,0.8808,feature request,product
-TKT-00393,outage,tech support,0.9500,outage,tech support
-TKT-00395,how-to,tech support,0.9500,how-to,tech support
-TKT-00396,account access,account security,0.9500,account access,account security
-TKT-00398,how-to,tech support,0.3082,how-to,tech support
-TKT-00399,billing,billing,0.8808,billing,billing
-TKT-00400,how-to,tech support,0.9247,how-to,tech support
-TKT-00401,billing,billing,0.9500,billing,billing
-TKT-00402,feature request,product,0.9500,feature request,product
-TKT-00403,outage,tech support,0.9500,outage,tech support
-TKT-00405,billing,billing,0.9500,billing,billing
-TKT-00406,billing,billing,0.9500,billing,billing
-TKT-00407,bug,tech support,0.9500,bug,tech support
-TKT-00409,billing,billing,0.8167,billing,billing
-TKT-00410,bug,tech support,0.9500,bug,tech support
-TKT-00411,account access,account security,0.9500,account access,account security
-TKT-00412,account access,account security,0.9500,account access,account security
-TKT-00413,how-to,tech support,0.9247,how-to,tech support
-TKT-00414,account access,account security,0.9500,account access,account security
-TKT-00415,how-to,tech support,0.8808,how-to,tech support
-TKT-00417,outage,tech support,0.9500,outage,tech support
-TKT-00418,how-to,tech support,0.8808,how-to,tech support
-TKT-00419,how-to,tech support,0.9500,how-to,tech support
-TKT-00420,bug,tech support,0.8573,bug,tech support
-TKT-00421,how-to,tech support,0.3082,how-to,tech support
-TKT-00424,account access,account security,0.8808,account access,account security
-TKT-00425,feature request,product,0.9500,feature request,product
-TKT-00426,how-to,tech support,0.9500,how-to,tech support
-TKT-00427,how-to,tech support,0.9500,how-to,tech support
-TKT-00428,account access,account security,0.9500,account access,account security
-TKT-00433,feature request,product,0.8808,feature request,product
-TKT-00434,feature request,tech support,0.7858,feature request,product
-TKT-00438,how-to,tech support,0.9500,how-to,tech support
-TKT-00439,account access,account security,0.9500,account access,account security
-TKT-00440,how-to,tech support,0.8808,how-to,tech support
-TKT-00441,how-to,tech support,0.8808,how-to,tech support
-TKT-00442,billing,billing,0.8167,billing,billing
-TKT-00443,billing,billing,0.9500,billing,billing
-TKT-00444,feature request,product,0.9500,feature request,product
-TKT-00445,outage,tech support,0.9500,outage,tech support
-TKT-00447,billing,billing,0.9061,billing,billing
-TKT-00449,feature request,product,0.8808,feature request,product
-TKT-00450,account access,account security,0.9061,account access,account security
-TKT-00451,bug,tech support,0.7286,bug,tech support
-TKT-00452,feature request,tech support,0.7858,feature request,product
-TKT-00453,bug,tech support,0.8808,bug,tech support
-TKT-00454,bug,tech support,0.8808,bug,tech support
-TKT-00455,bug,tech support,0.8808,bug,tech support
-TKT-00456,feature request,product,0.8808,feature request,product
-TKT-00457,bug,tech support,0.1000,how-to,tech support
-TKT-00458,bug,tech support,0.8573,bug,tech support
-TKT-00459,outage,billing,0.7286,outage,tech support
-TKT-00460,account access,account security,0.8808,account access,account security
-TKT-00463,account access,account security,0.8808,account access,account security
-TKT-00465,billing,billing,0.7286,billing,billing
-TKT-00466,bug,tech support,0.7286,bug,tech support
-TKT-00467,feature request,product,0.9500,feature request,product
-TKT-00468,how-to,tech support,0.9247,how-to,tech support
-TKT-00469,how-to,tech support,0.9247,how-to,tech support
-TKT-00473,billing,billing,0.8167,billing,billing
-TKT-00475,outage,tech support,0.9500,outage,tech support
-TKT-00477,account access,account security,0.9500,account access,account security
-TKT-00478,billing,billing,0.9500,billing,billing
-TKT-00479,how-to,tech support,0.3082,how-to,tech support
-TKT-00480,account access,account security,0.9500,account access,account security
-TKT-00481,how-to,tech support,0.9500,how-to,tech support
-TKT-00482,outage,tech support,0.9500,outage,tech support
-TKT-00483,feature request,product,0.8808,feature request,product
-TKT-00485,outage,tech support,0.9500,outage,tech support
-TKT-00486,bug,tech support,0.8808,bug,tech support
-TKT-00487,account access,account security,0.9500,account access,account security
-TKT-00488,outage,tech support,0.8808,outage,tech support
-TKT-00491,bug,tech support,0.9500,bug,tech support
-TKT-00492,feature request,product,0.8808,feature request,product
-TKT-00493,billing,billing,0.9500,billing,billing
-TKT-00494,billing,billing,0.9500,billing,billing
-TKT-00495,how-to,tech support,0.9500,how-to,tech support
-TKT-00499,billing,billing,0.9500,billing,billing
-TKT-00500,outage,tech support,0.9500,outage,tech support
-TKT-00501,billing,billing,0.9500,billing,billing
-TKT-00502,feature request,tech support,0.7858,feature request,product
-TKT-00504,how-to,tech support,0.9247,how-to,tech support
-TKT-00505,how-to,tech support,0.9500,how-to,tech support
-TKT-00506,feature request,product,0.8808,feature request,product
-TKT-00507,bug,tech support,0.7649,bug,tech support
-TKT-00508,account access,account security,0.8808,account access,account security
-TKT-00509,outage,tech support,0.9500,outage,tech support
-TKT-00512,outage,tech support,0.9500,outage,tech support
-TKT-00513,billing,billing,0.9500,billing,billing
-TKT-00515,outage,tech support,0.3082,outage,tech support
-TKT-00516,outage,tech support,0.9500,outage,tech support
-TKT-00517,how-to,tech support,0.9500,how-to,tech support
-TKT-00519,how-to,tech support,0.9247,how-to,tech support
-TKT-00520,bug,tech support,0.9500,bug,tech support
-TKT-00521,how-to,tech support,0.9500,how-to,tech support
-TKT-00522,feature request,tech support,0.7858,feature request,product
-TKT-00524,how-to,tech support,0.9500,how-to,tech support
-TKT-00525,how-to,tech support,0.9500,how-to,tech support
-TKT-00526,outage,tech support,0.9500,outage,tech support
-TKT-00527,how-to,tech support,0.9247,how-to,tech support
-TKT-00528,feature request,tech support,0.7858,feature request,product
-TKT-00529,bug,tech support,0.8808,bug,tech support
-TKT-00530,feature request,product,0.9500,feature request,product
-TKT-00531,feature request,product,0.9500,feature request,product
-TKT-00532,bug,tech support,0.7286,bug,tech support
-TKT-00534,account access,account security,0.9500,account access,account security
-TKT-00535,outage,tech support,0.9500,outage,tech support
-TKT-00537,how-to,tech support,0.3082,how-to,tech support
-TKT-00538,outage,tech support,0.8573,outage,tech support
-TKT-00539,bug,tech support,0.8808,bug,tech support
-TKT-00540,billing,billing,0.9000,billing,billing
-TKT-00541,outage,tech support,0.9500,outage,tech support
-TKT-00544,feature request,tech support,0.7858,feature request,product
-TKT-00545,bug,tech support,0.9500,bug,tech support
-TKT-00546,feature request,tech support,0.7858,feature request,product
-TKT-00547,feature request,product,0.8808,feature request,product
-TKT-00548,outage,tech support,0.9500,outage,tech support
-TKT-00549,bug,tech support,0.8808,bug,tech support
-TKT-00550,bug,tech support,0.7286,bug,tech support
-TKT-00551,feature request,product,0.9500,feature request,product
-TKT-00553,feature request,product,0.9500,feature request,product
-TKT-00555,how-to,tech support,0.9247,how-to,tech support
-TKT-00556,outage,tech support,0.9500,outage,tech support
-TKT-00557,bug,tech support,0.9500,bug,tech support
-TKT-00558,how-to,tech support,0.9500,how-to,tech support
-TKT-00559,feature request,product,0.8808,feature request,product
-TKT-00560,billing,billing,0.9061,billing,billing
-TKT-00562,account access,account security,0.9500,account access,account security
-TKT-00563,account access,account security,0.9247,account access,account security
-TKT-00564,billing,billing,0.9000,billing,billing
-TKT-00565,outage,tech support,0.9500,outage,tech support
-TKT-00566,outage,tech support,0.9500,outage,tech support
-TKT-00567,how-to,tech support,0.8808,how-to,tech support
-TKT-00568,account access,account security,0.9500,account access,account security
-TKT-00569,bug,tech support,0.9500,bug,tech support
-TKT-00570,how-to,tech support,0.3082,how-to,tech support
-TKT-00571,bug,tech support,0.9500,bug,tech support
-TKT-00574,outage,tech support,0.9247,outage,tech support
-TKT-00575,account access,account security,0.8808,account access,account security
-TKT-00576,how-to,tech support,0.9500,how-to,tech support
-TKT-00577,outage,billing,0.7286,outage,tech support
-TKT-00578,how-to,tech support,0.9500,how-to,tech support
-TKT-00579,feature request,product,0.8808,feature request,product
-TKT-00580,bug,tech support,0.1000,feature request,product
-TKT-00581,how-to,tech support,0.3082,how-to,tech support
-TKT-00583,feature request,product,0.9500,feature request,product
-TKT-00584,account access,account security,0.9500,account access,account security
-TKT-00585,feature request,product,0.9500,feature request,product
-TKT-00586,feature request,tech support,0.7858,feature request,product
-TKT-00588,outage,tech support,0.9500,outage,tech support
-TKT-00590,bug,tech support,0.7858,bug,tech support
-TKT-00591,bug,tech support,0.9500,bug,tech support
-TKT-00593,how-to,tech support,0.9247,how-to,tech support
-TKT-00594,outage,tech support,0.8573,outage,tech support
-TKT-00595,feature request,tech support,0.7858,feature request,product
-TKT-00596,billing,billing,0.9500,billing,billing
-TKT-00597,bug,tech support,0.8808,bug,tech support
-TKT-00599,feature request,product,0.8808,feature request,product
-TKT-00600,how-to,tech support,0.9500,how-to,tech support
-TKT-00601,account access,account security,0.9500,account access,account security
-TKT-00602,outage,tech support,0.9500,outage,tech support
-TKT-00605,feature request,product,0.9500,feature request,product
-TKT-00606,feature request,tech support,0.7858,feature request,product
-TKT-00607,bug,tech support,0.1000,how-to,tech support
-TKT-00608,outage,tech support,0.9500,outage,tech support
-TKT-00609,how-to,tech support,0.9500,how-to,tech support
-TKT-00611,feature request,product,0.9500,feature request,product
-TKT-00613,how-to,tech support,0.9500,how-to,tech support
-TKT-00614,feature request,product,0.9500,feature request,product
-TKT-00615,bug,tech support,0.7286,bug,tech support
-TKT-00616,account access,account security,0.9500,account access,account security
-TKT-00618,outage,tech support,0.3082,outage,tech support
-TKT-00619,bug,tech support,0.8573,bug,tech support
-TKT-00620,billing,billing,0.9500,billing,billing
-TKT-00622,account access,account security,0.9500,account access,account security
-TKT-00623,feature request,tech support,0.7858,how-to,tech support
-TKT-00624,billing,billing,0.9500,billing,billing
-TKT-00625,account access,account security,0.8808,account access,account security
-TKT-00626,how-to,tech support,0.3082,how-to,tech support
-TKT-00630,outage,tech support,0.8808,outage,tech support
-TKT-00632,billing,billing,0.8808,billing,billing
-TKT-00633,billing,billing,0.9500,billing,billing
-TKT-00634,outage,tech support,0.9500,outage,tech support
-TKT-00635,outage,tech support,0.9500,outage,tech support
-TKT-00636,bug,tech support,0.9500,bug,tech support
-TKT-00637,bug,tech support,0.9500,bug,tech support
-TKT-00638,feature request,product,0.9500,feature request,product
-TKT-00640,outage,tech support,0.9500,outage,tech support
-TKT-00641,billing,billing,0.9500,billing,billing
-TKT-00642,feature request,product,0.8808,feature request,product
-TKT-00643,bug,tech support,0.8808,bug,tech support
-TKT-00644,bug,tech support,0.1000,how-to,tech support
-TKT-00646,feature request,product,0.8808,feature request,product
-TKT-00647,account access,account security,0.9500,account access,account security
-TKT-00648,how-to,tech support,0.8808,how-to,tech support
-TKT-00649,billing,billing,0.9247,billing,billing
-TKT-00650,outage,tech support,0.9500,outage,tech support
-TKT-00651,how-to,tech support,0.3082,how-to,tech support
-TKT-00652,billing,billing,0.9500,billing,billing
-TKT-00653,feature request,tech support,0.7858,feature request,product
-TKT-00654,outage,tech support,0.9500,outage,tech support
-TKT-00658,bug,tech support,0.8808,bug,tech support
-TKT-00659,account access,account security,0.9500,account access,account security
-TKT-00660,feature request,product,0.8808,feature request,product
-TKT-00661,outage,tech support,0.9500,outage,tech support
-TKT-00662,billing,billing,0.9500,billing,billing
-TKT-00663,how-to,tech support,0.9247,how-to,tech support
-TKT-00664,bug,tech support,0.7649,bug,tech support
-TKT-00665,bug,tech support,0.9500,bug,tech support
-TKT-00666,how-to,tech support,0.9500,how-to,tech support
-TKT-00667,how-to,tech support,0.9500,how-to,tech support
-TKT-00668,feature request,product,0.8808,feature request,product
-TKT-00669,how-to,tech support,0.9500,how-to,tech support
-TKT-00670,bug,tech support,0.3082,how-to,tech support
-TKT-00671,how-to,tech support,0.8808,how-to,tech support
-TKT-00672,billing,billing,0.9500,billing,billing
-TKT-00673,account access,account security,0.8808,account access,account security
-TKT-00675,outage,tech support,0.9247,outage,tech support
-TKT-00676,bug,tech support,0.8808,bug,tech support
-TKT-00677,bug,tech support,0.9500,bug,tech support
-TKT-00678,how-to,tech support,0.9500,how-to,tech support
-TKT-00679,bug,tech support,0.3082,how-to,tech support
-TKT-00683,feature request,tech support,0.7858,how-to,tech support
-TKT-00684,outage,tech support,0.8573,outage,tech support
-TKT-00685,feature request,product,0.8808,feature request,product
-TKT-00686,account access,account security,0.9247,account access,account security
-TKT-00688,how-to,tech support,0.9247,how-to,tech support
-TKT-00689,feature request,product,0.9247,feature request,product
-TKT-00690,billing,billing,0.9500,billing,billing
-TKT-00691,outage,tech support,0.9500,outage,tech support
-TKT-00692,billing,billing,0.9500,billing,billing
-TKT-00693,account access,account security,0.9061,account access,account security
-TKT-00695,how-to,tech support,0.9500,how-to,tech support
-TKT-00696,outage,tech support,0.9500,outage,tech support
-TKT-00697,account access,account security,0.9500,account access,account security
-TKT-00698,billing,billing,0.9500,billing,billing
-TKT-00699,billing,billing,0.9500,billing,billing
-TKT-00700,outage,tech support,0.9500,outage,tech support
-TKT-00701,how-to,tech support,0.3082,how-to,tech support
-TKT-00702,outage,tech support,0.9500,outage,tech support
-TKT-00703,outage,tech support,0.9500,outage,tech support
-TKT-00704,outage,tech support,0.9500,outage,tech support
-TKT-00706,how-to,tech support,0.8808,how-to,tech support
-TKT-00708,account access,account security,0.9500,account access,account security
-TKT-00710,how-to,tech support,0.9500,how-to,tech support
-TKT-00711,feature request,product,0.8808,feature request,product
-TKT-00712,bug,tech support,0.7649,bug,tech support
-TKT-00713,outage,tech support,0.9500,outage,tech support
-TKT-00714,account access,account security,0.9500,account access,account security
-TKT-00715,feature request,product,0.8808,feature request,product
-TKT-00716,how-to,tech support,0.9500,how-to,tech support
-TKT-00717,how-to,tech support,0.9500,how-to,tech support
-TKT-00718,bug,tech support,0.8573,bug,tech support
-TKT-00719,outage,tech support,0.9500,outage,tech support
-TKT-00720,feature request,tech support,0.7858,feature request,product
-TKT-00721,feature request,product,0.9500,feature request,product
-TKT-00722,how-to,tech support,0.8808,how-to,tech support
-TKT-00723,how-to,tech support,0.9247,how-to,tech support
-TKT-00724,account access,account security,0.8808,account access,account security
-TKT-00725,account access,account security,0.9500,account access,account security
-TKT-00726,billing,billing,0.9500,billing,billing
-TKT-00727,feature request,product,0.9500,feature request,product
-TKT-00728,feature request,tech support,0.7858,feature request,product
-TKT-00729,outage,tech support,0.9500,outage,tech support
-TKT-00731,how-to,tech support,0.9500,how-to,tech support
-TKT-00732,feature request,product,0.8808,feature request,product
-TKT-00733,feature request,product,0.9500,feature request,product
-TKT-00734,outage,tech support,0.9500,outage,tech support
-TKT-00735,how-to,tech support,0.9500,how-to,tech support
-TKT-00736,how-to,tech support,0.3082,how-to,tech support
-TKT-00737,account access,account security,0.8808,account access,account security
-TKT-00739,feature request,product,0.9500,feature request,product
-TKT-00740,how-to,tech support,0.9500,how-to,tech support
-TKT-00741,billing,billing,0.9500,billing,billing
-TKT-00742,account access,account security,0.8808,account access,account security
-TKT-00743,feature request,product,0.9500,feature request,product
-TKT-00744,bug,tech support,0.8808,bug,tech support
-TKT-00745,how-to,tech support,0.9500,how-to,tech support
-TKT-00746,bug,tech support,0.9500,bug,tech support
-TKT-00747,billing,billing,0.8808,billing,billing
-TKT-00748,bug,tech support,0.7286,bug,tech support
-TKT-00749,billing,billing,0.9500,billing,billing
-TKT-00750,feature request,product,0.8808,feature request,product
-TKT-00752,how-to,tech support,0.9500,how-to,tech support
-TKT-00753,account access,account security,0.9500,account access,account security
-TKT-00754,account access,account security,0.8808,account access,account security
-TKT-00755,billing,billing,0.9500,billing,billing
-TKT-00756,account access,account security,0.9500,account access,account security
-TKT-00757,outage,tech support,0.9500,outage,tech support
-TKT-00758,billing,billing,0.9500,billing,billing
-TKT-00759,outage,tech support,0.9500,outage,tech support
-TKT-00760,bug,tech support,0.9500,bug,tech support
-TKT-00761,bug,tech support,0.8808,bug,tech support
-TKT-00762,how-to,tech support,0.3082,how-to,tech support
-TKT-00763,account access,account security,0.8808,account access,account security
-TKT-00764,billing,billing,0.9500,billing,billing
-TKT-00765,outage,tech support,0.8573,outage,tech support
-TKT-00766,how-to,tech support,0.8808,how-to,tech support
-TKT-00768,account access,account security,0.8808,account access,account security
-TKT-00769,feature request,product,0.8808,feature request,product
-TKT-00770,account access,account security,0.8808,account access,account security
-TKT-00771,how-to,tech support,0.8808,how-to,tech support
-TKT-00772,how-to,tech support,0.9500,how-to,tech support
-TKT-00773,feature request,product,0.8808,feature request,product
-TKT-00776,account access,account security,0.9500,account access,account security
-TKT-00777,billing,billing,0.9500,billing,billing
-TKT-00780,account access,account security,0.9500,account access,account security
-TKT-00781,account access,account security,0.9500,account access,account security
-TKT-00782,bug,tech support,0.1000,feature request,product
-TKT-00783,feature request,product,0.9500,feature request,product
-TKT-00786,feature request,product,0.8808,feature request,product
-TKT-00787,how-to,tech support,0.9500,how-to,tech support
-TKT-00789,account access,account security,0.8808,account access,account security
-TKT-00790,outage,tech support,0.9247,outage,tech support
-TKT-00791,feature request,product,0.9500,feature request,product
-TKT-00792,account access,account security,0.9500,account access,account security
-TKT-00793,billing,billing,0.9500,billing,billing
-TKT-00794,billing,billing,0.8167,billing,billing
-TKT-00795,account access,account security,0.9500,account access,account security
-TKT-00796,outage,tech support,0.9500,outage,tech support
-TKT-00798,bug,tech support,0.1000,feature request,product
-TKT-00799,account access,account security,0.9500,account access,account security
-TKT-00800,feature request,product,0.8808,feature request,product
-TKT-00802,outage,tech support,0.9500,outage,tech support
-TKT-00803,outage,tech support,0.9500,outage,tech support
-TKT-00805,account access,account security,0.9500,account access,account security
-TKT-00806,feature request,product,0.8808,feature request,product
-TKT-00808,bug,tech support,0.7858,bug,tech support
-TKT-00811,account access,account security,0.9500,account access,account security
-TKT-00813,outage,tech support,0.9500,outage,tech support
-TKT-00814,feature request,product,0.8808,feature request,product
-TKT-00815,feature request,product,0.9500,feature request,product
-TKT-00816,outage,tech support,0.9247,outage,tech support
-TKT-00817,how-to,tech support,0.3082,how-to,tech support
-TKT-00818,account access,account security,0.9061,account access,account security
-TKT-00819,feature request,tech support,0.7858,feature request,product
-TKT-00820,billing,billing,0.9500,billing,billing
-TKT-00822,billing,billing,0.8167,billing,billing
-TKT-00823,outage,tech support,0.9500,outage,tech support
-TKT-00824,bug,tech support,0.8808,bug,tech support
-TKT-00825,outage,tech support,0.9500,outage,tech support
-TKT-00826,how-to,tech support,0.9500,how-to,tech support
-TKT-00827,bug,tech support,0.9500,bug,tech support
-TKT-00828,outage,tech support,0.8808,outage,tech support
-TKT-00829,billing,billing,0.9000,billing,billing
-TKT-00830,how-to,tech support,0.8808,how-to,tech support
-TKT-00831,feature request,product,0.8808,feature request,product
-TKT-00832,outage,tech support,0.9500,outage,tech support
-TKT-00833,bug,tech support,0.8808,bug,tech support
-TKT-00834,account access,account security,0.8808,account access,account security
-TKT-00835,how-to,tech support,0.9500,how-to,tech support
-TKT-00836,billing,billing,0.9500,billing,billing
-TKT-00837,feature request,product,0.8808,feature request,product
-TKT-00840,bug,tech support,0.9500,bug,tech support
-TKT-00842,feature request,tech support,0.7858,feature request,product
-TKT-00843,account access,account security,0.9500,account access,account security
-TKT-00844,feature request,tech support,0.7858,feature request,product
-TKT-00845,how-to,tech support,0.9500,how-to,tech support
-TKT-00846,bug,tech support,0.9500,bug,tech support
-TKT-00848,how-to,tech support,0.8808,how-to,tech support
-TKT-00849,feature request,product,0.9500,feature request,product
-TKT-00850,bug,tech support,0.7649,bug,tech support
-TKT-00851,account access,account security,0.9500,account access,account security
-TKT-00852,feature request,product,0.9500,feature request,product
-TKT-00853,bug,tech support,0.9500,bug,tech support
-TKT-00854,account access,account security,0.9500,account access,account security
-TKT-00856,billing,billing,0.8808,billing,billing
-TKT-00857,billing,billing,0.9500,billing,billing
-TKT-00858,how-to,tech support,0.9500,how-to,tech support
-TKT-00859,billing,billing,0.8808,billing,billing
-TKT-00860,outage,tech support,0.8808,outage,tech support
-TKT-00862,billing,billing,0.9500,billing,billing
-TKT-00863,outage,tech support,0.9500,outage,tech support
-TKT-00865,outage,tech support,0.9500,outage,tech support
-TKT-00866,outage,tech support,0.8808,outage,tech support
-TKT-00867,bug,tech support,0.9500,bug,tech support
-TKT-00868,account access,account security,0.8808,account access,account security
-TKT-00869,bug,tech support,0.8573,bug,tech support
-TKT-00870,account access,account security,0.9500,account access,account security
-TKT-00871,feature request,product,0.8808,feature request,product
-TKT-00872,bug,tech support,0.9500,bug,tech support
-TKT-00874,account access,account security,0.9061,account access,account security
-TKT-00875,how-to,tech support,0.9500,how-to,tech support
-TKT-00876,how-to,tech support,0.9500,how-to,tech support
-TKT-00877,billing,billing,0.9500,billing,billing
-TKT-00878,outage,tech support,0.9500,outage,tech support
-TKT-00879,account access,account security,0.8808,account access,account security
-TKT-00881,how-to,tech support,0.8808,how-to,tech support
-TKT-00882,how-to,tech support,0.9247,how-to,tech support
-TKT-00884,account access,account security,0.9500,account access,account security
-TKT-00885,bug,tech support,0.9500,bug,tech support
-TKT-00886,account access,account security,0.9500,account access,account security
-TKT-00887,account access,account security,0.9500,account access,account security
-TKT-00888,account access,account security,0.9500,account access,account security
-TKT-00889,bug,tech support,0.9500,bug,tech support
-TKT-00890,account access,account security,0.9500,account access,account security
-TKT-00893,billing,billing,0.9500,billing,billing
-TKT-00894,feature request,tech support,0.7826,bug,tech support
-TKT-00897,how-to,tech support,0.3082,how-to,tech support
-TKT-00898,outage,tech support,0.9500,outage,tech support
-TKT-00899,billing,billing,0.9500,billing,billing
-TKT-00900,how-to,tech support,0.9247,how-to,tech support
-TKT-00901,billing,billing,0.9500,billing,billing
-TKT-00902,bug,tech support,0.7649,bug,tech support
-TKT-00903,how-to,tech support,0.9247,how-to,tech support
-TKT-00905,feature request,product,0.9500,feature request,product
-TKT-00906,feature request,tech support,0.7858,feature request,product
-TKT-00907,feature request,product,0.8808,feature request,product
-TKT-00908,account access,account security,0.9500,account access,account security
-TKT-00910,feature request,product,0.8808,feature request,product
-TKT-00911,outage,tech support,0.9500,outage,tech support
-TKT-00913,billing,billing,0.9500,billing,billing
-TKT-00914,account access,account security,0.9500,account access,account security
-TKT-00916,billing,billing,0.9500,billing,billing
-TKT-00917,account access,account security,0.9500,account access,account security
-TKT-00918,feature request,tech support,0.7858,feature request,product
-TKT-00919,how-to,tech support,0.9247,how-to,tech support
-TKT-00921,account access,account security,0.8808,account access,account security
-TKT-00923,how-to,tech support,0.8808,how-to,tech support
-TKT-00924,account access,account security,0.9500,account access,account security
-TKT-00925,billing,billing,0.8167,billing,billing
-TKT-00926,bug,tech support,0.8573,bug,tech support
-TKT-00928,how-to,tech support,0.9500,how-to,tech support
-TKT-00929,feature request,product,0.9500,feature request,product
-TKT-00930,outage,tech support,0.9500,outage,tech support
-TKT-00932,feature request,tech support,0.7858,how-to,tech support
-TKT-00934,feature request,product,0.8808,feature request,product
-TKT-00935,how-to,tech support,0.9500,how-to,tech support
-TKT-00936,outage,tech support,0.9500,outage,tech support
-TKT-00937,feature request,product,0.9500,feature request,product
-TKT-00938,outage,tech support,0.9500,outage,tech support
-TKT-00939,feature request,product,0.8808,feature request,product
-TKT-00940,billing,billing,0.9500,billing,billing
-TKT-00941,outage,tech support,0.9500,outage,tech support
-TKT-00943,feature request,product,0.9500,feature request,product
-TKT-00946,outage,tech support,0.9500,outage,tech support
-TKT-00948,account access,account security,0.8808,account access,account security
-TKT-00950,outage,tech support,0.9500,outage,tech support
-TKT-00952,feature request,product,0.8808,feature request,product
-TKT-00953,feature request,product,0.9500,feature request,product
-TKT-00954,feature request,product,0.9500,feature request,product
-TKT-00955,how-to,tech support,0.8808,how-to,tech support
-TKT-00956,outage,tech support,0.9500,outage,tech support
-TKT-00957,feature request,tech support,0.7858,feature request,product
-TKT-00958,outage,billing,0.7286,outage,tech support
-TKT-00959,bug,tech support,0.3082,outage,tech support
-TKT-00960,feature request,product,0.8808,feature request,product
-TKT-00962,bug,tech support,0.9500,bug,tech support
-TKT-00963,account access,account security,0.8808,account access,account security
-TKT-00964,outage,tech support,0.9500,outage,tech support
-TKT-00965,outage,tech support,0.9500,outage,tech support
-TKT-00966,outage,tech support,0.3082,outage,tech support
-TKT-00968,feature request,tech support,0.7858,feature request,product
-TKT-00969,billing,billing,0.8808,billing,billing
-TKT-00970,outage,tech support,0.9500,outage,tech support
-TKT-00972,feature request,product,0.8808,feature request,product
-TKT-00974,account access,account security,0.8808,account access,account security
-TKT-00975,bug,tech support,0.9500,bug,tech support
-TKT-00976,feature request,tech support,0.7858,feature request,product
-TKT-00977,feature request,tech support,0.7858,feature request,product
-TKT-00980,billing,billing,0.9500,billing,billing
-TKT-00981,account access,account security,0.9500,account access,account security
-TKT-00982,billing,billing,0.9000,billing,billing
-TKT-00983,account access,account security,0.9500,account access,account security
-TKT-00984,outage,tech support,0.9500,outage,tech support
-TKT-00985,outage,tech support,0.9247,outage,tech support
-TKT-00986,feature request,product,0.8808,feature request,product
-TKT-00988,how-to,tech support,0.9500,how-to,tech support
-TKT-00990,how-to,tech support,0.9500,how-to,tech support
-TKT-00991,bug,tech support,0.7286,bug,tech support
-TKT-00992,feature request,product,0.8808,feature request,product
-TKT-00993,feature request,product,0.9500,feature request,product
-TKT-00994,feature request,tech support,0.7858,feature request,product
-TKT-00996,billing,billing,0.9500,billing,billing
-TKT-00998,bug,tech support,0.7286,bug,tech support
-TKT-00999,how-to,tech support,0.8808,how-to,tech support
-TKT-01000,outage,tech support,0.9500,outage,tech support
+id,pred_issue_type,pred_team,confidence,urgency,true_issue_type,true_team
+TKT-00001,outage,tech support,0.9500,critical,outage,tech support
+TKT-00002,outage,tech support,0.9500,critical,outage,tech support
+TKT-00003,billing,billing,0.9500,medium,billing,billing
+TKT-00005,account access,account security,0.9500,high,account access,account security
+TKT-00006,billing,billing,0.9500,high,billing,billing
+TKT-00008,bug,tech support,0.9500,high,bug,tech support
+TKT-00009,outage,tech support,0.9500,critical,outage,tech support
+TKT-00010,account access,account security,0.9500,high,account access,account security
+TKT-00011,billing,billing,0.8167,medium,billing,billing
+TKT-00012,bug,tech support,0.9500,high,bug,tech support
+TKT-00013,outage,tech support,0.8808,critical,outage,tech support
+TKT-00014,bug,tech support,0.9500,high,bug,tech support
+TKT-00015,outage,tech support,0.8573,critical,outage,tech support
+TKT-00016,how-to,tech support,0.8808,low,how-to,tech support
+TKT-00017,billing,billing,0.8167,medium,billing,billing
+TKT-00018,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00019,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00022,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00023,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00024,feature request,product,0.9500,low,feature request,product
+TKT-00025,billing,billing,0.9500,medium,billing,billing
+TKT-00026,billing,billing,0.8167,medium,billing,billing
+TKT-00027,outage,tech support,0.8808,critical,outage,tech support
+TKT-00028,billing,billing,0.8808,high,billing,billing
+TKT-00029,outage,tech support,0.9500,critical,outage,tech support
+TKT-00032,bug,tech support,0.7286,high,bug,tech support
+TKT-00033,feature request,tech support,0.7858,low,feature request,product
+TKT-00034,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00035,outage,tech support,0.9500,critical,outage,tech support
+TKT-00036,how-to,tech support,0.8808,low,how-to,tech support
+TKT-00037,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00038,how-to,tech support,0.3082,low,how-to,tech support
+TKT-00039,account access,account security,0.9500,high,account access,account security
+TKT-00040,bug,tech support,0.9500,high,bug,tech support
+TKT-00041,bug,tech support,0.7858,high,bug,tech support
+TKT-00042,billing,billing,0.9247,medium,billing,billing
+TKT-00043,billing,billing,0.9500,medium,billing,billing
+TKT-00044,account access,account security,0.8808,high,account access,account security
+TKT-00045,account access,account security,0.9500,high,account access,account security
+TKT-00046,billing,billing,0.9500,medium,billing,billing
+TKT-00047,account access,account security,0.9500,high,account access,account security
+TKT-00048,bug,tech support,0.3082,high,how-to,tech support
+TKT-00049,bug,tech support,0.8808,high,bug,tech support
+TKT-00050,bug,tech support,0.3082,high,outage,tech support
+TKT-00051,feature request,product,0.8808,low,feature request,product
+TKT-00052,feature request,product,0.8808,low,feature request,product
+TKT-00053,feature request,product,0.8808,low,feature request,product
+TKT-00054,account access,account security,0.9500,high,account access,account security
+TKT-00055,how-to,tech support,0.8808,low,how-to,tech support
+TKT-00056,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00057,outage,tech support,0.9500,critical,outage,tech support
+TKT-00059,how-to,tech support,0.3082,low,how-to,tech support
+TKT-00060,how-to,tech support,0.3082,low,how-to,tech support
+TKT-00062,bug,tech support,0.9500,high,bug,tech support
+TKT-00063,billing,billing,0.9500,high,billing,billing
+TKT-00065,feature request,tech support,0.7858,low,feature request,product
+TKT-00066,billing,billing,0.9500,high,billing,billing
+TKT-00067,feature request,product,0.9500,low,feature request,product
+TKT-00068,feature request,tech support,0.7858,low,feature request,product
+TKT-00069,feature request,tech support,0.7858,low,feature request,product
+TKT-00070,how-to,tech support,0.8808,low,how-to,tech support
+TKT-00072,feature request,tech support,0.7858,low,how-to,tech support
+TKT-00073,feature request,product,0.9500,low,feature request,product
+TKT-00074,feature request,tech support,0.7858,low,feature request,product
+TKT-00075,feature request,product,0.8808,low,feature request,product
+TKT-00076,billing,billing,0.9500,high,billing,billing
+TKT-00077,account access,account security,0.8808,high,account access,account security
+TKT-00080,feature request,product,0.8808,low,feature request,product
+TKT-00082,feature request,tech support,0.7858,low,feature request,product
+TKT-00083,outage,tech support,0.9500,critical,outage,tech support
+TKT-00085,outage,tech support,0.9500,critical,outage,tech support
+TKT-00087,billing,billing,0.8167,medium,billing,billing
+TKT-00088,feature request,product,0.8808,low,feature request,product
+TKT-00089,bug,tech support,0.1000,high,how-to,tech support
+TKT-00090,bug,tech support,0.9500,high,bug,tech support
+TKT-00091,account access,account security,0.9500,high,account access,account security
+TKT-00092,account access,account security,0.8808,high,account access,account security
+TKT-00093,outage,tech support,0.9500,high,outage,tech support
+TKT-00094,how-to,tech support,0.9247,low,how-to,tech support
+TKT-00095,outage,tech support,0.9500,high,outage,tech support
+TKT-00096,feature request,product,0.8808,low,feature request,product
+TKT-00097,billing,billing,0.8167,medium,billing,billing
+TKT-00098,how-to,tech support,0.9247,low,how-to,tech support
+TKT-00099,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00101,bug,tech support,0.7286,high,bug,tech support
+TKT-00102,feature request,product,0.9500,low,feature request,product
+TKT-00103,feature request,tech support,0.7858,low,feature request,product
+TKT-00106,feature request,tech support,0.7858,low,feature request,product
+TKT-00107,feature request,product,0.9247,low,feature request,product
+TKT-00110,bug,tech support,0.9500,high,bug,tech support
+TKT-00112,how-to,tech support,0.8808,low,how-to,tech support
+TKT-00113,feature request,tech support,0.7858,low,how-to,tech support
+TKT-00114,outage,tech support,0.9500,critical,outage,tech support
+TKT-00115,billing,billing,0.9500,medium,billing,billing
+TKT-00116,feature request,tech support,0.7858,low,feature request,product
+TKT-00119,billing,billing,0.8167,medium,billing,billing
+TKT-00120,outage,tech support,0.8573,critical,outage,tech support
+TKT-00121,feature request,product,0.8808,low,feature request,product
+TKT-00122,feature request,tech support,0.7826,high,bug,tech support
+TKT-00123,bug,tech support,0.1000,high,feature request,product
+TKT-00125,billing,billing,0.9500,medium,billing,billing
+TKT-00126,feature request,product,0.8808,low,feature request,product
+TKT-00127,account access,account security,0.8808,critical,account access,account security
+TKT-00128,bug,tech support,0.9500,high,bug,tech support
+TKT-00129,bug,tech support,0.8808,high,bug,tech support
+TKT-00130,bug,tech support,0.3082,high,how-to,tech support
+TKT-00131,bug,tech support,0.7858,high,bug,tech support
+TKT-00132,feature request,product,0.9500,low,feature request,product
+TKT-00133,feature request,product,0.9500,low,feature request,product
+TKT-00136,outage,tech support,0.9500,critical,outage,tech support
+TKT-00138,outage,tech support,0.9500,critical,outage,tech support
+TKT-00142,outage,tech support,0.8573,critical,outage,tech support
+TKT-00143,outage,tech support,0.8573,critical,outage,tech support
+TKT-00144,feature request,product,0.8808,low,feature request,product
+TKT-00145,billing,billing,0.8808,high,billing,billing
+TKT-00147,outage,tech support,0.9500,high,outage,tech support
+TKT-00148,feature request,product,0.9500,low,feature request,product
+TKT-00149,feature request,tech support,0.7858,low,feature request,product
+TKT-00150,billing,billing,0.8808,high,billing,billing
+TKT-00151,bug,tech support,0.8808,high,bug,tech support
+TKT-00152,billing,billing,0.9500,medium,billing,billing
+TKT-00153,how-to,tech support,0.8808,low,how-to,tech support
+TKT-00154,billing,billing,0.9500,medium,billing,billing
+TKT-00155,feature request,product,0.9500,low,feature request,product
+TKT-00156,billing,billing,0.9500,high,billing,billing
+TKT-00157,account access,account security,0.9500,high,account access,account security
+TKT-00158,outage,tech support,0.9500,critical,outage,tech support
+TKT-00159,bug,tech support,0.1000,high,how-to,tech support
+TKT-00160,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00161,outage,tech support,0.3082,high,outage,tech support
+TKT-00162,feature request,tech support,0.7858,low,feature request,product
+TKT-00163,feature request,product,0.8808,low,feature request,product
+TKT-00164,bug,tech support,0.8808,high,bug,tech support
+TKT-00165,account access,account security,0.9500,high,account access,account security
+TKT-00166,bug,tech support,0.7286,high,bug,tech support
+TKT-00168,how-to,tech support,0.9247,low,how-to,tech support
+TKT-00169,account access,account security,0.9500,high,account access,account security
+TKT-00170,bug,tech support,0.8808,high,bug,tech support
+TKT-00171,account access,account security,0.9500,high,account access,account security
+TKT-00172,how-to,tech support,0.8808,low,how-to,tech support
+TKT-00173,bug,tech support,0.8808,high,bug,tech support
+TKT-00174,outage,tech support,0.9500,critical,outage,tech support
+TKT-00175,bug,tech support,0.9500,high,bug,tech support
+TKT-00176,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00177,outage,tech support,0.9500,critical,outage,tech support
+TKT-00179,feature request,product,0.9500,low,feature request,product
+TKT-00180,feature request,product,0.8808,low,feature request,product
+TKT-00181,account access,account security,0.9500,high,account access,account security
+TKT-00182,outage,tech support,0.9500,critical,outage,tech support
+TKT-00184,account access,account security,0.8808,high,account access,account security
+TKT-00185,account access,account security,0.9500,high,account access,account security
+TKT-00186,billing,billing,0.9500,medium,billing,billing
+TKT-00187,billing,billing,0.9500,high,billing,billing
+TKT-00188,billing,billing,0.9500,high,billing,billing
+TKT-00189,outage,tech support,0.9500,critical,outage,tech support
+TKT-00190,account access,account security,0.9500,high,account access,account security
+TKT-00191,outage,tech support,0.9500,critical,outage,tech support
+TKT-00192,outage,tech support,0.9500,high,outage,tech support
+TKT-00193,outage,tech support,0.9500,critical,outage,tech support
+TKT-00194,account access,account security,0.8808,critical,account access,account security
+TKT-00195,bug,tech support,0.7286,high,bug,tech support
+TKT-00196,billing,billing,0.8167,medium,billing,billing
+TKT-00197,outage,tech support,0.8573,critical,outage,tech support
+TKT-00198,bug,tech support,0.8808,high,bug,tech support
+TKT-00199,account access,account security,0.9500,high,account access,account security
+TKT-00200,bug,tech support,0.7649,high,bug,tech support
+TKT-00201,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00202,outage,tech support,0.9500,critical,outage,tech support
+TKT-00203,billing,billing,0.8808,medium,billing,billing
+TKT-00204,bug,tech support,0.9500,high,bug,tech support
+TKT-00205,feature request,tech support,0.7858,low,feature request,product
+TKT-00206,bug,tech support,0.7286,high,bug,tech support
+TKT-00207,feature request,product,0.9500,low,feature request,product
+TKT-00208,outage,tech support,0.8808,critical,outage,tech support
+TKT-00209,bug,tech support,0.7858,high,bug,tech support
+TKT-00210,outage,tech support,0.8808,critical,outage,tech support
+TKT-00211,bug,tech support,0.7649,high,bug,tech support
+TKT-00213,account access,account security,0.9500,high,account access,account security
+TKT-00215,outage,tech support,0.9500,critical,outage,tech support
+TKT-00216,bug,tech support,0.9500,high,bug,tech support
+TKT-00217,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00218,outage,tech support,0.9500,low,outage,tech support
+TKT-00219,feature request,product,0.8808,low,feature request,product
+TKT-00220,billing,billing,0.9500,high,billing,billing
+TKT-00221,billing,billing,0.8808,medium,billing,billing
+TKT-00222,outage,tech support,0.9500,critical,outage,tech support
+TKT-00223,feature request,product,0.9500,low,feature request,product
+TKT-00224,bug,tech support,0.9500,high,bug,tech support
+TKT-00225,bug,tech support,0.9500,high,bug,tech support
+TKT-00226,account access,account security,0.8808,high,account access,account security
+TKT-00227,outage,tech support,0.9500,high,outage,tech support
+TKT-00228,how-to,tech support,0.8808,low,how-to,tech support
+TKT-00229,outage,tech support,0.9500,critical,outage,tech support
+TKT-00230,billing,billing,0.7286,medium,billing,billing
+TKT-00231,bug,tech support,0.7286,high,bug,tech support
+TKT-00232,feature request,tech support,0.7858,low,feature request,product
+TKT-00233,how-to,tech support,0.8808,low,how-to,tech support
+TKT-00234,feature request,product,0.9500,low,feature request,product
+TKT-00235,account access,account security,0.8808,critical,account access,account security
+TKT-00236,billing,billing,0.9500,medium,billing,billing
+TKT-00237,how-to,tech support,0.9247,low,how-to,tech support
+TKT-00238,how-to,tech support,0.9247,low,how-to,tech support
+TKT-00239,how-to,tech support,0.3082,low,how-to,tech support
+TKT-00240,billing,billing,0.9247,medium,billing,billing
+TKT-00242,feature request,product,0.9500,low,feature request,product
+TKT-00243,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00244,feature request,tech support,0.7858,low,feature request,product
+TKT-00246,bug,tech support,0.7649,high,bug,tech support
+TKT-00247,feature request,product,0.9500,low,feature request,product
+TKT-00248,account access,account security,0.9500,high,account access,account security
+TKT-00249,how-to,tech support,0.8808,low,how-to,tech support
+TKT-00250,account access,account security,0.9061,high,account access,account security
+TKT-00251,feature request,product,0.8808,low,feature request,product
+TKT-00252,billing,billing,0.8808,high,billing,billing
+TKT-00253,bug,tech support,0.7858,high,bug,tech support
+TKT-00254,feature request,product,0.9500,low,feature request,product
+TKT-00255,bug,tech support,0.1000,high,how-to,tech support
+TKT-00256,account access,account security,0.9500,high,account access,account security
+TKT-00257,outage,tech support,0.9247,critical,outage,tech support
+TKT-00258,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00259,feature request,tech support,0.7858,low,feature request,product
+TKT-00261,outage,tech support,0.9500,critical,outage,tech support
+TKT-00262,feature request,product,0.8808,low,feature request,product
+TKT-00263,outage,tech support,0.8573,critical,outage,tech support
+TKT-00264,account access,account security,0.9500,high,account access,account security
+TKT-00265,outage,tech support,0.9500,low,outage,tech support
+TKT-00266,account access,account security,0.9500,high,account access,account security
+TKT-00267,feature request,tech support,0.7858,low,feature request,product
+TKT-00268,billing,billing,0.9500,medium,billing,billing
+TKT-00269,billing,billing,0.9500,medium,billing,billing
+TKT-00270,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00271,account access,account security,0.9500,high,account access,account security
+TKT-00272,outage,tech support,0.9500,critical,outage,tech support
+TKT-00274,billing,billing,0.9061,medium,billing,billing
+TKT-00275,outage,tech support,0.8808,critical,outage,tech support
+TKT-00276,bug,tech support,0.9500,high,bug,tech support
+TKT-00279,billing,billing,0.8167,medium,billing,billing
+TKT-00280,billing,billing,0.7286,medium,billing,billing
+TKT-00281,outage,tech support,0.9500,low,outage,tech support
+TKT-00282,bug,tech support,0.8573,high,bug,tech support
+TKT-00283,outage,tech support,0.9500,high,outage,tech support
+TKT-00285,billing,billing,0.9500,medium,billing,billing
+TKT-00287,feature request,tech support,0.7858,low,feature request,product
+TKT-00288,feature request,product,0.9500,low,feature request,product
+TKT-00291,feature request,product,0.8808,low,feature request,product
+TKT-00292,bug,tech support,0.8808,high,bug,tech support
+TKT-00293,feature request,tech support,0.7858,low,feature request,product
+TKT-00294,billing,billing,0.9500,medium,billing,billing
+TKT-00295,billing,billing,0.9500,medium,billing,billing
+TKT-00296,billing,billing,0.9500,high,billing,billing
+TKT-00297,account access,account security,0.8808,critical,account access,account security
+TKT-00298,account access,account security,0.8808,critical,account access,account security
+TKT-00299,outage,tech support,0.3082,high,outage,tech support
+TKT-00300,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00301,bug,tech support,0.7286,high,bug,tech support
+TKT-00302,feature request,product,0.9500,low,feature request,product
+TKT-00305,billing,billing,0.9500,medium,billing,billing
+TKT-00306,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00308,outage,tech support,0.9500,critical,outage,tech support
+TKT-00309,bug,tech support,0.7286,high,bug,tech support
+TKT-00311,account access,account security,0.8808,high,account access,account security
+TKT-00312,account access,account security,0.9500,high,account access,account security
+TKT-00313,outage,tech support,0.9247,critical,outage,tech support
+TKT-00314,feature request,tech support,0.7858,low,feature request,product
+TKT-00315,outage,tech support,0.9500,high,outage,tech support
+TKT-00316,bug,tech support,0.1000,high,how-to,tech support
+TKT-00317,bug,tech support,0.8808,high,bug,tech support
+TKT-00318,account access,account security,0.8808,high,account access,account security
+TKT-00319,account access,account security,0.9500,high,account access,account security
+TKT-00320,outage,tech support,0.9500,critical,outage,tech support
+TKT-00322,how-to,tech support,0.8808,low,how-to,tech support
+TKT-00323,outage,tech support,0.9500,critical,outage,tech support
+TKT-00324,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00325,account access,account security,0.9500,high,account access,account security
+TKT-00326,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00327,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00328,outage,tech support,0.9500,critical,outage,tech support
+TKT-00329,account access,account security,0.9500,high,account access,account security
+TKT-00330,billing,billing,0.9500,medium,billing,billing
+TKT-00331,account access,account security,0.9500,high,account access,account security
+TKT-00332,feature request,product,0.9247,low,feature request,product
+TKT-00333,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00334,feature request,product,0.9500,low,feature request,product
+TKT-00335,feature request,product,0.9500,low,feature request,product
+TKT-00336,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00337,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00338,feature request,product,0.8808,low,feature request,product
+TKT-00339,account access,account security,0.9500,high,account access,account security
+TKT-00340,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00341,outage,tech support,0.3082,high,outage,tech support
+TKT-00342,bug,tech support,0.9500,high,bug,tech support
+TKT-00343,bug,tech support,0.3082,high,how-to,tech support
+TKT-00345,billing,billing,0.8808,medium,billing,billing
+TKT-00346,account access,account security,0.9500,high,account access,account security
+TKT-00347,outage,tech support,0.9500,high,outage,tech support
+TKT-00349,billing,billing,0.9500,medium,billing,billing
+TKT-00350,account access,account security,0.9500,high,account access,account security
+TKT-00351,outage,tech support,0.9500,critical,outage,tech support
+TKT-00352,outage,billing,0.7286,high,outage,tech support
+TKT-00353,feature request,tech support,0.7858,low,feature request,product
+TKT-00355,billing,billing,0.9500,medium,billing,billing
+TKT-00356,billing,billing,0.8167,medium,billing,billing
+TKT-00357,how-to,tech support,0.8808,low,how-to,tech support
+TKT-00358,account access,account security,0.8808,critical,account access,account security
+TKT-00359,account access,account security,0.8808,critical,account access,account security
+TKT-00360,feature request,product,0.8808,low,feature request,product
+TKT-00361,feature request,product,0.9500,low,feature request,product
+TKT-00362,feature request,product,0.9500,low,feature request,product
+TKT-00363,feature request,tech support,0.7858,low,feature request,product
+TKT-00364,bug,tech support,0.9500,high,bug,tech support
+TKT-00366,billing,billing,0.9500,high,billing,billing
+TKT-00368,feature request,tech support,0.7826,high,bug,tech support
+TKT-00369,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00370,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00372,outage,tech support,0.9500,high,outage,tech support
+TKT-00373,feature request,product,0.8808,low,feature request,product
+TKT-00374,billing,billing,0.9500,high,billing,billing
+TKT-00375,feature request,product,0.9500,low,feature request,product
+TKT-00376,account access,account security,0.9247,critical,account access,account security
+TKT-00377,account access,account security,0.9500,high,account access,account security
+TKT-00378,outage,tech support,0.9500,critical,outage,tech support
+TKT-00379,billing,billing,0.9500,high,billing,billing
+TKT-00380,account access,account security,0.9500,high,account access,account security
+TKT-00381,outage,tech support,0.9500,high,outage,tech support
+TKT-00382,bug,tech support,0.9500,high,bug,tech support
+TKT-00383,bug,tech support,0.8808,high,bug,tech support
+TKT-00385,bug,tech support,0.7649,high,bug,tech support
+TKT-00387,bug,tech support,0.7649,high,bug,tech support
+TKT-00388,bug,tech support,0.8808,high,bug,tech support
+TKT-00389,outage,tech support,0.9500,critical,outage,tech support
+TKT-00390,billing,billing,0.9500,medium,billing,billing
+TKT-00391,billing,billing,0.7286,medium,billing,billing
+TKT-00392,feature request,product,0.8808,low,feature request,product
+TKT-00393,outage,tech support,0.9500,high,outage,tech support
+TKT-00395,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00396,account access,account security,0.9500,high,account access,account security
+TKT-00398,how-to,tech support,0.3082,low,how-to,tech support
+TKT-00399,billing,billing,0.8808,medium,billing,billing
+TKT-00400,how-to,tech support,0.9247,low,how-to,tech support
+TKT-00401,billing,billing,0.9500,medium,billing,billing
+TKT-00402,feature request,product,0.9500,low,feature request,product
+TKT-00403,outage,tech support,0.9500,critical,outage,tech support
+TKT-00405,billing,billing,0.9500,high,billing,billing
+TKT-00406,billing,billing,0.9500,medium,billing,billing
+TKT-00407,bug,tech support,0.9500,high,bug,tech support
+TKT-00409,billing,billing,0.8167,medium,billing,billing
+TKT-00410,bug,tech support,0.9500,high,bug,tech support
+TKT-00411,account access,account security,0.9500,high,account access,account security
+TKT-00412,account access,account security,0.9500,high,account access,account security
+TKT-00413,how-to,tech support,0.9247,low,how-to,tech support
+TKT-00414,account access,account security,0.9500,high,account access,account security
+TKT-00415,how-to,tech support,0.8808,low,how-to,tech support
+TKT-00417,outage,tech support,0.9500,critical,outage,tech support
+TKT-00418,how-to,tech support,0.8808,low,how-to,tech support
+TKT-00419,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00420,bug,tech support,0.8573,high,bug,tech support
+TKT-00421,how-to,tech support,0.3082,low,how-to,tech support
+TKT-00424,account access,account security,0.8808,high,account access,account security
+TKT-00425,feature request,product,0.9500,low,feature request,product
+TKT-00426,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00427,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00428,account access,account security,0.9500,high,account access,account security
+TKT-00433,feature request,product,0.8808,low,feature request,product
+TKT-00434,feature request,tech support,0.7858,low,feature request,product
+TKT-00438,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00439,account access,account security,0.9500,high,account access,account security
+TKT-00440,how-to,tech support,0.8808,low,how-to,tech support
+TKT-00441,how-to,tech support,0.8808,low,how-to,tech support
+TKT-00442,billing,billing,0.8167,medium,billing,billing
+TKT-00443,billing,billing,0.9500,high,billing,billing
+TKT-00444,feature request,product,0.9500,low,feature request,product
+TKT-00445,outage,tech support,0.9500,high,outage,tech support
+TKT-00447,billing,billing,0.9061,medium,billing,billing
+TKT-00449,feature request,product,0.8808,low,feature request,product
+TKT-00450,account access,account security,0.9061,high,account access,account security
+TKT-00451,bug,tech support,0.7286,high,bug,tech support
+TKT-00452,feature request,tech support,0.7858,low,feature request,product
+TKT-00453,bug,tech support,0.8808,high,bug,tech support
+TKT-00454,bug,tech support,0.8808,high,bug,tech support
+TKT-00455,bug,tech support,0.8808,high,bug,tech support
+TKT-00456,feature request,product,0.8808,low,feature request,product
+TKT-00457,bug,tech support,0.1000,high,how-to,tech support
+TKT-00458,bug,tech support,0.8573,high,bug,tech support
+TKT-00459,outage,billing,0.7286,high,outage,tech support
+TKT-00460,account access,account security,0.8808,high,account access,account security
+TKT-00463,account access,account security,0.8808,high,account access,account security
+TKT-00465,billing,billing,0.7286,medium,billing,billing
+TKT-00466,bug,tech support,0.7286,high,bug,tech support
+TKT-00467,feature request,product,0.9500,low,feature request,product
+TKT-00468,how-to,tech support,0.9247,low,how-to,tech support
+TKT-00469,how-to,tech support,0.9247,low,how-to,tech support
+TKT-00473,billing,billing,0.8167,medium,billing,billing
+TKT-00475,outage,tech support,0.9500,critical,outage,tech support
+TKT-00477,account access,account security,0.9500,high,account access,account security
+TKT-00478,billing,billing,0.9500,medium,billing,billing
+TKT-00479,how-to,tech support,0.3082,low,how-to,tech support
+TKT-00480,account access,account security,0.9500,high,account access,account security
+TKT-00481,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00482,outage,tech support,0.9500,critical,outage,tech support
+TKT-00483,feature request,product,0.8808,low,feature request,product
+TKT-00485,outage,tech support,0.9500,high,outage,tech support
+TKT-00486,bug,tech support,0.8808,high,bug,tech support
+TKT-00487,account access,account security,0.9500,high,account access,account security
+TKT-00488,outage,tech support,0.8808,critical,outage,tech support
+TKT-00491,bug,tech support,0.9500,high,bug,tech support
+TKT-00492,feature request,product,0.8808,low,feature request,product
+TKT-00493,billing,billing,0.9500,medium,billing,billing
+TKT-00494,billing,billing,0.9500,medium,billing,billing
+TKT-00495,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00499,billing,billing,0.9500,medium,billing,billing
+TKT-00500,outage,tech support,0.9500,critical,outage,tech support
+TKT-00501,billing,billing,0.9500,medium,billing,billing
+TKT-00502,feature request,tech support,0.7858,low,feature request,product
+TKT-00504,how-to,tech support,0.9247,low,how-to,tech support
+TKT-00505,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00506,feature request,product,0.8808,low,feature request,product
+TKT-00507,bug,tech support,0.7649,high,bug,tech support
+TKT-00508,account access,account security,0.8808,high,account access,account security
+TKT-00509,outage,tech support,0.9500,high,outage,tech support
+TKT-00512,outage,tech support,0.9500,critical,outage,tech support
+TKT-00513,billing,billing,0.9500,medium,billing,billing
+TKT-00515,outage,tech support,0.3082,high,outage,tech support
+TKT-00516,outage,tech support,0.9500,critical,outage,tech support
+TKT-00517,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00519,how-to,tech support,0.9247,low,how-to,tech support
+TKT-00520,bug,tech support,0.9500,high,bug,tech support
+TKT-00521,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00522,feature request,tech support,0.7858,low,feature request,product
+TKT-00524,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00525,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00526,outage,tech support,0.9500,critical,outage,tech support
+TKT-00527,how-to,tech support,0.9247,low,how-to,tech support
+TKT-00528,feature request,tech support,0.7858,low,feature request,product
+TKT-00529,bug,tech support,0.8808,high,bug,tech support
+TKT-00530,feature request,product,0.9500,low,feature request,product
+TKT-00531,feature request,product,0.9500,low,feature request,product
+TKT-00532,bug,tech support,0.7286,high,bug,tech support
+TKT-00534,account access,account security,0.9500,high,account access,account security
+TKT-00535,outage,tech support,0.9500,low,outage,tech support
+TKT-00537,how-to,tech support,0.3082,low,how-to,tech support
+TKT-00538,outage,tech support,0.8573,critical,outage,tech support
+TKT-00539,bug,tech support,0.8808,high,bug,tech support
+TKT-00540,billing,billing,0.9000,medium,billing,billing
+TKT-00541,outage,tech support,0.9500,high,outage,tech support
+TKT-00544,feature request,tech support,0.7858,low,feature request,product
+TKT-00545,bug,tech support,0.9500,high,bug,tech support
+TKT-00546,feature request,tech support,0.7858,low,feature request,product
+TKT-00547,feature request,product,0.8808,low,feature request,product
+TKT-00548,outage,tech support,0.9500,high,outage,tech support
+TKT-00549,bug,tech support,0.8808,high,bug,tech support
+TKT-00550,bug,tech support,0.7286,high,bug,tech support
+TKT-00551,feature request,product,0.9500,low,feature request,product
+TKT-00553,feature request,product,0.9500,low,feature request,product
+TKT-00555,how-to,tech support,0.9247,low,how-to,tech support
+TKT-00556,outage,tech support,0.9500,critical,outage,tech support
+TKT-00557,bug,tech support,0.9500,high,bug,tech support
+TKT-00558,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00559,feature request,product,0.8808,low,feature request,product
+TKT-00560,billing,billing,0.9061,medium,billing,billing
+TKT-00562,account access,account security,0.9500,high,account access,account security
+TKT-00563,account access,account security,0.9247,critical,account access,account security
+TKT-00564,billing,billing,0.9000,medium,billing,billing
+TKT-00565,outage,tech support,0.9500,high,outage,tech support
+TKT-00566,outage,tech support,0.9500,critical,outage,tech support
+TKT-00567,how-to,tech support,0.8808,low,how-to,tech support
+TKT-00568,account access,account security,0.9500,high,account access,account security
+TKT-00569,bug,tech support,0.9500,high,bug,tech support
+TKT-00570,how-to,tech support,0.3082,low,how-to,tech support
+TKT-00571,bug,tech support,0.9500,high,bug,tech support
+TKT-00574,outage,tech support,0.9247,critical,outage,tech support
+TKT-00575,account access,account security,0.8808,critical,account access,account security
+TKT-00576,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00577,outage,billing,0.7286,high,outage,tech support
+TKT-00578,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00579,feature request,product,0.8808,low,feature request,product
+TKT-00580,bug,tech support,0.1000,high,feature request,product
+TKT-00581,how-to,tech support,0.3082,low,how-to,tech support
+TKT-00583,feature request,product,0.9500,low,feature request,product
+TKT-00584,account access,account security,0.9500,high,account access,account security
+TKT-00585,feature request,product,0.9500,low,feature request,product
+TKT-00586,feature request,tech support,0.7858,low,feature request,product
+TKT-00588,outage,tech support,0.9500,critical,outage,tech support
+TKT-00590,bug,tech support,0.7858,high,bug,tech support
+TKT-00591,bug,tech support,0.9500,high,bug,tech support
+TKT-00593,how-to,tech support,0.9247,low,how-to,tech support
+TKT-00594,outage,tech support,0.8573,critical,outage,tech support
+TKT-00595,feature request,tech support,0.7858,low,feature request,product
+TKT-00596,billing,billing,0.9500,high,billing,billing
+TKT-00597,bug,tech support,0.8808,high,bug,tech support
+TKT-00599,feature request,product,0.8808,low,feature request,product
+TKT-00600,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00601,account access,account security,0.9500,high,account access,account security
+TKT-00602,outage,tech support,0.9500,critical,outage,tech support
+TKT-00605,feature request,product,0.9500,low,feature request,product
+TKT-00606,feature request,tech support,0.7858,low,feature request,product
+TKT-00607,bug,tech support,0.1000,high,how-to,tech support
+TKT-00608,outage,tech support,0.9500,critical,outage,tech support
+TKT-00609,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00611,feature request,product,0.9500,low,feature request,product
+TKT-00613,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00614,feature request,product,0.9500,low,feature request,product
+TKT-00615,bug,tech support,0.7286,high,bug,tech support
+TKT-00616,account access,account security,0.9500,high,account access,account security
+TKT-00618,outage,tech support,0.3082,high,outage,tech support
+TKT-00619,bug,tech support,0.8573,high,bug,tech support
+TKT-00620,billing,billing,0.9500,high,billing,billing
+TKT-00622,account access,account security,0.9500,high,account access,account security
+TKT-00623,feature request,tech support,0.7858,low,how-to,tech support
+TKT-00624,billing,billing,0.9500,medium,billing,billing
+TKT-00625,account access,account security,0.8808,critical,account access,account security
+TKT-00626,how-to,tech support,0.3082,low,how-to,tech support
+TKT-00630,outage,tech support,0.8808,critical,outage,tech support
+TKT-00632,billing,billing,0.8808,high,billing,billing
+TKT-00633,billing,billing,0.9500,high,billing,billing
+TKT-00634,outage,tech support,0.9500,high,outage,tech support
+TKT-00635,outage,tech support,0.9500,critical,outage,tech support
+TKT-00636,bug,tech support,0.9500,high,bug,tech support
+TKT-00637,bug,tech support,0.9500,high,bug,tech support
+TKT-00638,feature request,product,0.9500,low,feature request,product
+TKT-00640,outage,tech support,0.9500,critical,outage,tech support
+TKT-00641,billing,billing,0.9500,high,billing,billing
+TKT-00642,feature request,product,0.8808,low,feature request,product
+TKT-00643,bug,tech support,0.8808,high,bug,tech support
+TKT-00644,bug,tech support,0.1000,high,how-to,tech support
+TKT-00646,feature request,product,0.8808,low,feature request,product
+TKT-00647,account access,account security,0.9500,high,account access,account security
+TKT-00648,how-to,tech support,0.8808,low,how-to,tech support
+TKT-00649,billing,billing,0.9247,medium,billing,billing
+TKT-00650,outage,tech support,0.9500,critical,outage,tech support
+TKT-00651,how-to,tech support,0.3082,low,how-to,tech support
+TKT-00652,billing,billing,0.9500,medium,billing,billing
+TKT-00653,feature request,tech support,0.7858,low,feature request,product
+TKT-00654,outage,tech support,0.9500,critical,outage,tech support
+TKT-00658,bug,tech support,0.8808,high,bug,tech support
+TKT-00659,account access,account security,0.9500,high,account access,account security
+TKT-00660,feature request,product,0.8808,low,feature request,product
+TKT-00661,outage,tech support,0.9500,critical,outage,tech support
+TKT-00662,billing,billing,0.9500,medium,billing,billing
+TKT-00663,how-to,tech support,0.9247,low,how-to,tech support
+TKT-00664,bug,tech support,0.7649,high,bug,tech support
+TKT-00665,bug,tech support,0.9500,high,bug,tech support
+TKT-00666,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00667,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00668,feature request,product,0.8808,low,feature request,product
+TKT-00669,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00670,bug,tech support,0.3082,high,how-to,tech support
+TKT-00671,how-to,tech support,0.8808,low,how-to,tech support
+TKT-00672,billing,billing,0.9500,medium,billing,billing
+TKT-00673,account access,account security,0.8808,critical,account access,account security
+TKT-00675,outage,tech support,0.9247,critical,outage,tech support
+TKT-00676,bug,tech support,0.8808,high,bug,tech support
+TKT-00677,bug,tech support,0.9500,high,bug,tech support
+TKT-00678,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00679,bug,tech support,0.3082,high,how-to,tech support
+TKT-00683,feature request,tech support,0.7858,low,how-to,tech support
+TKT-00684,outage,tech support,0.8573,critical,outage,tech support
+TKT-00685,feature request,product,0.8808,low,feature request,product
+TKT-00686,account access,account security,0.9247,critical,account access,account security
+TKT-00688,how-to,tech support,0.9247,low,how-to,tech support
+TKT-00689,feature request,product,0.9247,low,feature request,product
+TKT-00690,billing,billing,0.9500,high,billing,billing
+TKT-00691,outage,tech support,0.9500,high,outage,tech support
+TKT-00692,billing,billing,0.9500,medium,billing,billing
+TKT-00693,account access,account security,0.9061,high,account access,account security
+TKT-00695,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00696,outage,tech support,0.9500,critical,outage,tech support
+TKT-00697,account access,account security,0.9500,high,account access,account security
+TKT-00698,billing,billing,0.9500,medium,billing,billing
+TKT-00699,billing,billing,0.9500,medium,billing,billing
+TKT-00700,outage,tech support,0.9500,critical,outage,tech support
+TKT-00701,how-to,tech support,0.3082,low,how-to,tech support
+TKT-00702,outage,tech support,0.9500,critical,outage,tech support
+TKT-00703,outage,tech support,0.9500,low,outage,tech support
+TKT-00704,outage,tech support,0.9500,critical,outage,tech support
+TKT-00706,how-to,tech support,0.8808,low,how-to,tech support
+TKT-00708,account access,account security,0.9500,high,account access,account security
+TKT-00710,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00711,feature request,product,0.8808,low,feature request,product
+TKT-00712,bug,tech support,0.7649,high,bug,tech support
+TKT-00713,outage,tech support,0.9500,high,outage,tech support
+TKT-00714,account access,account security,0.9500,high,account access,account security
+TKT-00715,feature request,product,0.8808,low,feature request,product
+TKT-00716,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00717,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00718,bug,tech support,0.8573,high,bug,tech support
+TKT-00719,outage,tech support,0.9500,high,outage,tech support
+TKT-00720,feature request,tech support,0.7858,low,feature request,product
+TKT-00721,feature request,product,0.9500,low,feature request,product
+TKT-00722,how-to,tech support,0.8808,low,how-to,tech support
+TKT-00723,how-to,tech support,0.9247,low,how-to,tech support
+TKT-00724,account access,account security,0.8808,high,account access,account security
+TKT-00725,account access,account security,0.9500,high,account access,account security
+TKT-00726,billing,billing,0.9500,medium,billing,billing
+TKT-00727,feature request,product,0.9500,low,feature request,product
+TKT-00728,feature request,tech support,0.7858,low,feature request,product
+TKT-00729,outage,tech support,0.9500,critical,outage,tech support
+TKT-00731,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00732,feature request,product,0.8808,low,feature request,product
+TKT-00733,feature request,product,0.9500,low,feature request,product
+TKT-00734,outage,tech support,0.9500,critical,outage,tech support
+TKT-00735,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00736,how-to,tech support,0.3082,low,how-to,tech support
+TKT-00737,account access,account security,0.8808,critical,account access,account security
+TKT-00739,feature request,product,0.9500,low,feature request,product
+TKT-00740,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00741,billing,billing,0.9500,high,billing,billing
+TKT-00742,account access,account security,0.8808,critical,account access,account security
+TKT-00743,feature request,product,0.9500,low,feature request,product
+TKT-00744,bug,tech support,0.8808,high,bug,tech support
+TKT-00745,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00746,bug,tech support,0.9500,high,bug,tech support
+TKT-00747,billing,billing,0.8808,medium,billing,billing
+TKT-00748,bug,tech support,0.7286,high,bug,tech support
+TKT-00749,billing,billing,0.9500,medium,billing,billing
+TKT-00750,feature request,product,0.8808,low,feature request,product
+TKT-00752,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00753,account access,account security,0.9500,high,account access,account security
+TKT-00754,account access,account security,0.8808,critical,account access,account security
+TKT-00755,billing,billing,0.9500,high,billing,billing
+TKT-00756,account access,account security,0.9500,high,account access,account security
+TKT-00757,outage,tech support,0.9500,critical,outage,tech support
+TKT-00758,billing,billing,0.9500,medium,billing,billing
+TKT-00759,outage,tech support,0.9500,critical,outage,tech support
+TKT-00760,bug,tech support,0.9500,high,bug,tech support
+TKT-00761,bug,tech support,0.8808,high,bug,tech support
+TKT-00762,how-to,tech support,0.3082,low,how-to,tech support
+TKT-00763,account access,account security,0.8808,high,account access,account security
+TKT-00764,billing,billing,0.9500,medium,billing,billing
+TKT-00765,outage,tech support,0.8573,critical,outage,tech support
+TKT-00766,how-to,tech support,0.8808,low,how-to,tech support
+TKT-00768,account access,account security,0.8808,high,account access,account security
+TKT-00769,feature request,product,0.8808,low,feature request,product
+TKT-00770,account access,account security,0.8808,critical,account access,account security
+TKT-00771,how-to,tech support,0.8808,low,how-to,tech support
+TKT-00772,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00773,feature request,product,0.8808,low,feature request,product
+TKT-00776,account access,account security,0.9500,high,account access,account security
+TKT-00777,billing,billing,0.9500,medium,billing,billing
+TKT-00780,account access,account security,0.9500,high,account access,account security
+TKT-00781,account access,account security,0.9500,high,account access,account security
+TKT-00782,bug,tech support,0.1000,high,feature request,product
+TKT-00783,feature request,product,0.9500,low,feature request,product
+TKT-00786,feature request,product,0.8808,low,feature request,product
+TKT-00787,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00789,account access,account security,0.8808,critical,account access,account security
+TKT-00790,outage,tech support,0.9247,critical,outage,tech support
+TKT-00791,feature request,product,0.9500,low,feature request,product
+TKT-00792,account access,account security,0.9500,high,account access,account security
+TKT-00793,billing,billing,0.9500,high,billing,billing
+TKT-00794,billing,billing,0.8167,medium,billing,billing
+TKT-00795,account access,account security,0.9500,high,account access,account security
+TKT-00796,outage,tech support,0.9500,critical,outage,tech support
+TKT-00798,bug,tech support,0.1000,high,feature request,product
+TKT-00799,account access,account security,0.9500,high,account access,account security
+TKT-00800,feature request,product,0.8808,low,feature request,product
+TKT-00802,outage,tech support,0.9500,critical,outage,tech support
+TKT-00803,outage,tech support,0.9500,low,outage,tech support
+TKT-00805,account access,account security,0.9500,high,account access,account security
+TKT-00806,feature request,product,0.8808,low,feature request,product
+TKT-00808,bug,tech support,0.7858,high,bug,tech support
+TKT-00811,account access,account security,0.9500,high,account access,account security
+TKT-00813,outage,tech support,0.9500,critical,outage,tech support
+TKT-00814,feature request,product,0.8808,low,feature request,product
+TKT-00815,feature request,product,0.9500,low,feature request,product
+TKT-00816,outage,tech support,0.9247,critical,outage,tech support
+TKT-00817,how-to,tech support,0.3082,low,how-to,tech support
+TKT-00818,account access,account security,0.9061,high,account access,account security
+TKT-00819,feature request,tech support,0.7858,low,feature request,product
+TKT-00820,billing,billing,0.9500,high,billing,billing
+TKT-00822,billing,billing,0.8167,medium,billing,billing
+TKT-00823,outage,tech support,0.9500,high,outage,tech support
+TKT-00824,bug,tech support,0.8808,high,bug,tech support
+TKT-00825,outage,tech support,0.9500,critical,outage,tech support
+TKT-00826,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00827,bug,tech support,0.9500,high,bug,tech support
+TKT-00828,outage,tech support,0.8808,critical,outage,tech support
+TKT-00829,billing,billing,0.9000,medium,billing,billing
+TKT-00830,how-to,tech support,0.8808,low,how-to,tech support
+TKT-00831,feature request,product,0.8808,low,feature request,product
+TKT-00832,outage,tech support,0.9500,critical,outage,tech support
+TKT-00833,bug,tech support,0.8808,high,bug,tech support
+TKT-00834,account access,account security,0.8808,high,account access,account security
+TKT-00835,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00836,billing,billing,0.9500,medium,billing,billing
+TKT-00837,feature request,product,0.8808,low,feature request,product
+TKT-00840,bug,tech support,0.9500,high,bug,tech support
+TKT-00842,feature request,tech support,0.7858,low,feature request,product
+TKT-00843,account access,account security,0.9500,high,account access,account security
+TKT-00844,feature request,tech support,0.7858,low,feature request,product
+TKT-00845,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00846,bug,tech support,0.9500,high,bug,tech support
+TKT-00848,how-to,tech support,0.8808,low,how-to,tech support
+TKT-00849,feature request,product,0.9500,low,feature request,product
+TKT-00850,bug,tech support,0.7649,high,bug,tech support
+TKT-00851,account access,account security,0.9500,high,account access,account security
+TKT-00852,feature request,product,0.9500,low,feature request,product
+TKT-00853,bug,tech support,0.9500,high,bug,tech support
+TKT-00854,account access,account security,0.9500,high,account access,account security
+TKT-00856,billing,billing,0.8808,high,billing,billing
+TKT-00857,billing,billing,0.9500,medium,billing,billing
+TKT-00858,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00859,billing,billing,0.8808,medium,billing,billing
+TKT-00860,outage,tech support,0.8808,critical,outage,tech support
+TKT-00862,billing,billing,0.9500,medium,billing,billing
+TKT-00863,outage,tech support,0.9500,critical,outage,tech support
+TKT-00865,outage,tech support,0.9500,high,outage,tech support
+TKT-00866,outage,tech support,0.8808,critical,outage,tech support
+TKT-00867,bug,tech support,0.9500,high,bug,tech support
+TKT-00868,account access,account security,0.8808,high,account access,account security
+TKT-00869,bug,tech support,0.8573,high,bug,tech support
+TKT-00870,account access,account security,0.9500,high,account access,account security
+TKT-00871,feature request,product,0.8808,low,feature request,product
+TKT-00872,bug,tech support,0.9500,high,bug,tech support
+TKT-00874,account access,account security,0.9061,high,account access,account security
+TKT-00875,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00876,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00877,billing,billing,0.9500,medium,billing,billing
+TKT-00878,outage,tech support,0.9500,high,outage,tech support
+TKT-00879,account access,account security,0.8808,high,account access,account security
+TKT-00881,how-to,tech support,0.8808,low,how-to,tech support
+TKT-00882,how-to,tech support,0.9247,low,how-to,tech support
+TKT-00884,account access,account security,0.9500,high,account access,account security
+TKT-00885,bug,tech support,0.9500,high,bug,tech support
+TKT-00886,account access,account security,0.9500,high,account access,account security
+TKT-00887,account access,account security,0.9500,high,account access,account security
+TKT-00888,account access,account security,0.9500,high,account access,account security
+TKT-00889,bug,tech support,0.9500,high,bug,tech support
+TKT-00890,account access,account security,0.9500,high,account access,account security
+TKT-00893,billing,billing,0.9500,medium,billing,billing
+TKT-00894,feature request,tech support,0.7826,high,bug,tech support
+TKT-00897,how-to,tech support,0.3082,low,how-to,tech support
+TKT-00898,outage,tech support,0.9500,high,outage,tech support
+TKT-00899,billing,billing,0.9500,medium,billing,billing
+TKT-00900,how-to,tech support,0.9247,low,how-to,tech support
+TKT-00901,billing,billing,0.9500,medium,billing,billing
+TKT-00902,bug,tech support,0.7649,high,bug,tech support
+TKT-00903,how-to,tech support,0.9247,low,how-to,tech support
+TKT-00905,feature request,product,0.9500,low,feature request,product
+TKT-00906,feature request,tech support,0.7858,low,feature request,product
+TKT-00907,feature request,product,0.8808,low,feature request,product
+TKT-00908,account access,account security,0.9500,high,account access,account security
+TKT-00910,feature request,product,0.8808,low,feature request,product
+TKT-00911,outage,tech support,0.9500,critical,outage,tech support
+TKT-00913,billing,billing,0.9500,medium,billing,billing
+TKT-00914,account access,account security,0.9500,high,account access,account security
+TKT-00916,billing,billing,0.9500,medium,billing,billing
+TKT-00917,account access,account security,0.9500,high,account access,account security
+TKT-00918,feature request,tech support,0.7858,low,feature request,product
+TKT-00919,how-to,tech support,0.9247,low,how-to,tech support
+TKT-00921,account access,account security,0.8808,high,account access,account security
+TKT-00923,how-to,tech support,0.8808,low,how-to,tech support
+TKT-00924,account access,account security,0.9500,high,account access,account security
+TKT-00925,billing,billing,0.8167,medium,billing,billing
+TKT-00926,bug,tech support,0.8573,high,bug,tech support
+TKT-00928,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00929,feature request,product,0.9500,low,feature request,product
+TKT-00930,outage,tech support,0.9500,high,outage,tech support
+TKT-00932,feature request,tech support,0.7858,low,how-to,tech support
+TKT-00934,feature request,product,0.8808,low,feature request,product
+TKT-00935,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00936,outage,tech support,0.9500,critical,outage,tech support
+TKT-00937,feature request,product,0.9500,low,feature request,product
+TKT-00938,outage,tech support,0.9500,high,outage,tech support
+TKT-00939,feature request,product,0.8808,low,feature request,product
+TKT-00940,billing,billing,0.9500,medium,billing,billing
+TKT-00941,outage,tech support,0.9500,critical,outage,tech support
+TKT-00943,feature request,product,0.9500,low,feature request,product
+TKT-00946,outage,tech support,0.9500,critical,outage,tech support
+TKT-00948,account access,account security,0.8808,high,account access,account security
+TKT-00950,outage,tech support,0.9500,critical,outage,tech support
+TKT-00952,feature request,product,0.8808,low,feature request,product
+TKT-00953,feature request,product,0.9500,low,feature request,product
+TKT-00954,feature request,product,0.9500,low,feature request,product
+TKT-00955,how-to,tech support,0.8808,low,how-to,tech support
+TKT-00956,outage,tech support,0.9500,critical,outage,tech support
+TKT-00957,feature request,tech support,0.7858,low,feature request,product
+TKT-00958,outage,billing,0.7286,high,outage,tech support
+TKT-00959,bug,tech support,0.3082,high,outage,tech support
+TKT-00960,feature request,product,0.8808,low,feature request,product
+TKT-00962,bug,tech support,0.9500,high,bug,tech support
+TKT-00963,account access,account security,0.8808,critical,account access,account security
+TKT-00964,outage,tech support,0.9500,critical,outage,tech support
+TKT-00965,outage,tech support,0.9500,critical,outage,tech support
+TKT-00966,outage,tech support,0.3082,high,outage,tech support
+TKT-00968,feature request,tech support,0.7858,low,feature request,product
+TKT-00969,billing,billing,0.8808,medium,billing,billing
+TKT-00970,outage,tech support,0.9500,critical,outage,tech support
+TKT-00972,feature request,product,0.8808,low,feature request,product
+TKT-00974,account access,account security,0.8808,critical,account access,account security
+TKT-00975,bug,tech support,0.9500,high,bug,tech support
+TKT-00976,feature request,tech support,0.7858,low,feature request,product
+TKT-00977,feature request,tech support,0.7858,low,feature request,product
+TKT-00980,billing,billing,0.9500,medium,billing,billing
+TKT-00981,account access,account security,0.9500,high,account access,account security
+TKT-00982,billing,billing,0.9000,medium,billing,billing
+TKT-00983,account access,account security,0.9500,high,account access,account security
+TKT-00984,outage,tech support,0.9500,high,outage,tech support
+TKT-00985,outage,tech support,0.9247,critical,outage,tech support
+TKT-00986,feature request,product,0.8808,low,feature request,product
+TKT-00988,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00990,how-to,tech support,0.9500,low,how-to,tech support
+TKT-00991,bug,tech support,0.7286,high,bug,tech support
+TKT-00992,feature request,product,0.8808,low,feature request,product
+TKT-00993,feature request,product,0.9500,low,feature request,product
+TKT-00994,feature request,tech support,0.7858,low,feature request,product
+TKT-00996,billing,billing,0.9500,medium,billing,billing
+TKT-00998,bug,tech support,0.7286,high,bug,tech support
+TKT-00999,how-to,tech support,0.8808,low,how-to,tech support
+TKT-01000,outage,tech support,0.9500,high,outage,tech support
