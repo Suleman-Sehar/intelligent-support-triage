@@ -358,6 +358,45 @@ def format_per_slice_table(baseline_preds: List[dict], llm_preds: List[dict], tr
     return "\n".join(lines)
 
 
+def format_challenge_table(baseline_metrics: Dict, llm_metrics: Dict, guardrail_metrics: Dict, num_samples: int) -> str:
+    """Format challenge set results as a separate table."""
+    lines = []
+    lines.append("## Challenge Set Results")
+    lines.append("")
+    lines.append(f"Challenge set: {num_samples} hand-labeled tickets (paraphrased, noisy, multi-issue, Roman-Urdu, ambiguous). Not used for tuning.")
+    lines.append("")
+    lines.append("| Metric | Baseline (Rules) | LLM (gpt-4o-mini) | Guardrails (LLM) |")
+    lines.append("|--------|------------------|-------------------|------------------|")
+    
+    b_issue = baseline_metrics["issue_type"]["macro_f1"]
+    b_team = baseline_metrics["team"]["macro_f1"]
+    l_issue = llm_metrics["issue_type"]["macro_f1"]
+    l_team = llm_metrics["team"]["macro_f1"]
+    g_issue = guardrail_metrics["issue_type"]["macro_f1"]
+    g_team = guardrail_metrics["team"]["macro_f1"]
+    
+    lines.append(f"| Issue Type Macro F1 | {b_issue:.4f} | {l_issue:.4f} | {g_issue:.4f} |")
+    lines.append(f"| Team Macro F1 | {b_team:.4f} | {l_team:.4f} | {g_team:.4f} |")
+    lines.append(f"| Avg Confidence | {baseline_metrics['avg_confidence']:.4f} | {llm_metrics['avg_confidence']:.4f} | {guardrail_metrics['avg_confidence']:.4f} |")
+    lines.append("")
+    
+    lines.append("### Per-Class Issue Type F1 (Challenge)")
+    lines.append("")
+    lines.append("| Class | Baseline | LLM | Guardrails |")
+    lines.append("|-------|----------|-----|------------|")
+    all_classes = set(baseline_metrics["issue_type"]["per_class"].keys()) | \
+                  set(llm_metrics["issue_type"]["per_class"].keys()) | \
+                  set(guardrail_metrics["issue_type"]["per_class"].keys())
+    for cls in sorted(all_classes):
+        b = baseline_metrics["issue_type"]["per_class"].get(cls, {}).get("f1", 0)
+        l = llm_metrics["issue_type"]["per_class"].get(cls, {}).get("f1", 0)
+        g = guardrail_metrics["issue_type"]["per_class"].get(cls, {}).get("f1", 0)
+        lines.append(f"| {cls} | {b:.3f} | {l:.3f} | {g:.3f} |")
+    lines.append("")
+    
+    return "\n".join(lines)
+
+
 def save_evidence(evidence_dir: Path, basename: str, content: str, metrics: Dict):
     """Save evidence files."""
     evidence_dir.mkdir(parents=True, exist_ok=True)
@@ -380,11 +419,15 @@ def save_evidence(evidence_dir: Path, basename: str, content: str, metrics: Dict
 def main():
     parser = argparse.ArgumentParser(description="Evaluate and compare models")
     parser.add_argument("--input", default="data/tickets.csv", help="Input tickets CSV")
-    parser.add_argument("--split", default="test", choices=["dev", "test"], help="Split to evaluate")
+    parser.add_argument("--split", default="test", choices=["dev", "test", "challenge"], help="Split to evaluate")
     parser.add_argument("--baseline", default="evidence/baseline_predictions_test.csv", help="Baseline predictions")
     parser.add_argument("--llm", default="evidence/llm_predictions_test.csv", help="LLM predictions")
     parser.add_argument("--guardrail", default="evidence/guardrail_predictions_test.csv", help="Guardrail predictions")
     parser.add_argument("--guardrail-fallback", default="evidence/guardrail_fallback_test.csv", help="Guardrail fallback predictions")
+    parser.add_argument("--challenge-baseline", default=None, help="Challenge baseline predictions")
+    parser.add_argument("--challenge-llm", default=None, help="Challenge LLM predictions")
+    parser.add_argument("--challenge-guardrail", default=None, help="Challenge guardrail predictions")
+    parser.add_argument("--challenge-input", default="data/challenge_set.csv", help="Challenge set input CSV")
     parser.add_argument("--output-dir", default="evidence", help="Output directory for evidence")
     parser.add_argument("--name", default="evaluation", help="Base name for evidence files")
     args = parser.parse_args()
@@ -422,6 +465,21 @@ def main():
     slice_table = format_per_slice_table(baseline_preds, llm_preds, truths)
     print(slice_table)
     
+    # Challenge set results (if provided)
+    challenge_table = ""
+    if args.challenge_baseline and args.challenge_llm and args.challenge_guardrail:
+        challenge_truths = load_ground_truth(args.challenge_input, "challenge")
+        cb_preds = load_predictions(args.challenge_baseline)
+        cl_preds = load_predictions(args.challenge_llm)
+        cg_preds = load_predictions(args.challenge_guardrail)
+        
+        cb_metrics = compute_metrics(cb_preds, challenge_truths, "pred_issue_type", "pred_team")
+        cl_metrics = compute_metrics(cl_preds, challenge_truths, "pred_issue_type", "pred_team")
+        cg_metrics = compute_metrics(cg_preds, challenge_truths, "pred_issue_type", "pred_team")
+        
+        challenge_table = format_challenge_table(cb_metrics, cl_metrics, cg_metrics, len(challenge_truths))
+        print(challenge_table)
+    
     # Save evidence
     all_metrics = {
         "baseline": baseline_metrics,
@@ -437,7 +495,7 @@ def main():
         }
     }
     
-    full_comparison = comparison + "\n" + slice_table
+    full_comparison = comparison + "\n" + slice_table + challenge_table
     
     save_evidence(Path(args.output_dir), args.name, full_comparison, all_metrics)
     
