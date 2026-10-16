@@ -139,7 +139,7 @@ print(f'PII Redacted: {result.pii_redacted}, Human Review: {result.human_review}
 ### 4. Evaluation Dashboard (1 min)
 - Open `evidence/evaluation_latest.md` - comparison table
 - Highlight product team +20.7% F1 improvement
-- Show 0% human review rate
+- Show 6.8% human review rate
 
 ### 5. Responsible AI (30 sec)
 - PII never sent to LLM
