@@ -155,6 +155,13 @@ Same ticket, team follows issue type. When issue_type=how-to, team=tech_support 
 
    **Challenge set team routing**: Baseline Team F1 0.824 vs LLM Team F1 0.825 (+0.1 points — no meaningful gain). Root cause: account security team drops to 0.600 F1 on the challenge set, as Roman-Urdu and ambiguous tickets (e.g. CH-0033, CH-0036) are misrouted to tech support instead of account security.
 
+## Sample-size Caveats
+
+- Test split n=191 (~30 per class): per-class metrics have high variance; results are directional, not proof.
+- Challenge set n=39: too small for statistical significance; author-written and AI-assisted, not used for tuning.
+- Guardrail value rests on only 3 total test-split errors: flagged accuracy is 10/13 flagged tickets correct; 3 of 3 errors caught. Small-sample caveat applies.
+- Urgency is derived from issue type, not independently labeled; treat urgency metrics as directional evidence.
+
 ## Recommendations
 
 1. **Add few-shot examples** for account access vs how-to boundary cases
